@@ -1,0 +1,9 @@
+<library path="lib/libacin_gui">
+  <class name="acin_gui/ObjectReconstruction"
+         type="acin_gui::ObjectReconstructionPanel"
+         base_class_type="rviz::Panel">
+    <description>
+      A panel widget allowing reconstruction of objects.
+    </description>
+  </class>
+</library>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<sdf version="1.5">
+  <world name="default">
+    <!-- Disable shadows -->
+    <scene>
+      <ambient>1 1 1 1</ambient>
+      <shadows>0</shadows>
+    </scene>
+
+    <!-- Adjust gravity -->
+    <gravity>0 0 -9.81</gravity>
+
+    <!-- Global light source -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground plane -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+  </world>
+</sdf>

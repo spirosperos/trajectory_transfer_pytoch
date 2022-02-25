@@ -1,0 +1,4 @@
+# Pose of camera frame relative to world
+geometry_msgs/Pose absolute_pose
+---
+bool success

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:property name="filename" value="$(find acin_reconstruction)/config/marker.yaml"/>
+  <xacro:property name="charuco" value="${load_yaml(filename)}"/>
+
+  <xacro:macro name="marker">
+    <!-- Insert marker board -->
+    <link name="object_link">
+      <visual>
+        <origin xyz="${charuco.square_length*charuco.squares_x/2} ${charuco.square_length*charuco.squares_y/2} 0" rpy="0 0 ${-pi/2}"/>
+        <geometry>
+          <mesh filename="package://acin_reconstruction/marker/marker_board.dae"/>
+        </geometry>
+      </visual>
+      <visual>
+        <origin xyz="${charuco.square_length*charuco.squares_x/2} ${charuco.square_length*charuco.squares_y/2} -0.0016" rpy="0 0 ${-pi/2}"/>
+        <geometry>
+          <box size="0.297 0.420 0.003"/>
+        </geometry>
+        <material name="white">
+          <color rgba="1 1 1 1"/>
+        </material>
+      </visual>
+      <collision>
+        <origin xyz="${charuco.square_length*charuco.squares_x/2} ${charuco.square_length*charuco.squares_y/2} -0.0015" rpy="0 0 ${-pi/2}"/>
+        <geometry>
+          <box size="0.297 0.420 0.003"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- Coordinate system for reconstructed objects -->
+    <joint name="object_joint" type="fixed">
+      <origin xyz="${charuco.square_length*charuco.squares_y/2} ${-charuco.square_length*charuco.squares_x/2} 0.003" rpy="0 0 ${pi/2}"/>
+      <parent link="table_link_2"/>
+      <child link="object_link"/>
+    </joint>
+  </xacro:macro>
+</robot>

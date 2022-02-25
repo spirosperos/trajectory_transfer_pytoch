@@ -1,0 +1,6 @@
+#if defined(TWINCAT_COMPILE) && !defined(CLIMITS_H)
+#define CLIMITS_H
+	#include<limits.h>
+#endif; 
+
+

@@ -1,0 +1,592 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import tf
+import xacro
+import math as m
+import numpy as np
+from lxml import etree
+
+import rospy
+import rospkg
+import moveit_commander
+
+import moveit_msgs
+
+from geometry_msgs.msg import Pose
+from geometry_msgs.msg import PoseStamped
+from sensor_msgs.msg import JointState
+
+from acin_reconstruction.srv import Load, LoadRequest
+from acin_reconstruction.srv import Scan, ScanRequest
+from acin_reconstruction.srv import Export, ExportRequest
+from acin_reconstruction.srv import Modify, ModifyRequest
+from acin_reconstruction.srv import Register, RegisterRequest
+from acin_reconstruction.srv import Transform, TransformRequest
+from acin_reconstruction.srv import MultiwayRegister, MultiwayRegisterRequest
+from acin_automation.srv import Optimize, OptimizeRequest
+
+import actionlib
+from acin_automation.msg import ExecuteScriptAction
+from acin_automation.msg import ExecuteScriptFeedback
+
+class ExecuteScriptServer:
+    def __init__(self, schema):
+        self.schema = schema
+        
+        # Prepare feedback message
+        self.feedback = ExecuteScriptFeedback()
+        
+        # Prepare MoveIt
+        self.move_group = moveit_commander.MoveGroupCommander('arm')
+        
+        # Prepare service proxy
+        self.load_service = rospy.ServiceProxy('load', Load)
+        self.export_service = rospy.ServiceProxy('export', Export)
+        self.modify_service = rospy.ServiceProxy('modify', Modify)
+        self.scan_service = rospy.ServiceProxy('perform_scan', Scan)
+        self.register_service = rospy.ServiceProxy('register', Register)
+        self.optimize_service = rospy.ServiceProxy('optimize', Optimize)
+        self.transform_service = rospy.ServiceProxy('transform', Transform)
+        self.multiway_service = rospy.ServiceProxy('multiway_register', MultiwayRegister)
+        
+        # Function mapping
+        self.functions = {
+            'add':        self.add,
+            'wait':       self.wait,
+            'scan':       self.scan,
+            'show':       self.show,
+            'hide':       self.hide,
+            'color':      self.color,
+            'move':       self.move,
+            'load':       self.load,
+            'delete':     self.delete,
+            'export':     self.export,
+            'register':   self.register,
+            'multiway':   self.multiway,
+            'transform':  self.transform,
+            'downsample': self.downsample
+        }
+        
+        self.server = actionlib.SimpleActionServer('execute_script',
+                                                   ExecuteScriptAction,
+                                                   self.execute, False)
+        self.server.start()
+
+    def wait(self, element):
+        try:
+            duration_str = element.get('duration')
+            duration = float(duration_str)
+        except:
+            return False
+        self.feedback.message = "Waiting for "+duration_str+"s..."
+        self.server.publish_feedback(self.feedback)
+        rospy.sleep(duration)
+        return True
+
+    def optimize(self, element):
+        self.feedback.message = "Optimizing..."
+        self.server.publish_feedback(self.feedback)
+        
+        # Create service request
+        req = OptimizeRequest()
+        req.beta = 1.5
+        req.start_state = self.move_group.get_current_state().joint_state
+        req.target_poses = []
+        
+        # Find all target poses in script
+        for child in element:
+            if (child.tag == 'move'):
+                pose = self.get_pose(child)
+                req.target_poses.append(pose)
+        
+        # Call service
+        resp = self.optimize_service(req)
+        
+        if resp.success:
+            self.optimized_goals = resp.joint_states
+            self.optimized_plans = resp.plans
+            return True
+        else:
+            rospy.logerr("Optimization failed")
+            return False
+
+    def scan(self, element):
+        try:
+            self.feedback.message = "Scanning..."
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = ScanRequest()
+            req.name = element.get('name')
+            req.path_pose = element.get('path_pose')
+            req.path_color = element.get('path_color')
+            req.path_depth = element.get('path_depth')
+            
+            # Call service
+            resp = self.scan_service(req)
+            return resp.success
+        except:
+            return False
+
+    def show(self, element):
+        try:
+            fragment = element.get('fragment')
+            self.feedback.message = "Show "+fragment
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = ModifyRequest()
+            req.operation = req.SHOW
+            req.fragment = fragment
+            
+            # Call service
+            resp = self.modify_service(req)
+            return resp.success
+        except:
+            return False
+
+    def hide(self, element):
+        try:
+            fragment = element.get('fragment')
+            self.feedback.message = "Hide "+fragment
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = ModifyRequest()
+            req.operation = req.HIDE
+            req.fragment = fragment
+            
+            # Call service
+            resp = self.modify_service(req)
+            return resp.success
+        except:
+            return False
+
+    def export(self, element):
+        try:
+            fragment = element.get('fragment')
+            file_type = element.get('type')
+            path = element.get('path')
+            self.feedback.message = "Export "+fragment+"..."
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = ExportRequest()
+            req.fragment = fragment
+            if (file_type=="point_cloud"):
+                req.type = req.POINT_CLOUD
+            else:
+                req.type = req.MESH
+            req.path = path
+            
+            # Call service
+            resp = self.export_service(req)
+            return resp.success
+        except:
+            return False
+
+    def add(self, element):
+        try:
+            fragment = element.get('fragment')
+            self.feedback.message = "Add "+fragment
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = ModifyRequest()
+            req.operation = req.ADD
+            req.fragment = fragment
+            req.target = element.get('target')
+            
+            # Call service
+            resp = self.modify_service(req)
+            return resp.success
+        except:
+            return False
+
+    def downsample(self, element):
+        try:
+            fragment = element.get('fragment')
+            self.feedback.message = "Downsample "+fragment
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = ModifyRequest()
+            req.operation = req.DOWNSAMPLE
+            req.fragment = fragment
+            req.voxel_size = float(element.get('voxel_size'))
+            
+            # Call service
+            resp = self.modify_service(req)
+            return resp.success
+        except:
+            return False
+
+    def delete(self, element):
+        try:
+            fragment = element.get('fragment')    
+            self.feedback.message = "Delete "+fragment
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = ModifyRequest()
+            req.operation = req.DELETE
+            req.fragment = fragment
+            
+            # Call service
+            resp = self.modify_service(req)
+            return resp.success
+        except:
+            return False
+
+    def color(self, element):
+        try:
+            fragment = element.get('fragment')
+            rgb = element.get('rgb').split(" ")
+            self.feedback.message = "Color "+fragment
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = ModifyRequest()
+            req.operation = req.COLOR
+            req.fragment = fragment
+            req.custom_color = True
+            req.color.r = float(rgb[0])
+            req.color.g = float(rgb[1])
+            req.color.b = float(rgb[2])
+            
+            # Call service
+            resp = self.modify_service(req)
+            return resp.success
+        except:
+            return False
+
+    def get_pose(self, element):
+        pose = Pose()
+        
+        elements = element.getchildren()
+        if (elements[0].tag=='position'):
+            position = elements[0].get('xyz').split(" ")
+            pose.position.x = float(position[0])
+            pose.position.y = float(position[1])
+            pose.position.z = float(position[2])
+            orientation = elements[1].get('xyzw').split(" ")
+            pose.orientation.x = float(orientation[0])
+            pose.orientation.y = float(orientation[1])
+            pose.orientation.z = float(orientation[2])
+            pose.orientation.w = float(orientation[3])
+        else:
+            center = elements[0].get('xyz').split(" ")
+            x = float(center[0])
+            y = float(center[1])
+            z = float(center[2])
+            r = float(elements[0].get('radius'))
+            p = float(elements[1].get('phi'))
+            t = float(elements[1].get('theta'))
+            a = float(elements[1].get('alpha'))
+            
+            # Compute elements of rotation matrix
+            m00 = m.cos(p)*m.cos(t)*m.sin(a) - m.sin(p)*m.cos(a)
+            m10 = m.sin(p)*m.cos(t)*m.sin(a) + m.cos(p)*m.cos(a)
+            m20 = -m.sin(t)*m.sin(a)
+            m01 = m.cos(p)*m.cos(t)*m.cos(a) + m.sin(p)*m.sin(a)
+            m11 = m.sin(p)*m.cos(t)*m.cos(a) - m.cos(p)*m.sin(a)
+            m21 = -m.sin(t)*m.cos(a)
+            m02 = -m.cos(p)*m.sin(t)
+            m12 = -m.sin(p)*m.sin(t)
+            m22 = -m.cos(t)
+            
+            # Calculate quaternion
+            if (m22<0):
+                if (m00>m11):
+                    b = 1+m00-m11-m22
+                    qx = b
+                    qy = m10+m01
+                    qz = m02+m20
+                    qw = m21-m12
+                else:
+                    b = 1-m00+m11-m22
+                    qx = m10+m01
+                    qy = b
+                    qz = m21+m12
+                    qw = m02-m20
+            elif (m00<-m11):
+                b = 1-m00-m11+m22
+                qx = m02+m20
+                qy = m21+m12
+                qz = b
+                qw = m10-m01
+            else:
+                b = 1+m00+m11+m22
+                qx = m21-m12
+                qy = m02-m20
+                qz = m10-m01
+                qw = b
+            
+            qx *= 0.5/m.sqrt(b)
+            qy *= 0.5/m.sqrt(b)
+            qz *= 0.5/m.sqrt(b)
+            qw *= 0.5/m.sqrt(b)
+            
+            # Calculate position
+            px = x+r*m.sin(t)*m.cos(p)
+            py = y+r*m.sin(t)*m.sin(p)
+            pz = z+r*m.cos(t)
+            
+            # Fill message
+            pose.position.x = px
+            pose.position.y = py
+            pose.position.z = pz
+            pose.orientation.x = qx
+            pose.orientation.y = qy
+            pose.orientation.z = qz
+            pose.orientation.w = qw
+        
+        pose_stamped = PoseStamped()
+        pose_stamped.header.frame_id = element.get('reference')
+        pose_stamped.pose = pose
+        
+        return pose_stamped
+
+    def move(self, element):
+        try:
+            if self.optimization:
+                self.feedback.message = "Moving..."
+                self.server.publish_feedback(self.feedback)
+                
+                plan = moveit_msgs.msg.RobotTrajectory()
+                plan.joint_trajectory = self.optimized_plans[self.opt_counter].trajectory.joint_trajectory
+                
+                self.move_group.execute(plan)
+                self.move_group.stop()
+                self.opt_counter += 1
+            else:
+                self.feedback.message = "Planning and moving..."
+                self.server.publish_feedback(self.feedback)
+                
+                # Set parameters
+                planner_id = rospy.get_param("/shared/planner_id", "RRTConnect")
+                self.move_group.set_planner_id(planner_id)
+                v_scaling = rospy.get_param("/shared/max_velocity_scaling_factor", 0.15)
+                self.move_group.set_max_velocity_scaling_factor(v_scaling)
+                a_scaling = rospy.get_param("/shared/max_acceleration_scaling_factor", 0.3)
+                self.move_group.set_max_acceleration_scaling_factor(a_scaling)
+                allowed_planning_time = rospy.get_param("/shared/allowed_planning_time", 5.0)
+                self.move_group.set_planning_time(allowed_planning_time)
+                num_planning_attempts = rospy.get_param("/shared/num_planning_attempts", 10)
+                self.move_group.set_num_planning_attempts(num_planning_attempts)
+                
+                pose = self.get_pose(element)
+                self.move_group.clear_pose_targets()
+                self.move_group.set_pose_target(pose)
+                
+                # Try to find a solution several times
+                for k in range(500):
+                    if self.server.is_preempt_requested():
+                        return False
+                    plan = self.move_group.plan()
+                    if plan.joint_trajectory.points:
+                        break
+                
+                if not plan.joint_trajectory.points:
+                    rospy.logerr("Planning failed")
+                    return False
+                
+                self.move_group.execute(plan)
+                self.move_group.stop()
+            return True
+        except:
+            return False
+
+    def register(self, element):
+        try:
+            source = element.get('source')
+            target = element.get('target')
+            method = element.get('method')
+            threshold = float(element.get('threshold'))
+            self.feedback.message = "Register "+source
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req1 = RegisterRequest()
+            req1.source = source
+            req1.target = target
+            if (method=="point_to_point_icp"):
+                req1.method = req1.POINT_TO_POINT_ICP
+            elif (method=="point_to_plane_icp"):
+                req1.method = req1.POINT_TO_PLANE_ICP
+            req1.threshold = threshold
+            
+            # Call service
+            resp1 = self.register_service(req1)
+            
+            # Create service request
+            req2 = TransformRequest()
+            req2.forward = True
+            req2.fragment = source
+            req2.transform = resp1.transform
+            
+            # Call service
+            resp2 = self.transform_service(req2)
+            
+            return resp2.success
+        except:
+            return False
+
+    def multiway(self, element):
+        try:
+            method = element.get('method')
+            threshold = float(element.get('threshold'))
+            self.feedback.message = "Multiway registration..."
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = MultiwayRegisterRequest()
+            if (method=="point_to_point_icp"):
+                req.method = req.POINT_TO_POINT_ICP
+            elif (method=="point_to_plane_icp"):
+                req.method = req.POINT_TO_PLANE_ICP
+            req.threshold = threshold
+            
+            # Call service
+            resp = self.multiway_service(req)
+            
+            return resp.success
+        except:
+            return False
+
+    def transform(self, element):
+        try:
+            fragment = element.get('fragment')
+            translation = element.find('translation').get('xyz').split(" ")
+            rotation = element.find('rotation').get('xyzw').split(" ")
+            self.feedback.message = "Transform "+fragment
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = TransformRequest()
+            
+            req.forward = element.get('forward')=='true'
+            
+            req.fragment = fragment
+            req.transform.translation.x = float(translation[0])
+            req.transform.translation.y = float(translation[1])
+            req.transform.translation.z = float(translation[2])
+            req.transform.rotation.x = float(rotation[0])
+            req.transform.rotation.y = float(rotation[1])
+            req.transform.rotation.z = float(rotation[2])
+            req.transform.rotation.w = float(rotation[3])
+            
+            # Call service
+            resp = self.transform_service(req)
+            
+            return resp.success
+        except:
+            return False
+    
+    def load(self, element):
+        try:
+            name = element.get('name')
+            self.feedback.message = "Load "+name
+            self.server.publish_feedback(self.feedback)
+            
+            # Create service request
+            req = LoadRequest()
+            req.name = name
+            if (element.get('type')=='rgbd_image'):
+                req.type = req.RGBD_IMAGE
+                req.path_color = element.get('path_color')
+                req.path_depth = element.get('path_depth')
+            else:
+                req.type = req.POINT_CLOUD
+                req.path_point_cloud = element.get('path_point_cloud')
+            req.transform.rotation.w = 1
+            
+            # Call service
+            resp = self.load_service(req)
+            return resp.success
+        except:
+            return False
+
+    def execute(self, goal):
+        # Prepare feedback
+        self.feedback.progress = 0.0
+        
+        # Convert xacro to ordinary xml document
+        try:
+            doc = xacro.process_file(goal.filename)
+            doc_str = doc.toprettyxml()
+        except Exception as e:
+            self.feedback.message = e.message
+            self.server.publish_feedback(self.feedback)
+            self.server.set_preempted()
+            return
+        
+        # Parse and validate xml document
+        try:
+            parser = etree.XMLParser(schema=schema,
+                                     remove_comments=True,
+                                     attribute_defaults=True)
+            script = etree.fromstring(doc_str, parser=parser)
+        except Exception as e:
+            self.feedback.message = e.message
+            self.server.publish_feedback(self.feedback)
+            self.server.set_preempted()
+            return
+        
+        # Process xml document
+        L = len(script.getchildren())
+        i = 1
+        
+        if (script.get('optimization')=='true'):
+            self.optimization = True
+            self.optimized_goals = []
+            self.optimized_plans = []
+            self.opt_counter = 0
+            if not self.optimize(script):
+                self.feedback.message = "Script did not finish"
+                self.server.publish_feedback(self.feedback)
+                self.server.set_aborted()
+                return
+        else:
+            self.optimization = False
+        
+        finished = True
+        for child in script:
+            if self.server.is_preempt_requested():
+                finished = False
+                break
+            rospy.loginfo("Processing step "+str(i)+" out of "+str(L)+".")
+            try:
+                success = self.functions[child.tag](child)
+                if success is False:
+                    finished = False
+                    break
+            except KeyError:
+                print("Unknown function...")
+            
+            self.feedback.progress = 1.0*i/L
+            i += 1
+        if finished is True:
+            rospy.loginfo("Script finished.")
+            self.feedback.message = "Script finished"
+            self.server.publish_feedback(self.feedback)
+            self.server.set_succeeded()
+        else:
+            rospy.logerr("Script did not finish.")
+            self.feedback.message = "Script did not finish"
+            self.server.publish_feedback(self.feedback)
+            self.server.set_aborted()
+
+if __name__ == '__main__':
+    # Load xml schema
+    rospack = rospkg.RosPack()
+    path = rospack.get_path('acin_automation')
+    schema_doc = etree.parse(path+"/res/schema.xsd")
+    schema = etree.XMLSchema(schema_doc)
+    
+    # Start ROS node
+    rospy.init_node('script_execution_manager')
+    server = ExecuteScriptServer(schema)
+    
+    rospy.spin()

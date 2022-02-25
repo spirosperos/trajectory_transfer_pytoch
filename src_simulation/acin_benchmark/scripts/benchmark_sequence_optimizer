@@ -1,0 +1,245 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import xacro
+import math as m
+import numpy as np
+from lxml import etree
+
+import rospy
+import rospkg
+import moveit_commander
+
+from geometry_msgs.msg import Pose
+from moveit_msgs.msg import RobotState
+from geometry_msgs.msg import PoseStamped
+from acin_automation.srv import Optimize, OptimizeRequest
+
+def get_pose(elements):
+    pose = Pose()
+    
+    if (elements[0].tag=='position'):
+        position = elements[0].get('xyz').split(" ")
+        pose.position.x = float(position[0])
+        pose.position.y = float(position[1])
+        pose.position.z = float(position[2])
+        orientation = elements[1].get('xyzw').split(" ")
+        pose.orientation.x = float(orientation[0])
+        pose.orientation.y = float(orientation[1])
+        pose.orientation.z = float(orientation[2])
+        pose.orientation.w = float(orientation[3])
+    else:
+        center = elements[0].get('xyz').split(" ")
+        x = float(center[0])
+        y = float(center[1])
+        z = float(center[2])
+        r = float(elements[0].get('radius'))
+        p = float(elements[1].get('phi'))
+        t = float(elements[1].get('theta'))
+        a = float(elements[1].get('alpha'))
+        
+        # Compute elements of rotation matrix
+        m00 = m.cos(p)*m.cos(t)*m.sin(a) - m.sin(p)*m.cos(a)
+        m10 = m.sin(p)*m.cos(t)*m.sin(a) + m.cos(p)*m.cos(a)
+        m20 = -m.sin(t)*m.sin(a)
+        m01 = m.cos(p)*m.cos(t)*m.cos(a) + m.sin(p)*m.sin(a)
+        m11 = m.sin(p)*m.cos(t)*m.cos(a) - m.cos(p)*m.sin(a)
+        m21 = -m.sin(t)*m.cos(a)
+        m02 = -m.cos(p)*m.sin(t)
+        m12 = -m.sin(p)*m.sin(t)
+        m22 = -m.cos(t)
+        
+        # Calculate quaternion
+        if(m22<0):
+            if(m00>m11):
+                b = 1+m00-m11-m22
+                qx = b
+                qy = m10+m01
+                qz = m02+m20
+                qw = m21-m12
+            else:
+                b = 1-m00+m11-m22
+                qx = m10+m01
+                qy = b
+                qz = m21+m12
+                qw = m02-m20
+        elif(m00<-m11):
+            b = 1-m00-m11+m22
+            qx = m02+m20
+            qy = m21+m12
+            qz = b
+            qw = m10-m01
+        else:
+            b = 1+m00+m11+m22
+            qx = m21-m12
+            qy = m02-m20
+            qz = m10-m01
+            qw = b
+        
+        qx *= 0.5/m.sqrt(b)
+        qy *= 0.5/m.sqrt(b)
+        qz *= 0.5/m.sqrt(b)
+        qw *= 0.5/m.sqrt(b)
+        
+        # Calculate position
+        px = x+r*m.sin(t)*m.cos(p)
+        py = y+r*m.sin(t)*m.sin(p)
+        pz = z+r*m.cos(t)
+        
+        # Fill message
+        pose.position.x = px
+        pose.position.y = py
+        pose.position.z = pz
+        pose.orientation.x = qx
+        pose.orientation.y = qy
+        pose.orientation.z = qz
+        pose.orientation.w = qw
+    return pose
+
+if __name__ == '__main__':
+    # Load xml schema
+    rospack = rospkg.RosPack()
+    path = rospack.get_path('acin_automation')
+    schema_doc = etree.parse(path+"/res/schema.xsd")
+    schema = etree.XMLSchema(schema_doc)
+    
+    # Start ROS node
+    rospy.init_node('benchmark_sequence_optimizer')
+    
+    # Set parameters
+    script_name = '/home/benchmark.xml'
+    log_name = '/home/log.csv'
+    optimization = True
+    runs = 100
+    beta = 1.5
+    
+    # Convert xacro to ordinary xml document
+    try:
+        doc = xacro.process_file(script_name)
+        doc_str = doc.toprettyxml()
+    except:
+        rospy.logerr("Script not found")
+        exit()
+    
+    # Parse and validate xml document
+    try:
+        parser = etree.XMLParser(schema=schema,
+                                 remove_comments=True,
+                                 attribute_defaults=True)
+        script = etree.fromstring(doc_str,parser=parser)
+    except:
+        rospy.logerr("Script not valid")
+        exit()
+    
+    # Prepare service proxy
+    optimize_service = rospy.ServiceProxy('optimize', Optimize)
+    
+    # Prepare MoveIt
+    move_group = moveit_commander.MoveGroupCommander('arm')
+    
+    # Create service request
+    req = OptimizeRequest()
+    req.beta = beta
+    req.start_state = move_group.get_current_state().joint_state
+    req.target_poses = []
+    
+    # Find all target poses in script
+    for child in script:
+        if(child.tag == 'move'):
+            pose = PoseStamped()
+            pose.header.frame_id = "world"
+            pose.pose = get_pose(child)
+            req.target_poses.append(pose)
+    
+    if optimization:
+        # Prepare results
+        total_durations = [0]
+        num_planning_requests = [0]
+        
+        # Call service
+        for i in range(runs):
+            if rospy.is_shutdown():
+                exit()
+            rospy.loginfo("Run "+str(i+1))
+            res = optimize_service(req)
+            if not res.success:
+                rospy.logwarn("Optimization failed")
+                continue
+            
+            # Append results
+            total_durations.append(res.total_duration.to_sec())
+            num_planning_requests.append(res.num_planning_requests)
+        
+        # Create log
+        total_durations = np.asarray(total_durations)
+        num_planning_requests = np.asarray(num_planning_requests)
+        
+        indices = total_durations.argsort()
+        total_durations = total_durations[indices]
+        num_planning_requests = num_planning_requests[indices]
+        
+        cdf = np.linspace(0, 1.0*len(total_durations)/runs,
+                          1.0*len(total_durations), endpoint=False)
+        
+        log = np.array([total_durations, cdf, num_planning_requests])
+        np.savetxt(log_name, log.transpose(), delimiter=',')
+    else:
+        # Prepare results
+        total_durations = [0]
+        
+        # Set parameters
+        planner_id = rospy.get_param("/shared/planner_id")
+        move_group.set_planner_id(planner_id)
+        v_scaling = rospy.get_param("/shared/max_velocity_scaling_factor")
+        move_group.set_max_velocity_scaling_factor(v_scaling)
+        a_scaling = rospy.get_param("/shared/max_acceleration_scaling_factor")
+        move_group.set_max_acceleration_scaling_factor(a_scaling)
+        allowed_planning_time = rospy.get_param("/shared/allowed_planning_time", 5.0)
+        move_group.set_planning_time(allowed_planning_time)
+        num_planning_attempts = rospy.get_param("/shared/num_planning_attempts", 10)
+        move_group.set_num_planning_attempts(num_planning_attempts)
+        
+        for i in range(runs):
+            if rospy.is_shutdown():
+                exit()
+            rospy.loginfo("Run "+str(i+1))
+            total_duration = 0
+            move_group.set_start_state(move_group.get_current_state())
+            success = True
+            for j in range(len(req.target_poses)):
+                move_group.clear_pose_targets()
+                move_group.set_pose_target(req.target_poses[j])
+                
+                # Try to find a solution several times
+                for k in range(500):
+                    plan = move_group.plan()
+                    if plan.joint_trajectory.points:
+                        break
+                
+                if not plan.joint_trajectory.points:
+                    success = False
+                    rospy.logwarn("Planning failed")
+                    break
+                
+                # Set new start state
+                point = plan.joint_trajectory.points[-1]
+                start = RobotState()
+                start.joint_state.name = plan.joint_trajectory.joint_names
+                start.joint_state.position = point.positions
+                move_group.set_start_state(start)
+                
+                # Append result
+                total_duration += point.time_from_start.to_sec()
+            if success:
+                total_durations.append(total_duration)
+        
+        # Create log
+        total_durations = np.asarray(total_durations)
+        total_durations.sort()
+        cdf = np.linspace(0, 1.0*len(total_durations)/runs,
+                          1.0*len(total_durations), endpoint=False)
+        
+        log = np.array([total_durations, cdf])
+        np.savetxt(log_name, log.transpose(), delimiter=',')
+    
+    exit()

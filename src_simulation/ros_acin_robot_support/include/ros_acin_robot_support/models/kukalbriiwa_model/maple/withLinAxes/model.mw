@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="2020" minor="2"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="false" autoexpanding_sections="true" UserProfileName="Maple Default Profile" NumericFormat-ApplyInteger="true" NumericFormat-ApplyRational="true" NumericFormat-ApplyExponent="false" editable="true">
+<Hide name="Group Range"/>
+</View-Properties>
+<MapleNet-Properties prettyprint="3" warnlevel="3" compactdisplay="false" preplot="" helpbrowser="standard" displayprecision="-1" echo="1" unitattributes="&quot;fontweight&quot; = &quot;bold&quot;" imaginaryunit="I" longdelim="true" elisiontermsthreshold="10000" elisiondigitsafter="100" elisiondigitsbefore="100" plotdevice="inline" errorbreak="1" plotoptions="" plotdriver="opengl" quiet="false" elisiontermsbefore="100" elisiontermsafter="100" historytimestamp="false" screenwidth="79" indentamount="4" plotoutput="terminal" screenpixelheight="1080" rtablesize="[10, 10]" useclientjvm="true" labelwidth="20" postplot="" typesetting="extended" ansi="false" ansicolor="[]" elisiondigitsthreshold="10000" showassumed="1" ansilprint="false" trailingsemicolon="true" errorcursor="false" labelling="true" screenheight="25" prompt="&gt; " verboseproc="1" latexwidth="8.0" ShowLabels="true"/>
+<Styles>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="16" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Inert Output" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[144,144,144]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[40,120,40]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[120,0,14]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Header and Footer" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkError" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Atomic Variable" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[175,0,175]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkWarning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Caption Reference" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Code" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="true"/>
+<Font name="Equation Label" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Caption Text" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.3" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="newline" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Annotation Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkError" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkWarning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+</Styles>
+<Startup-Code startupcode=""/>
+<Metadata-table>
+    <Metadata-category name="&lt;default&gt;"/>
+    <Metadata-tag id="0" category="&lt;default&gt;" name="Document Properties">
+        <Metadata-attribute name="Keywords" value="&lt;default&gt;"/>
+        <Metadata-attribute name="Item List" value="true"/>
+        <Metadata-attribute name="Title" value="&lt;default&gt;"/>
+        <Metadata-attribute name="Author" value="&lt;default&gt;"/>
+        <Metadata-attribute name="Subject" value="&lt;default&gt;"/>
+    </Metadata-tag>
+</Metadata-table>
+<Task-table>
+    <Task-category name="&lt;default&gt;"/>
+</Task-table>
+<Task/>
+<Group labelreference="L1303" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group><Text-field style="Caption Text" layout="Normal" alignment="centred"><Font size="20">Model of KUKA LBR iiwa with Linear Axes</Font></Text-field>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Initialization</Text-field></Title>
+<Group hide-output="false" labelreference="L1299" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart;</Text-field>
+</Input>
+</Group>
+<Group hide-output="false" labelreference="L1302" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">with(LinearAlgebra):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1301" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">with(VectorCalculus,Jacobian):</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L1300" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">model_folder_name:=&quot;withLinAxes&quot;;</Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Definitions</Text-field></Title>
+<Group labelreference="L1199" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">In addition to the generalized coordinates q1,...,q7 for the KUKA robot, there are two coordinates, named qa and qb, for the linear axes.</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1198" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">q_dim := 9:
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L870" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Generalized coordinates</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L867" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">q := &lt;qa,qb,q1,q2,q3,q4,q5,q6,q7&gt;;
+q_list := convert(q,list):</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSSVtcm93R0YkNiYtSSNtaUdGJDYlUSJxRicvJSdpdGFsaWNHUSV0cnVlRicvJSxtYXRodmFyaWFudEdRJ2l0YWxpY0YnLUkjbW9HRiQ2LVEpJkFzc2lnbjtGJy9GNlEnbm9ybWFsRicvJSZmZW5jZUdRJmZhbHNlRicvJSpzZXBhcmF0b3JHRkAvJSlzdHJldGNoeUdGQC8lKnN5bW1ldHJpY0dGQC8lKGxhcmdlb3BHRkAvJS5tb3ZhYmxlbGltaXRzR0ZALyUnYWNjZW50R0ZALyUnbHNwYWNlR1EsMC4yNzc3Nzc4ZW1GJy8lJ3JzcGFjZUdGTy1JKG1mZW5jZWRHRiQ2KC1GLDYmLUknbXRhYmxlR0YkNj0tSSRtdHJHRiQ2Ji1JJG10ZEdGJDYoLUYvNiVRI3FhRidGMkY1LyUpcm93YWxpZ25HUSFGJy8lLGNvbHVtbmFsaWduR0Zfby8lK2dyb3VwYWxpZ25HRl9vLyUocm93c3BhbkdRIjFGJy8lK2NvbHVtbnNwYW5HRmZvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRI3FiRidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRI3ExRidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRI3EyRidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRI3EzRidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRI3E0RidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRI3E1RidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRI3E2RidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRI3E3RidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLyUmYWxpZ25HUSVheGlzRicvRl5vUSliYXNlbGluZUYnL0Zhb1EnY2VudGVyRicvRmNvUSd8ZnJsZWZ0fGhyRicvJS9hbGlnbm1lbnRzY29wZUdGNC8lLGNvbHVtbndpZHRoR1ElYXV0b0YnLyUmd2lkdGhHRl50LyUrcm93c3BhY2luZ0dRJjEuMGV4RicvJS5jb2x1bW5zcGFjaW5nR1EmMC44ZW1GJy8lKXJvd2xpbmVzR1Elbm9uZUYnLyUsY29sdW1ubGluZXNHRml0LyUmZnJhbWVHRml0LyUtZnJhbWVzcGFjaW5nR1EsMC40ZW1+MC41ZXhGJy8lKmVxdWFscm93c0dGQC8lLWVxdWFsY29sdW1uc0dGQC8lLWRpc3BsYXlzdHlsZUdGQC8lJXNpZGVHUSZyaWdodEYnLyUwbWlubGFiZWxzcGFjaW5nR0ZmdC8lK2ZvcmVncm91bmRHUShbMCwwLDBdRicvJSlyZWFkb25seUdGQEY8RjwvSSttc2VtYW50aWNzR0YkUSpDb2xWZWN0b3JGJy8lJW9wZW5HUScmbHNxYjtGJy8lJmNsb3NlR1EnJnJzcWI7RidGYXZGPC1GUzYoLUYsNiYtRlg2PS1GZW42Ji1GaG42KC1GLzYnRlxvRjJGXHZGX3ZGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYnRl9wRjJGXHZGX3ZGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYnRmZwRjJGXHZGX3ZGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYnRl1xRjJGXHZGX3ZGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYnRmRxRjJGXHZGX3ZGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYnRltyRjJGXHZGX3ZGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYnRmJyRjJGXHZGX3ZGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYnRmlyRjJGXHZGX3ZGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYnRmBzRjJGXHZGX3ZGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Zib0Zhc0Zkc0Zmc0Zoc0Zqc0ZcdEZfdEZhdEZkdEZndEZqdEZcdUZedUZhdUZjdUZldUZndUZqdUZcdkZfdkY8Rlx2Rl92RjwvRmV2USJbRicvRmh2USJdRic=">LUkobWZlbmNlZEc2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUklbXJvd0dGJDYjLUknbXRhYmxlR0YkNj0tSSRtdHJHRiQ2Ji1JJG10ZEdGJDYoLUkjbWlHRiQ2J1EjcWFGJy8lJ2l0YWxpY0dRJXRydWVGJy8lK2ZvcmVncm91bmRHUShbMCwwLDBdRicvJSlyZWFkb25seUdRJmZhbHNlRicvJSxtYXRodmFyaWFudEdRJ2l0YWxpY0YnLyUpcm93YWxpZ25HUSFGJy8lLGNvbHVtbmFsaWduR0ZJLyUrZ3JvdXBhbGlnbkdGSS8lKHJvd3NwYW5HUSIxRicvJStjb2x1bW5zcGFuR0ZQRkdGSkZMLUYyNiYtRjU2KC1GODYnUSNxYkYnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLUYyNiYtRjU2KC1GODYnUSNxMUYnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLUYyNiYtRjU2KC1GODYnUSNxMkYnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLUYyNiYtRjU2KC1GODYnUSNxM0YnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLUYyNiYtRjU2KC1GODYnUSNxNEYnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLUYyNiYtRjU2KC1GODYnUSNxNUYnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLUYyNiYtRjU2KC1GODYnUSNxNkYnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLUYyNiYtRjU2KC1GODYnUSNxN0YnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLyUmYWxpZ25HUSVheGlzRicvRkhRKWJhc2VsaW5lRicvRktRJ2NlbnRlckYnL0ZNUSd8ZnJsZWZ0fGhyRicvJS9hbGlnbm1lbnRzY29wZUdGPS8lLGNvbHVtbndpZHRoR1ElYXV0b0YnLyUmd2lkdGhHRmJyLyUrcm93c3BhY2luZ0dRJjEuMGV4RicvJS5jb2x1bW5zcGFjaW5nR1EmMC44ZW1GJy8lKXJvd2xpbmVzR1Elbm9uZUYnLyUsY29sdW1ubGluZXNHRl1zLyUmZnJhbWVHRl1zLyUtZnJhbWVzcGFjaW5nR1EsMC40ZW1+MC41ZXhGJy8lKmVxdWFscm93c0dGQy8lLWVxdWFsY29sdW1uc0dGQy8lLWRpc3BsYXlzdHlsZUdGQy8lJXNpZGVHUSZyaWdodEYnLyUwbWlubGFiZWxzcGFjaW5nR0ZqckY+RkEvRkVRJ25vcm1hbEYnLyUlb3BlbkdRIltGJy8lJmNsb3NlR1EiXUYn</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L876" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Generalized velocities</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L868" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">q_d := &lt;qda,qdb,qd1,qd2,qd3,qd4,qd5,qd6,qd7&gt;;
+q_d_list := convert(q_d,list):</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSSVtcm93R0YkNiYtSSNtaUdGJDYlUSRxX2RGJy8lJ2l0YWxpY0dRJXRydWVGJy8lLG1hdGh2YXJpYW50R1EnaXRhbGljRictSSNtb0dGJDYtUSkmQXNzaWduO0YnL0Y2USdub3JtYWxGJy8lJmZlbmNlR1EmZmFsc2VGJy8lKnNlcGFyYXRvckdGQC8lKXN0cmV0Y2h5R0ZALyUqc3ltbWV0cmljR0ZALyUobGFyZ2VvcEdGQC8lLm1vdmFibGVsaW1pdHNHRkAvJSdhY2NlbnRHRkAvJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZPLUkobWZlbmNlZEdGJDYoLUYsNiYtSSdtdGFibGVHRiQ2PS1JJG10ckdGJDYmLUkkbXRkR0YkNigtRi82JVEkcWRhRidGMkY1LyUpcm93YWxpZ25HUSFGJy8lLGNvbHVtbmFsaWduR0Zfby8lK2dyb3VwYWxpZ25HRl9vLyUocm93c3BhbkdRIjFGJy8lK2NvbHVtbnNwYW5HRmZvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRJHFkYkYnRjJGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYlUSRxZDFGJ0YyRjVGXW9GYG9GYm9GZG9GZ29GXW9GYG9GYm8tRmVuNiYtRmhuNigtRi82JVEkcWQyRidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRJHFkM0YnRjJGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYlUSRxZDRGJ0YyRjVGXW9GYG9GYm9GZG9GZ29GXW9GYG9GYm8tRmVuNiYtRmhuNigtRi82JVEkcWQ1RidGMkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNiVRJHFkNkYnRjJGNUZdb0Zgb0Zib0Zkb0Znb0Zdb0Zgb0Ziby1GZW42Ji1GaG42KC1GLzYlUSRxZDdGJ0YyRjVGXW9GYG9GYm9GZG9GZ29GXW9GYG9GYm8vJSZhbGlnbkdRJWF4aXNGJy9GXm9RKWJhc2VsaW5lRicvRmFvUSdjZW50ZXJGJy9GY29RJ3xmcmxlZnR8aHJGJy8lL2FsaWdubWVudHNjb3BlR0Y0LyUsY29sdW1ud2lkdGhHUSVhdXRvRicvJSZ3aWR0aEdGXnQvJStyb3dzcGFjaW5nR1EmMS4wZXhGJy8lLmNvbHVtbnNwYWNpbmdHUSYwLjhlbUYnLyUpcm93bGluZXNHUSVub25lRicvJSxjb2x1bW5saW5lc0dGaXQvJSZmcmFtZUdGaXQvJS1mcmFtZXNwYWNpbmdHUSwwLjRlbX4wLjVleEYnLyUqZXF1YWxyb3dzR0ZALyUtZXF1YWxjb2x1bW5zR0ZALyUtZGlzcGxheXN0eWxlR0ZALyUlc2lkZUdRJnJpZ2h0RicvJTBtaW5sYWJlbHNwYWNpbmdHRmZ0LyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0ZARjxGPC9JK21zZW1hbnRpY3NHRiRRKkNvbFZlY3RvckYnLyUlb3BlbkdRJyZsc3FiO0YnLyUmY2xvc2VHUScmcnNxYjtGJ0ZhdkY8LUZTNigtRiw2Ji1GWDY9LUZlbjYmLUZobjYoLUYvNidGXG9GMkZcdkZfdkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGX3BGMkZcdkZfdkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGZnBGMkZcdkZfdkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGXXFGMkZcdkZfdkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGZHFGMkZcdkZfdkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGW3JGMkZcdkZfdkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGYnJGMkZcdkZfdkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGaXJGMkZcdkZfdkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvLUZlbjYmLUZobjYoLUYvNidGYHNGMkZcdkZfdkY1Rl1vRmBvRmJvRmRvRmdvRl1vRmBvRmJvRmFzRmRzRmZzRmhzRmpzRlx0Rl90RmF0RmR0Rmd0Rmp0Rlx1Rl51RmF1RmN1RmV1Rmd1Rmp1Rlx2Rl92RjxGXHZGX3ZGPC9GZXZRIltGJy9GaHZRIl1GJw==">LUkobWZlbmNlZEc2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUklbXJvd0dGJDYjLUknbXRhYmxlR0YkNj0tSSRtdHJHRiQ2Ji1JJG10ZEdGJDYoLUkjbWlHRiQ2J1EkcWRhRicvJSdpdGFsaWNHUSV0cnVlRicvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXUYnLyUpcmVhZG9ubHlHUSZmYWxzZUYnLyUsbWF0aHZhcmlhbnRHUSdpdGFsaWNGJy8lKXJvd2FsaWduR1EhRicvJSxjb2x1bW5hbGlnbkdGSS8lK2dyb3VwYWxpZ25HRkkvJShyb3dzcGFuR1EiMUYnLyUrY29sdW1uc3BhbkdGUEZHRkpGTC1GMjYmLUY1NigtRjg2J1EkcWRiRidGO0Y+RkFGREZHRkpGTEZORlFGR0ZKRkwtRjI2Ji1GNTYoLUY4NidRJHFkMUYnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLUYyNiYtRjU2KC1GODYnUSRxZDJGJ0Y7Rj5GQUZERkdGSkZMRk5GUUZHRkpGTC1GMjYmLUY1NigtRjg2J1EkcWQzRidGO0Y+RkFGREZHRkpGTEZORlFGR0ZKRkwtRjI2Ji1GNTYoLUY4NidRJHFkNEYnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLUYyNiYtRjU2KC1GODYnUSRxZDVGJ0Y7Rj5GQUZERkdGSkZMRk5GUUZHRkpGTC1GMjYmLUY1NigtRjg2J1EkcWQ2RidGO0Y+RkFGREZHRkpGTEZORlFGR0ZKRkwtRjI2Ji1GNTYoLUY4NidRJHFkN0YnRjtGPkZBRkRGR0ZKRkxGTkZRRkdGSkZMLyUmYWxpZ25HUSVheGlzRicvRkhRKWJhc2VsaW5lRicvRktRJ2NlbnRlckYnL0ZNUSd8ZnJsZWZ0fGhyRicvJS9hbGlnbm1lbnRzY29wZUdGPS8lLGNvbHVtbndpZHRoR1ElYXV0b0YnLyUmd2lkdGhHRmJyLyUrcm93c3BhY2luZ0dRJjEuMGV4RicvJS5jb2x1bW5zcGFjaW5nR1EmMC44ZW1GJy8lKXJvd2xpbmVzR1Elbm9uZUYnLyUsY29sdW1ubGluZXNHRl1zLyUmZnJhbWVHRl1zLyUtZnJhbWVzcGFjaW5nR1EsMC40ZW1+MC41ZXhGJy8lKmVxdWFscm93c0dGQy8lLWVxdWFsY29sdW1uc0dGQy8lLWRpc3BsYXlzdHlsZUdGQy8lJXNpZGVHUSZyaWdodEYnLyUwbWlubGFiZWxzcGFjaW5nR0ZqckY+RkEvRkVRJ25vcm1hbEYnLyUlb3BlbkdRIltGJy8lJmNsb3NlR1EiXUYn</Equation></Text-field>
+</Output>
+</Group>
+<Group labelreference="L960" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Function to take a time derivative:</Text-field><Text-field style="Text" layout="Normal">1) Convert all symbols q to time functions q(t)</Text-field><Text-field style="Text" layout="Normal">2) Take the derivative w.r.t. time t</Text-field><Text-field style="Text" layout="Normal">3) Convert all q(t) back to q</Text-field><Text-field style="Text" layout="Normal">4) Convert all dq/dt(t) to q_d (q_dot)</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L962" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">q_to_qt := {seq(s=s(t),s in q_list)}:
+qt_to_q := {seq(s(t)=s,s in q_list)}:
+qdt_to_qd := {seq(diff(q_list[i](t),t)=q_d_list[i],i=1..q_dim)}:
+d_dt := x-&gt;eval(eval(map(diff,eval(x,q_to_qt),t),qdt_to_qd),qt_to_q):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L938" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Homogeneous transformations</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L896" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">HR_x := theta -&gt; &lt;&lt;1,0,0,0&gt;|&lt;0,cos(theta),sin(theta),0&gt;|&lt;0,-sin(theta),cos(theta),0&gt;|&lt;0,0,0,1&gt;&gt;:
+HR_y := theta -&gt; &lt;&lt;cos(theta),0,-sin(theta),0&gt;|&lt;0,1,0,0&gt;|&lt;sin(theta),0,cos(theta),0&gt;|&lt;0,0,0,1&gt;&gt;:
+HR_z := theta -&gt; &lt;&lt;cos(theta),sin(theta),0,0&gt;|&lt;-sin(theta),cos(theta),0,0&gt;|&lt;0,0,1,0&gt;|&lt;0,0,0,1&gt;&gt;:
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1204" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Trans_x := d -&gt; &lt;&lt;1,0,0,0&gt;|&lt;0,1,0,0&gt;|&lt;0,0,1,0&gt;|&lt;d,0,0,1&gt;&gt;:
+Trans_y := d -&gt; &lt;&lt;1,0,0,0&gt;|&lt;0,1,0,0&gt;|&lt;0,0,1,0&gt;|&lt;0,d,0,1&gt;&gt;:
+Trans_z := d -&gt; &lt;&lt;1,0,0,0&gt;|&lt;0,1,0,0&gt;|&lt;0,0,1,0&gt;|&lt;0,0,d,1&gt;&gt;:</Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Kinematics</Text-field></Title>
+<Group labelreference="L1200" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Transformations between successive links</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L1038" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">T_w0 := Trans_x(dw0x).Trans_y(dw0y).Trans_z(dw0z).HR_z(alpha_base).HR_y(beta_base).HR_x(gamma_base):
+T_0a := Trans_y(day+qa).Trans_z(daz):
+T_ab := Trans_x(qb).Trans_z(dbz).HR_y(Pi):
+T_b1 := Trans_z(d1).HR_z(q1):
+T_12 := Trans_z(d2).HR_z(Pi).HR_x(Pi/2).HR_z(q2):
+T_23 := Trans_y(d3).HR_z(Pi).HR_x(Pi/2).HR_z(q3):
+<Font opaque="true">T_34 := Trans_z(d4).HR_x(Pi/2).HR_z(q4):
+</Font>T_45 := Trans_y(d5).HR_z(Pi).HR_x(Pi/2).HR_z(q5):
+<Font opaque="true">T_56 := Trans_z(d6).HR_x(Pi/2).HR_z(q6):</Font>
+T_67 := Trans_y(d7).HR_z(Pi).HR_x(Pi/2).HR_z(q7):
+T_7e := Trans_z(d8):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L907" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Transformations to base coordinate system</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L906" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">T_0b := simplify(T_0a.T_ab):
+T_01 := simplify(T_0b.T_b1):
+T_02 := simplify(T_01.T_12):
+T_03 := simplify(T_02.T_23):
+T_04 := simplify(T_03.T_34):
+T_05 := simplify(T_04.T_45):
+T_06 := simplify(T_05.T_56):
+T_07 := simplify(T_06.T_67):
+T_0e := simplify(T_07.T_7e):
+T_we := simplify(T_w0.T_0e):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1250" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Vectors for each link's center of gravity in its own coordinate system</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L1251" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">spa := &lt;spax,spay,spaz,1&gt;:
+spb := &lt;spbx,spby,spbz,1&gt;:
+sp1 := &lt;sp1x,sp1y,sp1z,1&gt;:
+sp2 := &lt;sp2x,sp2y,sp2z,1&gt;:
+sp3 := &lt;sp3x,sp3y,sp3z,1&gt;:
+sp4 := &lt;sp4x,sp4y,sp4z,1&gt;:
+sp5 := &lt;sp5x,sp5y,sp5z,1&gt;:
+sp6 := &lt;sp6x,sp6y,sp6z,1&gt;:
+sp7 := &lt;sp7x,sp7y,sp7z,1&gt;:
+spt := &lt;sptx,spty,sptz,1&gt;:
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L924" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Center of gravity in base coordinate system</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L919" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">sp_0a := (T_0a.spa)[1..3]:
+sp_0b := (T_0b.spb)[1..3]:
+sp_01 := (T_01.sp1)[1..3]:
+sp_02 := (T_02.sp2)[1..3]:
+sp_03 := (T_03.sp3)[1..3]:
+sp_04 := (T_04.sp4)[1..3]:
+sp_05 := (T_05.sp5)[1..3]:
+sp_06 := (T_06.sp6)[1..3]:
+sp_07 := (T_07.sp7)[1..3]:
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L905" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Rotation matrices</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L901" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">R_0a := T_0a[1..3,1..3]:
+R_0b := T_0b[1..3,1..3]:
+R_01 := T_01[1..3,1..3]:
+R_02 := T_02[1..3,1..3]:
+R_03 := T_03[1..3,1..3]:
+R_04 := T_04[1..3,1..3]:
+R_05 := T_05[1..3,1..3]:
+R_06 := T_06[1..3,1..3]:
+R_07 := T_07[1..3,1..3]:
+R_0e := T_0e[1..3,1..3]:
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1060" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">p_0e := T_0e[1..3,4]:</Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Differential Kinematics</Text-field></Title>
+<Group labelreference="L883" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Translational part of the Jacobian</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L925" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Jv_0a := simplify(Jacobian(sp_0a,q_list)):
+Jv_0b := simplify(Jacobian(sp_0b,q_list)):
+Jv_01 := simplify(Jacobian(sp_01,q_list)):
+Jv_02 := simplify(Jacobian(sp_02,q_list)):
+Jv_03 := simplify(Jacobian(sp_03,q_list)):
+Jv_04 := simplify(Jacobian(sp_04,q_list)):
+Jv_05 := simplify(Jacobian(sp_05,q_list)):
+Jv_06 := simplify(Jacobian(sp_06,q_list)):
+Jv_07 := simplify(Jacobian(sp_07,q_list)):
+Jv_0e := simplify(Jacobian( p_0e,q_list)):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L928" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Skew symmetric matrices S = dR/dt * R^T</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L926" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">S_01 := simplify(d_dt(R_01).R_01^%T):
+S_02 := simplify(d_dt(R_02).R_02^%T):
+S_03 := simplify(d_dt(R_03).R_03^%T):
+S_04 := simplify(d_dt(R_04).R_04^%T):
+S_05 := simplify(d_dt(R_05).R_05^%T):
+S_06 := simplify(d_dt(R_06).R_06^%T):
+S_07 := simplify(d_dt(R_07).R_07^%T):
+S_0e := simplify(d_dt(R_0e).R_0e^%T):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L931" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Angular velocities with respect to base</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L935" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">omega_01 := &lt;S_01[3,2],S_01[1,3],S_01[2,1]&gt;:
+omega_02 := &lt;S_02[3,2],S_02[1,3],S_02[2,1]&gt;:
+omega_03 := &lt;S_03[3,2],S_03[1,3],S_03[2,1]&gt;:
+omega_04 := &lt;S_04[3,2],S_04[1,3],S_04[2,1]&gt;:
+omega_05 := &lt;S_05[3,2],S_05[1,3],S_05[2,1]&gt;:
+omega_06 := &lt;S_06[3,2],S_06[1,3],S_06[2,1]&gt;:
+omega_07 := &lt;S_07[3,2],S_07[1,3],S_07[2,1]&gt;:
+omega_0e := &lt;S_0e[3,2],S_0e[1,3],S_0e[2,1]&gt;:
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L939" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Rotatory part of the Jacobian</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L953" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">J_omega_01 := Jacobian(omega_01,q_d_list):
+J_omega_02 := Jacobian(omega_02,q_d_list):
+J_omega_03 := Jacobian(omega_03,q_d_list):
+J_omega_04 := Jacobian(omega_04,q_d_list):
+J_omega_05 := Jacobian(omega_05,q_d_list):
+J_omega_06 := Jacobian(omega_06,q_d_list):
+J_omega_07 := Jacobian(omega_07,q_d_list):
+J_omega_0e := Jacobian(omega_0e,q_d_list):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1227" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Geometric Jacobian</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1228" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">JJ := &lt;Jv_0e,J_omega_0e&gt;:
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1252" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Time derivative of geometric Jacobian</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1229" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">JJ_p := simplify(add(map(diff,JJ,q[i])*q_d[i],i=1..q_dim)):</Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Dynamics</Text-field></Title>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 2" layout="Heading 2">Gravitation</Text-field></Title>
+<Group hide-input="false" labelreference="L1295" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">R_base_0 := T_w0[1..3,1..3]^%T:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1212" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Vector of gravitation</Text-field>
+</Input>
+</Group>
+<Group hide-output="false" labelreference="L971" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">g_vec := R_base_0.&lt;0,0,-g&gt;:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1211" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Potential energy</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1209" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">V := g_vec^%T.(ma*sp_0a + mb*sp_0b + m1*sp_01 + m2*sp_02 + m3*sp_03 + m4*sp_04 + m5*sp_05 + m6*sp_06 + m7*sp_07):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1210" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">V := simplify(V):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1221" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Vector of gravitational forces</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1222" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">gg := Transpose(Jacobian([V],q_list)):</Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 2" layout="Heading 2">Mass Matrix</Text-field></Title>
+<Group labelreference="L1161" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Moments of inertia in individual coordinate systems</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L1162" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">II1 := Matrix([ [I1xx,I1xy,I1xz], [I1xy,I1yy,I1yz], [I1xz,I1yz,I1zz] ]):
+II2 := Matrix([ [I2xx,I2xy,I2xz], [I2xy,I2yy,I2yz], [I2xz,I2yz,I2zz] ]):
+II3 := Matrix([ [I3xx,I3xy,I3xz], [I3xy,I3yy,I3yz], [I3xz,I3yz,I3zz] ]):
+II4 := Matrix([ [I4xx,I4xy,I4xz], [I4xy,I4yy,I4yz], [I4xz,I4yz,I4zz] ]):
+II5 := Matrix([ [I5xx,I5xy,I5xz], [I5xy,I5yy,I5yz], [I5xz,I5yz,I5zz] ]):
+II6 := Matrix([ [I6xx,I6xy,I6xz], [I6xy,I6yy,I6yz], [I6xz,I6yz,I6zz] ]):
+II7 := Matrix([ [I7xx,I7xy,I7xz], [I7xy,I7yy,I7yz], [I7xz,I7yz,I7zz] ]):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L975" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Translational part of D(q)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1239" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">D_tra_0a := simplify(ma*Jv_0a^%T.Jv_0a):
+D_tra_0b := simplify(mb*Jv_0b^%T.Jv_0b):
+D_tra_01 := simplify(m1*Jv_01^%T.Jv_01):
+D_tra_02 := simplify(m2*Jv_02^%T.Jv_02):
+D_tra_03 := simplify(m3*Jv_03^%T.Jv_03):
+D_tra_04 := simplify(m4*Jv_04^%T.Jv_04):
+D_tra_05 := simplify(m5*Jv_05^%T.Jv_05):
+D_tra_06 := simplify(m6*Jv_06^%T.Jv_06):
+D_tra_07 := simplify(m7*Jv_07^%T.Jv_07):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1144" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">D_tra := simplify(D_tra_0a + D_tra_0b + D_tra_01 + D_tra_02 + D_tra_03 + D_tra_04 + D_tra_05 + D_tra_06 + D_tra_07):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1247" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Rotatory part of D(q)</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1083" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">D_rot_01 := simplify(J_omega_01^%T.R_01.II1.R_01^%T.J_omega_01):
+D_rot_02 := simplify(J_omega_02^%T.R_02.II2.R_02^%T.J_omega_02):
+D_rot_03 := simplify(J_omega_03^%T.R_03.II3.R_03^%T.J_omega_03):
+D_rot_04 := simplify(J_omega_04^%T.R_04.II4.R_04^%T.J_omega_04):
+D_rot_05 := simplify(J_omega_05^%T.R_05.II5.R_05^%T.J_omega_05):
+D_rot_06 := simplify(J_omega_06^%T.R_06.II6.R_06^%T.J_omega_06):
+D_rot_07 := simplify(J_omega_07^%T.R_07.II7.R_07^%T.J_omega_07):
+</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1089" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">D_rot := simplify(D_rot_01 + D_rot_02 + D_rot_03 + D_rot_04 + D_rot_05 + D_rot_06 + D_rot_07):
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1245" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Mass matrix D(q)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1023" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DD := simplify(D_tra+D_rot):</Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 2" layout="Heading 2">Coriolis Matrix</Text-field></Title>
+<Group labelreference="L1213" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Christoffel symbols</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1216" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to q_dim do
+ for j from 1 to q_dim do
+  for k from 1 to q_dim do
+   cc[i,j,k] := 1/2*(diff(DD[k,j],q[i])+diff(DD[k,i],q[j])-diff(DD[i,j],q[k]));
+  od;
+ od;
+od;
+</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1217" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Coriolis matrix</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1218" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CC := Matrix(q_dim,q_dim):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1219" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for i from 1 to q_dim do
+ for j from 1 to q_dim do
+  for k from 1 to q_dim do
+   CC[k,j] := CC[k,j] + cc[i,j,k]*q_d[i];
+  od;
+ od;
+od;</Text-field>
+</Input>
+</Group>
+</Section>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 2" layout="Heading 2">Conservative forces and friction</Text-field></Title>
+<Group labelreference="L1153" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Joint stiffness K__i</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L1152" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">K := DiagonalMatrix(&lt;K__a,K__b,K__1,K__2,K__3,K__4,K__5,K__6,K__7&gt;):</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1155" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">theta := &lt;thetaa,thetab,theta1,theta2,theta3,theta4,theta5,theta6,theta7&gt;:</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1150" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">tau := K.(theta-q);</Text-field>
+</Input>
+<Output><Text-field style="2D Output" layout="Maple Output"><Equation executable="false" style="2D Output" display="LUkqbWNvbXBsZXRlRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliR0YnNiQtSSVtcm93R0YkNiYtSSNtaUdGJDYlUSYmdGF1O0YnLyUnaXRhbGljR1EmZmFsc2VGJy8lLG1hdGh2YXJpYW50R1Enbm9ybWFsRictSSNtb0dGJDYtUSkmQXNzaWduO0YnRjUvJSZmZW5jZUdGNC8lKnNlcGFyYXRvckdGNC8lKXN0cmV0Y2h5R0Y0LyUqc3ltbWV0cmljR0Y0LyUobGFyZ2VvcEdGNC8lLm1vdmFibGVsaW1pdHNHRjQvJSdhY2NlbnRHRjQvJSdsc3BhY2VHUSwwLjI3Nzc3NzhlbUYnLyUncnNwYWNlR0ZMLUkobWZlbmNlZEdGJDYoLUYsNiYtSSdtdGFibGVHRiQ2PS1JJG10ckdGJDYmLUkkbXRkR0YkNigtRiw2Ji1JJW1zdWJHRiQ2Ji1GLzYlUSJLRicvRjNRJXRydWVGJy9GNlEnaXRhbGljRictRi82JVEiYUYnRl9vRmFvLyUvc3Vic2NyaXB0c2hpZnRHUSIwRicvSSttc2VtYW50aWNzR0YkUSdhdG9taWNGJy1GOTYtUTEmSW52aXNpYmxlVGltZXM7RidGNUY8Rj5GQEZCRkRGRkZIL0ZLUSYwLjBlbUYnL0ZORmBwLUZQNiQtRiw2Ji1GLzYlUSd0aGV0YWFGJ0Zfb0Zhby1GOTYtUSgmbWludXM7RidGNUY8Rj5GQEZCRkRGRkZIL0ZLUSwwLjIyMjIyMjJlbUYnL0ZORl1xLUYvNiVRI3FhRidGX29GYW9GNUY1RjUvJSlyb3dhbGlnbkdRIUYnLyUsY29sdW1uYWxpZ25HRmRxLyUrZ3JvdXBhbGlnbkdGZHEvJShyb3dzcGFuR1EiMUYnLyUrY29sdW1uc3BhbkdGW3JGYnFGZXFGZ3EtRlg2Ji1GZW42KC1GLDYmLUZqbjYmRlxvLUYvNiVRImJGJ0Zfb0Zhb0Zmb0Zpb0ZccC1GUDYkLUYsNiYtRi82JVEndGhldGFiRidGX29GYW9GaXAtRi82JVEjcWJGJ0Zfb0Zhb0Y1RjVGNUZicUZlcUZncUZpcUZcckZicUZlcUZncS1GWDYmLUZlbjYoLUYsNiYtRmpuNiZGXG8tRi82JUZbckZfb0Zhb0Zmb0Zpb0ZccC1GUDYkLUYsNiYtRi82JVEpJnRoZXRhOzFGJ0Zfb0Zhb0ZpcC1GLzYlUSNxMUYnRl9vRmFvRjVGNUY1RmJxRmVxRmdxRmlxRlxyRmJxRmVxRmdxLUZYNiYtRmVuNigtRiw2Ji1Gam42JkZcby1GLzYlUSIyRidGX29GYW9GZm9GaW9GXHAtRlA2JC1GLDYmLUYvNiVRKSZ0aGV0YTsyRidGX29GYW9GaXAtRi82JVEjcTJGJ0Zfb0Zhb0Y1RjVGNUZicUZlcUZncUZpcUZcckZicUZlcUZncS1GWDYmLUZlbjYoLUYsNiYtRmpuNiZGXG8tRi82JVEiM0YnRl9vRmFvRmZvRmlvRlxwLUZQNiQtRiw2Ji1GLzYlUSkmdGhldGE7M0YnRl9vRmFvRmlwLUYvNiVRI3EzRidGX29GYW9GNUY1RjVGYnFGZXFGZ3FGaXFGXHJGYnFGZXFGZ3EtRlg2Ji1GZW42KC1GLDYmLUZqbjYmRlxvLUYvNiVRIjRGJ0Zfb0Zhb0Zmb0Zpb0ZccC1GUDYkLUYsNiYtRi82JVEpJnRoZXRhOzRGJ0Zfb0Zhb0ZpcC1GLzYlUSNxNEYnRl9vRmFvRjVGNUY1RmJxRmVxRmdxRmlxRlxyRmJxRmVxRmdxLUZYNiYtRmVuNigtRiw2Ji1Gam42JkZcby1GLzYlUSI1RidGX29GYW9GZm9GaW9GXHAtRlA2JC1GLDYmLUYvNiVRKSZ0aGV0YTs1RidGX29GYW9GaXAtRi82JVEjcTVGJ0Zfb0Zhb0Y1RjVGNUZicUZlcUZncUZpcUZcckZicUZlcUZncS1GWDYmLUZlbjYoLUYsNiYtRmpuNiZGXG8tRi82JVEiNkYnRl9vRmFvRmZvRmlvRlxwLUZQNiQtRiw2Ji1GLzYlUSkmdGhldGE7NkYnRl9vRmFvRmlwLUYvNiVRI3E2RidGX29GYW9GNUY1RjVGYnFGZXFGZ3FGaXFGXHJGYnFGZXFGZ3EtRlg2Ji1GZW42KC1GLDYmLUZqbjYmRlxvLUYvNiVRIjdGJ0Zfb0Zhb0Zmb0Zpb0ZccC1GUDYkLUYsNiYtRi82JVEpJnRoZXRhOzdGJ0Zfb0Zhb0ZpcC1GLzYlUSNxN0YnRl9vRmFvRjVGNUY1RmJxRmVxRmdxRmlxRlxyRmJxRmVxRmdxLyUmYWxpZ25HUSVheGlzRicvRmNxUSliYXNlbGluZUYnL0ZmcVEnY2VudGVyRicvRmhxUSd8ZnJsZWZ0fGhyRicvJS9hbGlnbm1lbnRzY29wZUdGYG8vJSxjb2x1bW53aWR0aEdRJWF1dG9GJy8lJndpZHRoR0ZiXWwvJStyb3dzcGFjaW5nR1EmMS4wZXhGJy8lLmNvbHVtbnNwYWNpbmdHUSYwLjhlbUYnLyUpcm93bGluZXNHUSVub25lRicvJSxjb2x1bW5saW5lc0dGXV5sLyUmZnJhbWVHRl1ebC8lLWZyYW1lc3BhY2luZ0dRLDAuNGVtfjAuNWV4RicvJSplcXVhbHJvd3NHRjQvJS1lcXVhbGNvbHVtbnNHRjQvJS1kaXNwbGF5c3R5bGVHRjQvJSVzaWRlR1EmcmlnaHRGJy8lMG1pbmxhYmVsc3BhY2luZ0dGal1sLyUrZm9yZWdyb3VuZEdRKFswLDAsMF1GJy8lKXJlYWRvbmx5R0Y0RjVGNS9Gam9RKkNvbFZlY3RvckYnLyUlb3BlbkdRJyZsc3FiO0YnLyUmY2xvc2VHUScmcnNxYjtGJ0ZlX2xGNS1GUDYoLUYsNiYtRlU2PS1GWDYmLUZlbjYoLUYsNigtRiM2JC1Gam42Ji1GLzYnRl5vRl9vRmBfbEZjX2xGYW8tSSptdmVyYmF0aW1HRiQ2I1FfdDYjLUkjbWlHNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHNiI2J1EiYTYiLyUnaXRhbGljR1EldHJ1ZTYiLyUrZm9yZWdyb3VuZEdRKFswLDAsMF02Ii8lKXJlYWRvbmx5R1EmZmFsc2U2Ii8lLG1hdGh2YXJpYW50R1EnaXRhbGljNiJGJ0Zmb0Zpby1Gam42JkZdYWwtRi82J0Zlb0Zfb0ZgX2xGY19sRmFvRmZvRmlvRlxwLUZQNiYtRiw2KC1GLzYnRmhwRl9vRmBfbEZjX2xGYW8tRjk2L0ZbcUZgX2xGY19sRjVGPEY+RkBGQkZERkZGSEZccUZecS1GLzYnRmFxRl9vRmBfbEZjX2xGYW9GYF9sRmNfbEY1RmBfbEZjX2xGNUZgX2xGY19sRjVGYnFGZXFGZ3FGaXFGXHJGYnFGZXFGZ3EtRlg2Ji1GZW42KC1GLDYoLUYjNiQtRmpuNiZGXWFsLUZgYWw2I1FfdDYjLUkjbWlHNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHNiI2J1EiYjYiLyUnaXRhbGljR1EldHJ1ZTYiLyUrZm9yZWdyb3VuZEdRKFswLDAsMF02Ii8lKXJlYWRvbmx5R1EmZmFsc2U2Ii8lLG1hdGh2YXJpYW50R1EnaXRhbGljNiJGJ0Zmb0Zpby1Gam42JkZdYWwtRi82J0ZockZfb0ZgX2xGY19sRmFvRmZvRmlvRlxwLUZQNiYtRiw2KC1GLzYnRl9zRl9vRmBfbEZjX2xGYW9GXWJsLUYvNidGYnNGX29GYF9sRmNfbEZhb0ZgX2xGY19sRjVGYF9sRmNfbEY1RmBfbEZjX2xGNUZicUZlcUZncUZpcUZcckZicUZlcUZncS1GWDYmLUZlbjYoLUYsNigtRiM2JC1Gam42JkZdYWwtRmBhbDYjUV90NiMtSSNtaUc2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkc2IjYnUSIxNiIvJSdpdGFsaWNHUSV0cnVlNiIvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXTYiLyUpcmVhZG9ubHlHUSZmYWxzZTYiLyUsbWF0aHZhcmlhbnRHUSdpdGFsaWM2IkYnRmZvRmlvLUZqbjYmRl1hbC1GLzYnRltyRl9vRmBfbEZjX2xGYW9GZm9GaW9GXHAtRlA2Ji1GLDYoLUYvNidRKCYjOTUyOzFGJ0Zfb0ZgX2xGY19sRmFvRl1ibC1GLzYnRmZ0Rl9vRmBfbEZjX2xGYW9GYF9sRmNfbEY1RmBfbEZjX2xGNUZgX2xGY19sRjVGYnFGZXFGZ3FGaXFGXHJGYnFGZXFGZ3EtRlg2Ji1GZW42KC1GLDYoLUYjNiQtRmpuNiZGXWFsLUZgYWw2I1FfdDYjLUkjbWlHNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHNiI2J1EiMjYiLyUnaXRhbGljR1EldHJ1ZTYiLyUrZm9yZWdyb3VuZEdRKFswLDAsMF02Ii8lKXJlYWRvbmx5R1EmZmFsc2U2Ii8lLG1hdGh2YXJpYW50R1EnaXRhbGljNiJGJ0Zmb0Zpby1Gam42JkZdYWwtRi82J0ZhdUZfb0ZgX2xGY19sRmFvRmZvRmlvRlxwLUZQNiYtRiw2KC1GLzYnUSgmIzk1MjsyRidGX29GYF9sRmNfbEZhb0ZdYmwtRi82J0ZbdkZfb0ZgX2xGY19sRmFvRmBfbEZjX2xGNUZgX2xGY19sRjVGYF9sRmNfbEY1RmJxRmVxRmdxRmlxRlxyRmJxRmVxRmdxLUZYNiYtRmVuNigtRiw2KC1GIzYkLUZqbjYmRl1hbC1GYGFsNiNRX3Q2Iy1JI21pRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliRzYiNidRIjM2Ii8lJ2l0YWxpY0dRJXRydWU2Ii8lK2ZvcmVncm91bmRHUShbMCwwLDBdNiIvJSlyZWFkb25seUdRJmZhbHNlNiIvJSxtYXRodmFyaWFudEdRJ2l0YWxpYzYiRidGZm9GaW8tRmpuNiZGXWFsLUYvNidGZnZGX29GYF9sRmNfbEZhb0Zmb0Zpb0ZccC1GUDYmLUYsNigtRi82J1EoJiM5NTI7M0YnRl9vRmBfbEZjX2xGYW9GXWJsLUYvNidGYHdGX29GYF9sRmNfbEZhb0ZgX2xGY19sRjVGYF9sRmNfbEY1RmBfbEZjX2xGNUZicUZlcUZncUZpcUZcckZicUZlcUZncS1GWDYmLUZlbjYoLUYsNigtRiM2JC1Gam42JkZdYWwtRmBhbDYjUV90NiMtSSNtaUc2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkc2IjYnUSI0NiIvJSdpdGFsaWNHUSV0cnVlNiIvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXTYiLyUpcmVhZG9ubHlHUSZmYWxzZTYiLyUsbWF0aHZhcmlhbnRHUSdpdGFsaWM2IkYnRmZvRmlvLUZqbjYmRl1hbC1GLzYnRlt4Rl9vRmBfbEZjX2xGYW9GZm9GaW9GXHAtRlA2Ji1GLDYoLUYvNidRKCYjOTUyOzRGJ0Zfb0ZgX2xGY19sRmFvRl1ibC1GLzYnRmV4Rl9vRmBfbEZjX2xGYW9GYF9sRmNfbEY1RmBfbEZjX2xGNUZgX2xGY19sRjVGYnFGZXFGZ3FGaXFGXHJGYnFGZXFGZ3EtRlg2Ji1GZW42KC1GLDYoLUYjNiQtRmpuNiZGXWFsLUZgYWw2I1FfdDYjLUkjbWlHNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHNiI2J1EiNTYiLyUnaXRhbGljR1EldHJ1ZTYiLyUrZm9yZWdyb3VuZEdRKFswLDAsMF02Ii8lKXJlYWRvbmx5R1EmZmFsc2U2Ii8lLG1hdGh2YXJpYW50R1EnaXRhbGljNiJGJ0Zmb0Zpby1Gam42JkZdYWwtRi82J0ZgeUZfb0ZgX2xGY19sRmFvRmZvRmlvRlxwLUZQNiYtRiw2KC1GLzYnUSgmIzk1Mjs1RidGX29GYF9sRmNfbEZhb0ZdYmwtRi82J0ZqeUZfb0ZgX2xGY19sRmFvRmBfbEZjX2xGNUZgX2xGY19sRjVGYF9sRmNfbEY1RmJxRmVxRmdxRmlxRlxyRmJxRmVxRmdxLUZYNiYtRmVuNigtRiw2KC1GIzYkLUZqbjYmRl1hbC1GYGFsNiNRX3Q2Iy1JI21pRzYjL0krbW9kdWxlbmFtZUc2IkksVHlwZXNldHRpbmdHSShfc3lzbGliRzYiNidRIjY2Ii8lJ2l0YWxpY0dRJXRydWU2Ii8lK2ZvcmVncm91bmRHUShbMCwwLDBdNiIvJSlyZWFkb25seUdRJmZhbHNlNiIvJSxtYXRodmFyaWFudEdRJ2l0YWxpYzYiRidGZm9GaW8tRmpuNiZGXWFsLUYvNidGZXpGX29GYF9sRmNfbEZhb0Zmb0Zpb0ZccC1GUDYmLUYsNigtRi82J1EoJiM5NTI7NkYnRl9vRmBfbEZjX2xGYW9GXWJsLUYvNidGX1tsRl9vRmBfbEZjX2xGYW9GYF9sRmNfbEY1RmBfbEZjX2xGNUZgX2xGY19sRjVGYnFGZXFGZ3FGaXFGXHJGYnFGZXFGZ3EtRlg2Ji1GZW42KC1GLDYoLUYjNiQtRmpuNiZGXWFsLUZgYWw2I1FfdDYjLUkjbWlHNiMvSSttb2R1bGVuYW1lRzYiSSxUeXBlc2V0dGluZ0dJKF9zeXNsaWJHNiI2J1EiNzYiLyUnaXRhbGljR1EldHJ1ZTYiLyUrZm9yZWdyb3VuZEdRKFswLDAsMF02Ii8lKXJlYWRvbmx5R1EmZmFsc2U2Ii8lLG1hdGh2YXJpYW50R1EnaXRhbGljNiJGJ0Zmb0Zpby1Gam42JkZdYWwtRi82J0ZqW2xGX29GYF9sRmNfbEZhb0Zmb0Zpb0ZccC1GUDYmLUYsNigtRi82J1EoJiM5NTI7N0YnRl9vRmBfbEZjX2xGYW9GXWJsLUYvNidGZFxsRl9vRmBfbEZjX2xGYW9GYF9sRmNfbEY1RmBfbEZjX2xGNUZgX2xGY19sRjVGYnFGZXFGZ3FGaXFGXHJGYnFGZXFGZ3FGZVxsRmhcbEZqXGxGXF1sRl5dbEZgXWxGY11sRmVdbEZoXWxGW15sRl5ebEZgXmxGYl5sRmVebEZnXmxGaV5sRltfbEZeX2xGYF9sRmNfbEY1RmBfbEZjX2xGNS9GaF9sUSJbRicvRltgbFEiXUYn">LUkobWZlbmNlZEc2Iy9JK21vZHVsZW5hbWVHNiJJLFR5cGVzZXR0aW5nR0koX3N5c2xpYkdGJzYoLUklbXJvd0dGJDYjLUknbXRhYmxlR0YkNj0tSSRtdHJHRiQ2Ji1JJG10ZEdGJDYoLUYsNiUtSSVtc3ViR0YkNiYtSSNtaUdGJDYnUSJLRicvJSdpdGFsaWNHUSV0cnVlRicvJStmb3JlZ3JvdW5kR1EoWzAsMCwwXUYnLyUpcmVhZG9ubHlHUSZmYWxzZUYnLyUsbWF0aHZhcmlhbnRHUSdpdGFsaWNGJy1GPTYnUSJhRidGQEZDRkZGSS8lL3N1YnNjcmlwdHNoaWZ0R1EiMEYnL0krbXNlbWFudGljc0dGJFEnYXRvbWljRictSSNtb0dGJDYtUTEmSW52aXNpYmxlVGltZXM7RicvRkpRJ25vcm1hbEYnLyUmZmVuY2VHRkgvJSpzZXBhcmF0b3JHRkgvJSlzdHJldGNoeUdGSC8lKnN5bW1ldHJpY0dGSC8lKGxhcmdlb3BHRkgvJS5tb3ZhYmxlbGltaXRzR0ZILyUnYWNjZW50R0ZILyUnbHNwYWNlR1EmMC4wZW1GJy8lJ3JzcGFjZUdGZW8tRiM2Ji1GLDYlLUY9NidRJ3RoZXRhYUYnRkBGQ0ZGRkktRlY2L1EoJm1pbnVzO0YnRkNGRkZZRmVuRmduRmluRltvRl1vRl9vRmFvL0Zkb1EsMC4yMjIyMjIyZW1GJy9GZ29GY3AtRj02J1EjcWFGJ0ZARkNGRkZJRkNGRkZZLyUpcm93YWxpZ25HUSFGJy8lLGNvbHVtbmFsaWduR0ZqcC8lK2dyb3VwYWxpZ25HRmpwLyUocm93c3BhbkdRIjFGJy8lK2NvbHVtbnNwYW5HRmFxRmhwRltxRl1xLUYyNiYtRjU2KC1GLDYlLUY6NiZGPC1GPTYnUSJiRidGQEZDRkZGSUZPRlJGVS1GIzYmLUYsNiUtRj02J1EndGhldGFiRidGQEZDRkZGSUZfcC1GPTYnUSNxYkYnRkBGQ0ZGRklGQ0ZGRllGaHBGW3FGXXFGX3FGYnFGaHBGW3FGXXEtRjI2Ji1GNTYoLUYsNiUtRjo2JkY8LUY9NidGYXFGQEZDRkZGSUZPRlJGVS1GIzYmLUYsNiUtRj02J1EpJnRoZXRhOzFGJ0ZARkNGRkZJRl9wLUY9NidRI3ExRidGQEZDRkZGSUZDRkZGWUZocEZbcUZdcUZfcUZicUZocEZbcUZdcS1GMjYmLUY1NigtRiw2JS1GOjYmRjwtRj02J1EiMkYnRkBGQ0ZGRklGT0ZSRlUtRiM2Ji1GLDYlLUY9NidRKSZ0aGV0YTsyRidGQEZDRkZGSUZfcC1GPTYnUSNxMkYnRkBGQ0ZGRklGQ0ZGRllGaHBGW3FGXXFGX3FGYnFGaHBGW3FGXXEtRjI2Ji1GNTYoLUYsNiUtRjo2JkY8LUY9NidRIjNGJ0ZARkNGRkZJRk9GUkZVLUYjNiYtRiw2JS1GPTYnUSkmdGhldGE7M0YnRkBGQ0ZGRklGX3AtRj02J1EjcTNGJ0ZARkNGRkZJRkNGRkZZRmhwRltxRl1xRl9xRmJxRmhwRltxRl1xLUYyNiYtRjU2KC1GLDYlLUY6NiZGPC1GPTYnUSI0RidGQEZDRkZGSUZPRlJGVS1GIzYmLUYsNiUtRj02J1EpJnRoZXRhOzRGJ0ZARkNGRkZJRl9wLUY9NidRI3E0RidGQEZDRkZGSUZDRkZGWUZocEZbcUZdcUZfcUZicUZocEZbcUZdcS1GMjYmLUY1NigtRiw2JS1GOjYmRjwtRj02J1EiNUYnRkBGQ0ZGRklGT0ZSRlUtRiM2Ji1GLDYlLUY9NidRKSZ0aGV0YTs1RidGQEZDRkZGSUZfcC1GPTYnUSNxNUYnRkBGQ0ZGRklGQ0ZGRllGaHBGW3FGXXFGX3FGYnFGaHBGW3FGXXEtRjI2Ji1GNTYoLUYsNiUtRjo2JkY8LUY9NidRIjZGJ0ZARkNGRkZJRk9GUkZVLUYjNiYtRiw2JS1GPTYnUSkmdGhldGE7NkYnRkBGQ0ZGRklGX3AtRj02J1EjcTZGJ0ZARkNGRkZJRkNGRkZZRmhwRltxRl1xRl9xRmJxRmhwRltxRl1xLUYyNiYtRjU2KC1GLDYlLUY6NiZGPC1GPTYnUSI3RidGQEZDRkZGSUZPRlJGVS1GIzYmLUYsNiUtRj02J1EpJnRoZXRhOzdGJ0ZARkNGRkZJRl9wLUY9NidRI3E3RidGQEZDRkZGSUZDRkZGWUZocEZbcUZdcUZfcUZicUZocEZbcUZdcS8lJmFsaWduR1ElYXhpc0YnL0ZpcFEpYmFzZWxpbmVGJy9GXHFRJ2NlbnRlckYnL0ZecVEnfGZybGVmdHxockYnLyUvYWxpZ25tZW50c2NvcGVHRkIvJSxjb2x1bW53aWR0aEdRJWF1dG9GJy8lJndpZHRoR0ZoXGwvJStyb3dzcGFjaW5nR1EmMS4wZXhGJy8lLmNvbHVtbnNwYWNpbmdHUSYwLjhlbUYnLyUpcm93bGluZXNHUSVub25lRicvJSxjb2x1bW5saW5lc0dGY11sLyUmZnJhbWVHRmNdbC8lLWZyYW1lc3BhY2luZ0dRLDAuNGVtfjAuNWV4RicvJSplcXVhbHJvd3NHRkgvJS1lcXVhbGNvbHVtbnNHRkgvJS1kaXNwbGF5c3R5bGVHRkgvJSVzaWRlR1EmcmlnaHRGJy8lMG1pbmxhYmVsc3BhY2luZ0dGYF1sRkNGRkZZLyUlb3BlbkdRIltGJy8lJmNsb3NlR1EiXUYn</Equation></Text-field>
+</Output>
+</Group>
+<Group hide-output="false" labelreference="L1146" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">N=[ g(q)+beta*q_dot-tau</Text-field><Text-field style="Text" layout="Normal">       tau ]</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1149" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N := &lt;convert(Jacobian([V],q_list),Vector)+beta*q_d-tau,tau&gt;:</Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">File Export (Tool)</Text-field></Title>
+<Group labelreference="L350" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">http://compgroups.net/comp.soft-sys.math.maple/code-generation-from-a-matrix/2418212</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" hide-output="false" labelreference="L144" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export:=proc(sym::~Matrix,name::string,folder_name::string,parameterlist::list)
+     local s, m, tmp, f, i, rows, columns, param, abs_dir_path;
+     s:=convert(indets(sym, 'symbol'),list):
+     #Remove all elemens from s, which are part of the parameterlist
+     for i from 1 to numelems(parameterlist) do
+       s:=subs(parameterlist[i]=NULL,s);
+     end do:
+
+     #Important step to export. Larger expressions become troublesome
+     #when being exported as &quot;Matrix&quot;. An &quot;array&quot;, on the other hand,
+     #works fine. Therefore, the expression is converted to an array.
+     #See
+     #  http://compgroups.net/comp.soft-sys.math.maple/code-generation-from-a-matrix/2418212
+     #for the original suggestion.
+     #
+     #Parameter &quot;sym&quot; is always converted to a Matrix by calling the
+     #proc- also Vectors arrive as a Matrix. Interestingly,
+     #codegen[makeproc]() works only if the row dimension is less or
+     #equal to the column dimension. In that case, transpose.
+     rows,columns:=LinearAlgebra[Dimension](sym);
+     if rows&gt;columns then
+       m:=convert(LinearAlgebra[Transpose](sym),array);
+     else
+       m:=convert(sym,array):
+     end;
+     
+     #Append the parameter struct &quot;param&quot; to the parameterlist only if
+     #there are any constant parameters contained.
+     if numelems(s)&gt;0 then
+       tmp:=codegen[makeproc](m,parameters=[op(parameterlist),param]):
+     else
+       tmp:=codegen[makeproc](m,parameters=parameterlist):
+     end;
+     tmp:=codegen[optimize](tmp):
+     tmp:=CodeGeneration[Matlab](tmp,output=string,optimize=false):
+
+     #Prepend all used parameters by &quot;param.&quot; to make them fields of a struct.
+     #For example, s__1x is replaced by param.s__1x
+     #Elements, which are present in the parameterlist, have already been
+     #removed from s
+     for i from 1 to numelems(s) do
+<Font encoding="UTF-8">       tmp:=StringTools[RegSubs](cat(&quot;([ \134\134(\134\134</Font>-])(&quot;,convert(s[i],string),&quot;)([; <Font encoding="UTF-8">\134\134</Font>(<Font encoding="UTF-8">\134\134</Font>)])&quot;)=<Font encoding="UTF-8">&quot;\134\1341param.\134\1342\134\1343&quot;</Font>,tmp);
+     end do:
+
+     #Replace the function name
+     tmp:=StringTools[SubstituteAll](tmp,&quot;function tmpreturn = tmp(&quot;,cat(&quot;function tmpreturn = &quot;,name,&quot;(&quot;));<Font opaque="false" subscript="false" underline="false" superscript="false" bold="true" foreground="[120,0,14]" italic="false" executable="true" selection-placeholder="false" size="12" readonly="false" background="[255,255,255]" style="Help Maple Name" placeholder="false" family="Courier New" font_style_name="Help Maple Name">
+</Font>
+     #If the matrix was transposed before, replace the last line (return value)
+     #to transpose again.
+     if rows&gt;columns then
+       tmp:=StringTools[SubstituteAll](tmp,&quot;tmpreturn = m;&quot;,&quot;tmpreturn = m';&quot;);
+     end;
+     abs_dir_path :=cat(currentdir(),&quot;<Font encoding="UTF-8">\134/..\134/..\134/matlab\134/maple_generated\134/&quot;,</Font>folder_name,&quot;<Font encoding="UTF-8">\134/&quot;); </Font>
+     if FileTools[Exists](abs_dir_path) = false then
+       mkdir(abs_dir_path)
+     end;
+     #Write the resulting string to the file &quot;&lt;name&gt;.m&quot;
+     f:=FileTools[Text][Open](cat(abs_dir_path, name,&quot;.m&quot;),create,overwrite):
+     FileTools[Text][WriteString](f,tmp):
+     FileTools[Text][Close](f):
+   end proc:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1163" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export_C:=proc(sym::~Matrix,name::string,folder_name::string,parameterlist::list,type::string := &quot;.hpp&quot;)
+     local s, m, tmp, f, i, rows, columns, param,abs_dir_path;
+     s:=convert(indets(sym, 'symbol'),list):
+     #Remove all elemens from s, which are part of the parameterlist
+     for i from 1 to numelems(parameterlist) do
+       s:=subs(parameterlist[i]=NULL,s);
+     end do:
+
+     #Important step to export. Larger expressions become troublesome
+     #when being exported as &quot;Matrix&quot;. An &quot;array&quot;, on the other hand,
+     #works fine. Therefore, the expression is converted to an array.
+     #See
+     #  http://compgroups.net/comp.soft-sys.math.maple/code-generation-from-a-matrix/2418212
+     #for the original suggestion.
+     #
+     #Parameter &quot;sym&quot; is always converted to a Matrix by calling the
+     #proc- also Vectors arrive as a Matrix. Interestingly,
+     #codegen[makeproc]() works only if the row dimension is less or
+     #equal to the column dimension. In that case, transpose.
+     rows,columns:=LinearAlgebra[Dimension](sym);
+     if rows&gt;columns then
+       m:=convert(LinearAlgebra[Transpose](sym),array);
+     else
+       m:=convert(sym,array):
+     end;
+     
+     #Append the parameter struct &quot;param&quot; to the parameterlist only if
+     #there are any constant parameters contained.
+     if numelems(s)&gt;0 then
+       tmp:=codegen[makeproc](m,parameters=[op(parameterlist),param]):
+     else
+       tmp:=codegen[makeproc](m,parameters=parameterlist):
+     end;
+     tmp:=codegen[optimize](tmp):
+     tmp:=CodeGeneration[C](tmp,output=string,optimize=false,deducetypes=false,defaulttype=float):
+
+     #Prepend all used parameters by &quot;param.&quot; to make them fields of a struct.
+     #For example, s__1x is replaced by param.s__1x
+     #Elements, which are present in the parameterlist, have already been
+     #removed from s
+     for i from 1 to numelems(s) do
+<Font encoding="UTF-8">       tmp:=StringTools[RegSubs](cat(&quot;([ \134\134(\134\134-])(&quot;,convert(s[i],string),&quot;)([; \134\134(\134\134)])&quot;)=&quot;\134\1341param.\134\1342\134\1343&quot;,tmp);
+</Font>     end do:
+
+     #Replace the function name
+     tmp:=StringTools[SubstituteAll](tmp, &quot; double param,&quot;, &quot;const RobotParams&amp; param,&quot;);
+     if type = &quot;.hpp&quot; then
+       tmp:=StringTools[SubstituteAll](tmp,&quot;void tmp (&quot;,cat(&quot;template&lt;typename Scalar&gt; void &quot;,name,&quot; (&quot;));
+       tmp:=StringTools[SubstituteAll](tmp, &quot;double &quot;, &quot;Scalar &quot;);
+     end;
+     #If the matrix was transposed before, replace the last line (return value)
+     #to transpose again.
+     if rows&gt;columns then
+       tmp:=StringTools[SubstituteAll](tmp,&quot;tmpreturn = m;&quot;,&quot;tmpreturn = m';&quot;);
+     end;
+     abs_dir_path :=cat(currentdir(),&quot;<Font encoding="UTF-8">\134/..\134/..\134/cpp\134/maple_generated\134/&quot;,</Font>folder_name<Font encoding="UTF-8">,&quot;\134/&quot;); </Font>
+     if FileTools[Exists](abs_dir_path) = false then
+       mkdir(abs_dir_path)
+     end;
+     #Write the resulting string to the file &quot;&lt;name&gt;.c&quot;
+     f:=FileTools[Text][Open](cat(abs_dir_path,name,type),create,overwrite):
+     FileTools[Text][WriteString](f,tmp):
+     FileTools[Text][Close](f):
+   end proc:</Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Export Definitions</Text-field></Title>
+<Group labelreference="L1269" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">unassign('q','q_d','theta');</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1266" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">q_qvec:={qa=q[1],qb=q[2],seq(cat(q,i-2)=q[i],i=3..q_dim)}:</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1268" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">qd_qp:={qda=q_p[1],qdb=q_p[2],seq(cat(qd,i-2)=q_p[i],i=3..q_dim)}:</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1267" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">theta_thetavec:={thetaa=theta[1],thetab=theta[2],seq(cat(theta,i-2)=theta[i],i=3..q_dim)}:</Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Export to Matlab</Text-field></Title>
+<Group labelreference="L1281" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export(eval(DD,q_qvec), &quot;inertia_matrix&quot;,model_folder_name, [q]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1280" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export(eval(eval(CC,q_qvec),qd_qp), &quot;coriolis_matrix&quot;,model_folder_name, [q,q_p]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1279" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export(eval(gg,q_qvec), &quot;gravitational_forces&quot;,model_folder_name, [q]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1278" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export(eval(T_0e, q_qvec), &quot;hom_transform_endeffector&quot;,model_folder_name, [q]);</Text-field>
+</Input>
+</Group><Presentation-Block>
+<Group view="code" labelreference="L1283" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block>
+<Group labelreference="L1273" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export(eval(JJ, q_qvec), &quot;geo_jacobian_endeffector&quot;,model_folder_name, [q]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1274" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export(eval(eval(JJ_p, q_qvec), qd_qp), &quot;geo_jacobian_endeffector_p&quot;,model_folder_name, [q,q_p]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1275" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export(eval(eval(eval(N, q_qvec), qd_qp), theta_thetavec), &quot;conservative_forces&quot;,model_folder_name, [q,q_p,theta]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1277" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L1164" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Export to C</Text-field></Title>
+<Group hide-input="false" labelreference="L1287" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export_C(eval(DD,q_qvec), &quot;inertia_matrix&quot;,model_folder_name, [q]);</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20cannot%20resolve%20types,%20reassigning%20m's%20type" hyperlink="true"><Font style="HyperlinkWarning">Warning, cannot resolve types, reassigning m's type</Font></Hyperlink></Text-field>
+</Output>
+</Group>
+<Group hide-input="false" labelreference="L1286" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export_C(eval(eval(CC,q_qvec),qd_qp), &quot;coriolis_matrix&quot;, model_folder_name, [q,q_p]);</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20cannot%20resolve%20types,%20reassigning%20m's%20type" hyperlink="true"><Font style="HyperlinkWarning">Warning, cannot resolve types, reassigning m's type</Font></Hyperlink></Text-field>
+</Output>
+</Group>
+<Group hide-input="false" labelreference="L1285" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export_C(eval(gg,q_qvec), &quot;gravitational_forces&quot;,model_folder_name, [q]);</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20cannot%20resolve%20types,%20reassigning%20m's%20type" hyperlink="true"><Font style="HyperlinkWarning">Warning, cannot resolve types, reassigning m's type</Font></Hyperlink></Text-field>
+</Output>
+</Group>
+<Group hide-input="false" labelreference="L1284" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export_C(eval(T_0e, q_qvec), &quot;hom_transform_endeffector&quot;, model_folder_name, [q]);</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20cannot%20resolve%20types,%20reassigning%20m's%20type" hyperlink="true"><Font style="HyperlinkWarning">Warning, cannot resolve types, reassigning m's type</Font></Hyperlink></Text-field>
+</Output>
+</Group><Presentation-Block>
+<Group view="code" labelreference="L1289" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L1290" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export_C(eval(JJ, q_qvec), &quot;geo_jacobian_endeffector&quot;, model_folder_name, [q]);</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20cannot%20resolve%20types,%20reassigning%20m's%20type" hyperlink="true"><Font style="HyperlinkWarning">Warning, cannot resolve types, reassigning m's type</Font></Hyperlink></Text-field>
+</Output>
+</Group>
+<Group view="code" hide-input="false" labelreference="L1291" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export_C(eval(eval(JJ_p, q_qvec), qd_qp), &quot;geo_jacobian_endeffector_p&quot;, model_folder_name, [q,q_p]);</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20cannot%20resolve%20types,%20reassigning%20m's%20type" hyperlink="true"><Font style="HyperlinkWarning">Warning, cannot resolve types, reassigning m's type</Font></Hyperlink></Text-field>
+</Output>
+</Group>
+<Group view="code" hide-input="false" labelreference="L1292" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">file_export_C(eval(eval(eval(N, q_qvec), qd_qp), theta_thetavec), &quot;conservative_forces&quot;, model_folder_name, [q,q_p,theta]);</Text-field>
+</Input>
+<Output><Text-field style="HyperlinkWarning" layout="HyperlinkWarning"><Hyperlink linktarget="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20cannot%20resolve%20types,%20reassigning%20m's%20type" hyperlink="true"><Font style="HyperlinkWarning">Warning, cannot resolve types, reassigning m's type</Font></Hyperlink></Text-field>
+</Output>
+</Group></Presentation-Block>
+<Group labelreference="L1294" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Section>
+</Worksheet>

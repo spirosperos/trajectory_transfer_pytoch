@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Load parameters -->
+  <group ns="gateway">
+    <rosparam command="load" file="$(find acin_gateway)/config/parameters.yaml"/>
+  </group>
+
+  <!-- Start controller_gateway -->
+  <node name="controller_gateway" pkg="acin_gateway" type="controller_gateway"/>
+
+  <!-- Start sensor_gateway -->
+  <node name="sensor_gateway" pkg="acin_gateway" type="sensor_gateway"/>
+</launch>

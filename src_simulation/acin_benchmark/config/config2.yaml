@@ -1,0 +1,39 @@
+benchmark_config:
+    warehouse:
+        host: 127.0.0.1
+        port: 33829
+        scene_name: Scene
+    parameters:
+        name: SceneRequest
+        runs: 50
+        group: arm
+        timeout: 5
+        output_directory: /tmp/moveit_benchmarks/
+        queries: Request
+        start_states: Start
+    planners:
+        - plugin: ompl_interface/OMPLPlanner
+          planners:
+#           - BFMT
+            - BKPIECE
+            - BiEST
+            - BiTRRT
+            - EST
+#           - FMT
+            - KPIECE
+            - LBKPIECE
+#           - LBTRRT
+#           - LazyPRM
+#           - LazyPRMstar
+            - PDST
+#           - PRM
+#           - PRMstar
+            - ProjEST
+            - RRTConnect
+            - RRT
+#           - RRTstar
+            - SBL
+#           - SPARS
+#           - SPARStwo
+            - STRIDE
+            - TRRT

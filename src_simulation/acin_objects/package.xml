@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>acin_objects</name>
+  <version>0.0.0</version>
+  <description>The acin_objects package</description>
+
+  <maintainer email="martin.fraunhofer@gmail.com">Martin Fraunhofer</maintainer>
+
+  <license>BSD</license>
+  <author email="martin.fraunhofer@gmail.com">Martin Fraunhofer</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>xacro</exec_depend>
+</package>

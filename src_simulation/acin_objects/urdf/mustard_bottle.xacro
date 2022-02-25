@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- Object dimensions -->
+  <xacro:property name="length" value="0.0585"/>
+  <xacro:property name="width"  value="0.0962"/>
+  <xacro:property name="height" value="0.1930"/>
+
+  <!-- Mass -->
+  <xacro:property name="mass" value="0.6"/>
+
+  <!-- Move mesh to origin -->
+  <xacro:macro name="set_origin">
+    <origin xyz="0.0271 -0.0051 0.0034" rpy="0 0 ${292.5*pi/180}"/>
+  </xacro:macro>
+</robot>

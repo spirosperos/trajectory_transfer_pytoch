@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="420mm"
+   height="297mm"
+   viewBox="0 0 420 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   sodipodi:docname="marker.svg"
+   inkscape:export-filename="marker.png"
+   inkscape:export-xdpi="300.02237"
+   inkscape:export-ydpi="300.02237">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="733.62096"
+     inkscape:cy="557.47371"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:window-width="1853"
+     inkscape:window-height="1025"
+     inkscape:window-x="67"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid10"
+       units="mm"
+       spacingx="1"
+       spacingy="1" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       id="rect3715"
+       width="420"
+       height="297"
+       x="0"
+       y="-8.3923342e-06"
+       style="stroke-width:0.2654787;fill:#ffffff" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="9.7157793"
+       y="18.040585"
+       id="text3719"><tspan
+         sodipodi:role="line"
+         id="tspan3717"
+         x="9.7157793"
+         y="18.040585"
+         style="stroke-width:0.26458332">top left</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="364.65878"
+       y="18.040585"
+       id="text3723"><tspan
+         sodipodi:role="line"
+         id="tspan3721"
+         x="364.65878"
+         y="18.040585"
+         style="stroke-width:0.26458332">top right</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="9.0388184"
+       y="286.85013"
+       id="text3727"><tspan
+         sodipodi:role="line"
+         id="tspan3725"
+         x="9.0388184"
+         y="286.85013"
+         style="stroke-width:0.26458332">bottom left</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="343.71982"
+       y="284.79858"
+       id="text3731"><tspan
+         sodipodi:role="line"
+         id="tspan3729"
+         x="343.71982"
+         y="284.79858"
+         style="stroke-width:0.26458332">bottom right</tspan></text>
+    <image
+       sodipodi:absref="/home/martin/catkin_ws/src/acin_reconstruction/marker/image.png"
+       xlink:href="image.png"
+       width="385.00006"
+       height="245"
+       preserveAspectRatio="none"
+       style="image-rendering:optimizeSpeed"
+       id="image931"
+       x="17.499969"
+       y="26" />
+  </g>
+</svg>

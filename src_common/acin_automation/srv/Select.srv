@@ -1,0 +1,11 @@
+# State from which the motion plan starts
+sensor_msgs/JointState start_state
+# Poses from which to select one
+geometry_msgs/PoseStamped[] target_poses
+---
+# Index of selected goal
+uint16 index
+# Motion plan used during selection
+moveit_msgs/MotionPlanResponse plan
+# Result
+bool success

@@ -1,0 +1,1799 @@
+MoveIt! version 1.0.8-Alpha
+Experiment Start_Request
+Running on zenbook
+Starting at 2021-11-16T12:39:29.880883
+<<<|
+Motion plan request:
+workspace_parameters: 
+  header: 
+    seq: 0
+    stamp: 0.000000000
+    frame_id: 
+  min_corner: 
+    x: -1
+    y: -1
+    z: -1
+  max_corner: 
+    x: 1
+    y: 1
+    z: 1
+start_state: 
+  joint_state: 
+    header: 
+      seq: 0
+      stamp: 0.000000000
+      frame_id: world
+    name[]
+      name[0]: base_joint_1
+      name[1]: base_joint_2
+      name[2]: arm_joint_1
+      name[3]: arm_joint_2
+      name[4]: arm_joint_3
+      name[5]: arm_joint_4
+      name[6]: arm_joint_5
+      name[7]: arm_joint_6
+      name[8]: arm_joint_7
+      name[9]: table_joint_1
+      name[10]: table_joint_2
+    position[]
+      position[0]: -1
+      position[1]: 0
+      position[2]: 0
+      position[3]: 0
+      position[4]: 0
+      position[5]: 0
+      position[6]: 0
+      position[7]: 0
+      position[8]: 0
+      position[9]: 0
+      position[10]: 0
+    velocity[]
+    effort[]
+  multi_dof_joint_state: 
+    header: 
+      seq: 0
+      stamp: 0.000000000
+      frame_id: world
+    joint_names[]
+    transforms[]
+    twist[]
+    wrench[]
+  attached_collision_objects[]
+  is_diff: 0
+goal_constraints[]
+  goal_constraints[0]: 
+    name: 
+    joint_constraints[]
+      joint_constraints[0]: 
+            joint_name: base_joint_1
+        position: 0.0102727
+        tolerance_above: 2.22045e-16
+        tolerance_below: 2.22045e-16
+        weight: 1
+      joint_constraints[1]: 
+            joint_name: base_joint_2
+        position: -0.330269
+        tolerance_above: 2.22045e-16
+        tolerance_below: 2.22045e-16
+        weight: 1
+      joint_constraints[2]: 
+            joint_name: arm_joint_1
+        position: -1.50012
+        tolerance_above: 2.22045e-16
+        tolerance_below: 2.22045e-16
+        weight: 1
+      joint_constraints[3]: 
+            joint_name: arm_joint_2
+        position: -1.62369
+        tolerance_above: 2.22045e-16
+        tolerance_below: 2.22045e-16
+        weight: 1
+      joint_constraints[4]: 
+            joint_name: arm_joint_3
+        position: -0.638512
+        tolerance_above: 2.22045e-16
+        tolerance_below: 2.22045e-16
+        weight: 1
+      joint_constraints[5]: 
+            joint_name: arm_joint_4
+        position: -1.40155
+        tolerance_above: 2.22045e-16
+        tolerance_below: 2.22045e-16
+        weight: 1
+      joint_constraints[6]: 
+            joint_name: arm_joint_5
+        position: -1.43857
+        tolerance_above: 2.22045e-16
+        tolerance_below: 2.22045e-16
+        weight: 1
+      joint_constraints[7]: 
+            joint_name: arm_joint_6
+        position: -0.862087
+        tolerance_above: 2.22045e-16
+        tolerance_below: 2.22045e-16
+        weight: 1
+      joint_constraints[8]: 
+            joint_name: arm_joint_7
+        position: -2.023
+        tolerance_above: 2.22045e-16
+        tolerance_below: 2.22045e-16
+        weight: 1
+    position_constraints[]
+    orientation_constraints[]
+    visibility_constraints[]
+path_constraints: 
+  name: 
+  joint_constraints[]
+  position_constraints[]
+  orientation_constraints[]
+  visibility_constraints[]
+trajectory_constraints: 
+  constraints[]
+planner_id: 
+group_name: arm
+num_planning_attempts: 1
+allowed_planning_time: 5
+max_velocity_scaling_factor: 0.15
+max_acceleration_scaling_factor: 0.3
+
+Planning scene: 
+name: Scene
+robot_state: 
+  joint_state: 
+    header: 
+      seq: 0
+      stamp: 0.000000000
+      frame_id: world
+    name[]
+      name[0]: base_joint_1
+      name[1]: base_joint_2
+      name[2]: arm_joint_1
+      name[3]: arm_joint_2
+      name[4]: arm_joint_3
+      name[5]: arm_joint_4
+      name[6]: arm_joint_5
+      name[7]: arm_joint_6
+      name[8]: arm_joint_7
+      name[9]: table_joint_1
+      name[10]: table_joint_2
+    position[]
+      position[0]: -1
+      position[1]: 0
+      position[2]: 0
+      position[3]: 0
+      position[4]: 0
+      position[5]: 0
+      position[6]: 0
+      position[7]: 0
+      position[8]: 0
+      position[9]: 0
+      position[10]: 0
+    velocity[]
+    effort[]
+  multi_dof_joint_state: 
+    header: 
+      seq: 0
+      stamp: 0.000000000
+      frame_id: world
+    joint_names[]
+    transforms[]
+    twist[]
+    wrench[]
+  attached_collision_objects[]
+  is_diff: 0
+robot_model_name: acin_robot
+fixed_frame_transforms[]
+  fixed_frame_transforms[0]: 
+    header: 
+      seq: 0
+      stamp: 0.000000000
+      frame_id: world
+    child_frame_id: world
+    transform: 
+      translation: 
+        x: 0
+        y: 0
+        z: 0
+      rotation: 
+        x: 0
+        y: 0
+        z: 0
+        w: 1
+allowed_collision_matrix: 
+  entry_names[]
+    entry_names[0]: arm_link_0
+    entry_names[1]: arm_link_1
+    entry_names[2]: arm_link_2
+    entry_names[3]: arm_link_3
+    entry_names[4]: arm_link_4
+    entry_names[5]: arm_link_5
+    entry_names[6]: arm_link_6
+    entry_names[7]: arm_link_7
+    entry_names[8]: base_link_0
+    entry_names[9]: base_link_1
+    entry_names[10]: camera_link_0
+    entry_names[11]: camera_link_1
+    entry_names[12]: frame_link
+    entry_names[13]: link
+    entry_names[14]: object_link
+    entry_names[15]: table_link_0
+    entry_names[16]: table_link_1
+    entry_names[17]: table_link_2
+  entry_values[]
+    entry_values[0]: 
+        enabled[]
+        enabled[0]: 0
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 1
+        enabled[5]: 0
+        enabled[6]: 0
+        enabled[7]: 0
+        enabled[8]: 1
+        enabled[9]: 1
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 1
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 1
+        enabled[17]: 1
+    entry_values[1]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 0
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 1
+        enabled[5]: 1
+        enabled[6]: 1
+        enabled[7]: 1
+        enabled[8]: 1
+        enabled[9]: 1
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 1
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 1
+        enabled[17]: 1
+    entry_values[2]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 1
+        enabled[2]: 0
+        enabled[3]: 1
+        enabled[4]: 1
+        enabled[5]: 1
+        enabled[6]: 1
+        enabled[7]: 1
+        enabled[8]: 1
+        enabled[9]: 1
+        enabled[10]: 1
+        enabled[11]: 0
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 1
+        enabled[17]: 0
+    entry_values[3]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 0
+        enabled[4]: 1
+        enabled[5]: 1
+        enabled[6]: 1
+        enabled[7]: 1
+        enabled[8]: 1
+        enabled[9]: 1
+        enabled[10]: 1
+        enabled[11]: 0
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 1
+        enabled[17]: 0
+    entry_values[4]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 0
+        enabled[5]: 1
+        enabled[6]: 1
+        enabled[7]: 1
+        enabled[8]: 0
+        enabled[9]: 1
+        enabled[10]: 1
+        enabled[11]: 0
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 0
+        enabled[17]: 0
+    entry_values[5]: 
+        enabled[]
+        enabled[0]: 0
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 1
+        enabled[5]: 0
+        enabled[6]: 1
+        enabled[7]: 1
+        enabled[8]: 0
+        enabled[9]: 0
+        enabled[10]: 1
+        enabled[11]: 1
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 0
+        enabled[16]: 0
+        enabled[17]: 0
+    entry_values[6]: 
+        enabled[]
+        enabled[0]: 0
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 1
+        enabled[5]: 1
+        enabled[6]: 0
+        enabled[7]: 1
+        enabled[8]: 0
+        enabled[9]: 0
+        enabled[10]: 1
+        enabled[11]: 1
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 0
+        enabled[16]: 0
+        enabled[17]: 0
+    entry_values[7]: 
+        enabled[]
+        enabled[0]: 0
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 1
+        enabled[5]: 1
+        enabled[6]: 1
+        enabled[7]: 0
+        enabled[8]: 0
+        enabled[9]: 0
+        enabled[10]: 1
+        enabled[11]: 1
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 0
+        enabled[16]: 0
+        enabled[17]: 0
+    entry_values[8]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 0
+        enabled[5]: 0
+        enabled[6]: 0
+        enabled[7]: 0
+        enabled[8]: 0
+        enabled[9]: 1
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 1
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 1
+        enabled[17]: 1
+    entry_values[9]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 1
+        enabled[5]: 0
+        enabled[6]: 0
+        enabled[7]: 0
+        enabled[8]: 1
+        enabled[9]: 0
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 1
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 1
+        enabled[17]: 1
+    entry_values[10]: 
+        enabled[]
+        enabled[0]: 0
+        enabled[1]: 0
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 1
+        enabled[5]: 1
+        enabled[6]: 1
+        enabled[7]: 1
+        enabled[8]: 0
+        enabled[9]: 0
+        enabled[10]: 0
+        enabled[11]: 1
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 0
+        enabled[16]: 0
+        enabled[17]: 0
+    entry_values[11]: 
+        enabled[]
+        enabled[0]: 0
+        enabled[1]: 0
+        enabled[2]: 0
+        enabled[3]: 0
+        enabled[4]: 0
+        enabled[5]: 1
+        enabled[6]: 1
+        enabled[7]: 1
+        enabled[8]: 0
+        enabled[9]: 0
+        enabled[10]: 1
+        enabled[11]: 0
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 0
+        enabled[16]: 0
+        enabled[17]: 0
+    entry_values[12]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 1
+        enabled[2]: 0
+        enabled[3]: 0
+        enabled[4]: 0
+        enabled[5]: 0
+        enabled[6]: 0
+        enabled[7]: 0
+        enabled[8]: 1
+        enabled[9]: 1
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 1
+        enabled[17]: 1
+    entry_values[13]: 
+        enabled[]
+        enabled[0]: 0
+        enabled[1]: 0
+        enabled[2]: 0
+        enabled[3]: 0
+        enabled[4]: 0
+        enabled[5]: 0
+        enabled[6]: 0
+        enabled[7]: 0
+        enabled[8]: 0
+        enabled[9]: 0
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 0
+        enabled[16]: 0
+        enabled[17]: 0
+    entry_values[14]: 
+        enabled[]
+        enabled[0]: 0
+        enabled[1]: 0
+        enabled[2]: 0
+        enabled[3]: 0
+        enabled[4]: 0
+        enabled[5]: 0
+        enabled[6]: 0
+        enabled[7]: 0
+        enabled[8]: 0
+        enabled[9]: 0
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 0
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 0
+        enabled[16]: 0
+        enabled[17]: 0
+    entry_values[15]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 1
+        enabled[5]: 0
+        enabled[6]: 0
+        enabled[7]: 0
+        enabled[8]: 1
+        enabled[9]: 1
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 1
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 0
+        enabled[16]: 1
+        enabled[17]: 1
+    entry_values[16]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 1
+        enabled[2]: 1
+        enabled[3]: 1
+        enabled[4]: 0
+        enabled[5]: 0
+        enabled[6]: 0
+        enabled[7]: 0
+        enabled[8]: 1
+        enabled[9]: 1
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 1
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 0
+        enabled[17]: 1
+    entry_values[17]: 
+        enabled[]
+        enabled[0]: 1
+        enabled[1]: 1
+        enabled[2]: 0
+        enabled[3]: 0
+        enabled[4]: 0
+        enabled[5]: 0
+        enabled[6]: 0
+        enabled[7]: 0
+        enabled[8]: 1
+        enabled[9]: 1
+        enabled[10]: 0
+        enabled[11]: 0
+        enabled[12]: 1
+        enabled[13]: 0
+        enabled[14]: 0
+        enabled[15]: 1
+        enabled[16]: 1
+        enabled[17]: 0
+  default_entry_names[]
+  default_entry_values[]
+link_padding[]
+  link_padding[0]: 
+    link_name: arm_link_0
+    padding: 0
+  link_padding[1]: 
+    link_name: arm_link_1
+    padding: 0
+  link_padding[2]: 
+    link_name: arm_link_2
+    padding: 0
+  link_padding[3]: 
+    link_name: arm_link_3
+    padding: 0
+  link_padding[4]: 
+    link_name: arm_link_4
+    padding: 0
+  link_padding[5]: 
+    link_name: arm_link_5
+    padding: 0
+  link_padding[6]: 
+    link_name: arm_link_6
+    padding: 0
+  link_padding[7]: 
+    link_name: arm_link_7
+    padding: 0
+  link_padding[8]: 
+    link_name: base_link_0
+    padding: 0
+  link_padding[9]: 
+    link_name: base_link_1
+    padding: 0
+  link_padding[10]: 
+    link_name: camera_link_0
+    padding: 0
+  link_padding[11]: 
+    link_name: camera_link_1
+    padding: 0
+  link_padding[12]: 
+    link_name: frame_link
+    padding: 0
+  link_padding[13]: 
+    link_name: link
+    padding: 0
+  link_padding[14]: 
+    link_name: object_link
+    padding: 0
+  link_padding[15]: 
+    link_name: table_link_0
+    padding: 0
+  link_padding[16]: 
+    link_name: table_link_1
+    padding: 0
+  link_padding[17]: 
+    link_name: table_link_2
+    padding: 0
+link_scale[]
+  link_scale[0]: 
+    link_name: arm_link_0
+    scale: 1
+  link_scale[1]: 
+    link_name: arm_link_1
+    scale: 1
+  link_scale[2]: 
+    link_name: arm_link_2
+    scale: 1
+  link_scale[3]: 
+    link_name: arm_link_3
+    scale: 1
+  link_scale[4]: 
+    link_name: arm_link_4
+    scale: 1
+  link_scale[5]: 
+    link_name: arm_link_5
+    scale: 1
+  link_scale[6]: 
+    link_name: arm_link_6
+    scale: 1
+  link_scale[7]: 
+    link_name: arm_link_7
+    scale: 1
+  link_scale[8]: 
+    link_name: base_link_0
+    scale: 1
+  link_scale[9]: 
+    link_name: base_link_1
+    scale: 1
+  link_scale[10]: 
+    link_name: camera_link_0
+    scale: 1
+  link_scale[11]: 
+    link_name: camera_link_1
+    scale: 1
+  link_scale[12]: 
+    link_name: frame_link
+    scale: 1
+  link_scale[13]: 
+    link_name: link
+    scale: 1
+  link_scale[14]: 
+    link_name: object_link
+    scale: 1
+  link_scale[15]: 
+    link_name: table_link_0
+    scale: 1
+  link_scale[16]: 
+    link_name: table_link_1
+    scale: 1
+  link_scale[17]: 
+    link_name: table_link_2
+    scale: 1
+object_colors[]
+world: 
+  collision_objects[]
+    collision_objects[0]: 
+        header: 
+        seq: 0
+        stamp: 0.000000000
+        frame_id: world
+      id: Box_0
+      type: 
+        key: 
+        db: 
+      primitives[]
+        primitives[0]: 
+                type: 1
+          dimensions[]
+            dimensions[0]: 0.3
+            dimensions[1]: 0.3
+            dimensions[2]: 0.3
+      primitive_poses[]
+        primitive_poses[0]: 
+                position: 
+            x: 0
+            y: 0
+            z: 0.83
+          orientation: 
+            x: 0
+            y: 0
+            z: 0
+            w: 1
+      meshes[]
+      mesh_poses[]
+      planes[]
+      plane_poses[]
+      operation: 0
+  octomap: 
+    header: 
+      seq: 0
+      stamp: 0.000000000
+      frame_id: world
+    origin: 
+      position: 
+        x: 0
+        y: 0
+        z: 0
+      orientation: 
+        x: 0
+        y: 0
+        z: 0
+        w: 0
+    octomap: 
+      header: 
+        seq: 0
+        stamp: 0.000000000
+        frame_id: 
+      binary: 0
+      id: 
+      resolution: 0
+      data[]
+is_diff: 0
+
+|>>>
+0 is the random seed
+5 seconds per run
+-1 MB per run
+20 runs per planner
+1027.73 seconds spent to collect the data
+0 enum types
+22 planners
+BFMT
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+2.52771; 0; 0; 13.1744; 0.0818989; 3.259e-05; 0; 0; 13.1744; 0.0818989; 3.259e-05; 0; 0; 16.03; 3.68584; 2.46459; 0; 0; 13.1744; 0.928811; 0.0276697; 0.000725458; 1; 2.49301; 
+2.49109; 0; 0; 13.4784; 0.0304606; 1.0785e-05; 0; 0; 13.4784; 0.0304606; 1.0785e-05; 0; 0; 15.6641; 1.61666; 2.33225; 0; 0; 13.4784; 0.500386; 0.050424; 0.00120274; 1; 2.38388; 
+2.41942; 0; 0; 12.5857; 0.0247257; 9.677e-06; 0; 0; 12.5857; 0.0247257; 9.677e-06; 0; 0; 14.2337; 2.69209; 2.26706; 0; 0; 12.5857; 0.301181; 0.0436401; 0.00133966; 1; 2.31205; 
+2.67113; 0; 0; 13.6216; 0.104755; 1.1033e-05; 0; 0; 13.6216; 0.104755; 1.1033e-05; 0; 0; 16.5005; 4.02031; 2.5648; 0; 0; 13.6216; 1.54607; 0.0252655; 0.00120356; 1; 2.59128; 
+2.44935; 0; 0; 13.2294; 0.0757903; 1.0428e-05; 0; 0; 13.2294; 0.0757903; 1.0428e-05; 0; 0; 14.9584; 3.32936; 2.45434; 0; 0; 13.2294; 1.03735; 0.0291979; 0.00122048; 1; 2.48477; 
+2.12216; 0; 0; 11.9179; 0.0411201; 1.0991e-05; 0; 0; 11.9179; 0.0411201; 1.0991e-05; 0; 0; 15.807; 5.20485; 2.57264; 0; 0; 11.9179; 0.373773; 0.0518909; 0.00111137; 1; 2.62566; 
+3.26584; 0; 0; 14.3966; 0.0630952; 1.6862e-05; 0; 0; 14.3966; 0.0630952; 1.6862e-05; 0; 0; 17.0808; 4.17022; 2.83684; 0; 0; 14.3966; 0.891634; 0.0259162; 0.00128373; 1; 2.86405; 
+2.05324; 0; 0; 12.3792; 0.0799983; 1.615e-05; 0; 0; 12.3792; 0.0799983; 1.615e-05; 0; 0; 14.3733; 2.76834; 2.20369; 0; 0; 12.3792; 0.711352; 0.0631088; 0.00128862; 1; 2.2681; 
+2.25458; 0; 0; 13.3573; 0.0583222; 1.2481e-05; 0; 0; 13.3573; 0.0583222; 1.2481e-05; 0; 0; 16.1642; 3.80608; 3.12642; 0; 0; 13.3573; 1.14251; 0.0355757; 0.00128556; 1; 3.16329; 
+2.47597; 0; 0; 12.2726; 0.0539259; 1.6812e-05; 0; 0; 12.2726; 0.0539259; 1.6812e-05; 0; 0; 15.0651; 4.79609; 3.11304; 0; 0; 12.2726; 0.77363; 0.0689157; 0.00138361; 1; 3.18335; 
+2.3667; 0; 0; 12.6111; 0.039766; 1.8102e-05; 0; 0; 12.6111; 0.039766; 1.8102e-05; 0; 0; 13.834; 2.45258; 2.77233; 0; 0; 12.6111; 0.385704; 0.0494856; 0.00136593; 1; 2.8232; 
+2.38588; 0; 0; 13.1238; 0.0450082; 1.3817e-05; 0; 0; 13.1238; 0.0450082; 1.3817e-05; 0; 0; 17.7378; 4.45955; 3.46256; 0; 0; 13.1238; 0.393569; 0.0714582; 0.00138243; 1; 3.53541; 
+2.21617; 0; 0; 12.886; 0.0853318; 1.3427e-05; 0; 0; 12.886; 0.0853318; 1.3427e-05; 0; 0; 15.0847; 3.30443; 3.14578; 0; 0; 12.886; 1.76804; 0.0384056; 0.00146394; 1; 3.18566; 
+2.14153; 0; 0; 13.1033; 0.0822822; 1.4657e-05; 0; 0; 13.1033; 0.0822822; 1.4657e-05; 0; 0; 16.7068; 3.998; 4.14639; 0; 0; 13.1033; 1.95894; 0.0446218; 0.00148685; 1; 4.19251; 
+2.25677; 0; 0; 13.525; 0.0959764; 1.4616e-05; 0; 0; 13.525; 0.0959764; 1.4616e-05; 0; 0; 15.554; 3.44664; 3.64187; 0; 0; 13.525; 1.99704; 0.0857263; 0.00158321; 1; 3.72919; 
+2.24399; 0; 0; 12.6222; 0.0963165; 1.2893e-05; 0; 0; 12.6222; 0.0963165; 1.2893e-05; 0; 0; 15.4675; 3.39681; 3.36172; 0; 0; 12.6222; 1.50727; 0.0624169; 0.00167998; 1; 3.42583; 
+3.00213; 0; 0; 13.2128; 0.110963; 1.3648e-05; 0; 0; 13.2128; 0.110963; 1.3648e-05; 0; 0; 14.1267; 2.64011; 2.72919; 0; 0; 13.2128; 1.51422; 0.054463; 0.00157076; 1; 2.78523; 
+2.11851; 0; 0; 12.4244; 0.0540459; 1.3245e-05; 0; 0; 12.4244; 0.0540459; 1.3245e-05; 0; 0; 14.8587; 2.28151; 2.89043; 0; 0; 12.4244; 0.609295; 0.0630556; 0.00147584; 1; 2.95498; 
+2.52472; 0; 0; 13.4587; 0.060995; 1.6381e-05; 0; 0; 13.4587; 0.060995; 1.6381e-05; 0; 0; 16.3441; 3.00167; 3.65725; 0; 0; 13.4587; 0.957646; 0.0657335; 0.00155456; 1; 3.72456; 
+2.45344; 0; 0; 12.6477; 0.0214704; 1.3716e-05; 0; 0; 12.6477; 0.0214704; 1.3716e-05; 0; 0; 14.8799; 3.10822; 3.26238; 0; 0; 12.6477; 0.269288; 0.0380972; 0.00157914; 1; 3.30207; 
+.
+BKPIECE
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+6.16978; 0; 0; 30.5263; 0.0963026; 3.7157e-05; 0; 0; 30.5263; 0.0963026; 3.7157e-05; 0; 0; 397.121; 15.7709; 1.07141; 0; 0; 30.5263; 1.77775; 0.205267; 0.000662842; 1; 1.27737; 
+4.81758; 0; 0; 19.4393; 0.124798; 2.5569e-05; 0; 0; 19.4393; 0.124798; 2.5569e-05; 0; 0; 164.143; 14.1589; 1.00718; 0; 0; 19.4393; 1.86087; 0.183138; 0.000660615; 1; 1.19101; 
+5.90927; 0; 0; 31.9779; 0.275318; 5.116e-05; 0; 0; 31.9779; 0.275318; 5.116e-05; 0; 0; 170.858; 14.7757; 0.495902; 0; 0; 31.9779; 11.0571; 0.177499; 0.000709914; 1; 0.674162; 
+4.58148; 0; 0; 17.4072; 0.254319; 1.8872e-05; 0; 0; 17.4072; 0.254319; 1.8872e-05; 0; 0; 102.789; 11.9678; 0.428433; 0; 0; 17.4072; 4.77177; 0.13692; 0.000521382; 1; 0.565893; 
+4.26537; 0; 0; 14.6476; 0.245783; 2.5597e-05; 0; 0; 14.6476; 0.245783; 2.5597e-05; 0; 0; 116.032; 12.8853; 0.250964; 0; 0; 14.6476; 2.85527; 0.135781; 0.000514888; 1; 0.387285; 
+7.25516; 0; 0; 36.1289; 0.244516; 3.0058e-05; 0; 0; 36.1289; 0.244516; 3.0058e-05; 0; 0; 172.041; 14.8935; 1.10746; 0; 0; 36.1289; 5.88377; 0.186119; 0.000690803; 1; 1.2943; 
+5.55392; 0; 0; 27.3038; 0.229259; 2.4046e-05; 0; 0; 27.3038; 0.229259; 2.4046e-05; 0; 0; 175.606; 13.1367; 0.716671; 0; 0; 27.3038; 4.35829; 0.192027; 0.000736462; 1; 0.909459; 
+6.98683; 0; 0; 40.3614; 0.219845; 3.1716e-05; 0; 0; 40.3614; 0.219845; 3.1716e-05; 0; 0; 73.9617; 12.0144; 0.179646; 0; 0; 40.3614; 3.15651; 0.176418; 0.000872015; 1; 0.356968; 
+4.48919; 0; 0; 17.8605; 0.281681; 1.4843e-05; 0; 0; 17.8605; 0.281681; 1.4843e-05; 0; 0; 449.852; 16.6574; 1.34417; 0; 0; 17.8605; 5.14674; 0.184701; 0.000569966; 1; 1.52946; 
+4.58979; 0; 0; 17.7541; 0.157291; 4.1307e-05; 0; 0; 17.7541; 0.157291; 4.1307e-05; 0; 0; 65.1402; 12.5218; 0.178876; 0; 0; 17.7541; 3.34072; 0.114938; 0.00079253; 1; 0.294647; 
+6.07585; 0; 0; 20.4376; 0.183372; 2.2696e-05; 0; 0; 20.4376; 0.183372; 2.2696e-05; 0; 0; 134.143; 14.2941; 0.346535; 0; 0; 20.4376; 3.9754; 0.121561; 0.00107916; 1; 0.469197; 
+4.82212; 0; 0; 18.7926; 0.264797; 2.7396e-05; 0; 0; 18.7926; 0.264797; 2.7396e-05; 0; 0; 126.391; 11.7186; 0.52967; 0; 0; 18.7926; 3.79858; 0.135123; 0.00107585; 1; 0.665896; 
+5.50464; 0; 0; 24.0215; 0.240668; 3.0383e-05; 0; 0; 24.0215; 0.240668; 3.0383e-05; 0; 0; 496.336; 16.8562; 2.3732; 0; 0; 24.0215; 2.94082; 0.184155; 0.00142157; 1; 2.55881; 
+5.50993; 0; 0; 20.5077; 0.247292; 2.2983e-05; 0; 0; 20.5077; 0.247292; 2.2983e-05; 0; 0; 174.984; 13.0591; 0.622201; 0; 0; 20.5077; 3.3914; 0.1304; 0.00121327; 1; 0.753837; 
+4.84295; 0; 0; 21.225; 0.205179; 2.3536e-05; 0; 0; 21.225; 0.205179; 2.3536e-05; 0; 0; 143.537; 13.3136; 0.47749; 0; 0; 21.225; 5.82696; 0.156374; 0.00114192; 1; 0.635029; 
+5.98769; 0; 0; 36.4025; 0.198008; 4.0567e-05; 0; 0; 36.4025; 0.198008; 4.0567e-05; 0; 0; 133.809; 13.6505; 0.7081; 0; 0; 36.4025; 3.37593; 0.168011; 0.00159801; 1; 0.87775; 
+4.91096; 0; 0; 21.0424; 0.21816; 2.7065e-05; 0; 0; 21.0424; 0.21816; 2.7065e-05; 0; 0; 314.141; 16.462; 1.07967; 0; 0; 21.0424; 4.77846; 0.217716; 0.00121968; 1; 1.29863; 
+5.15559; 0; 0; 24.8316; 0.200918; 2.9143e-05; 0; 0; 24.8316; 0.200918; 2.9143e-05; 0; 0; 158.176; 15.7957; 0.271817; 0; 0; 24.8316; 2.78454; 0.102072; 0.00126731; 1; 0.375186; 
+4.27358; 0; 0; 13.8558; 0.136463; 2.1269e-05; 0; 0; 13.8558; 0.136463; 2.1269e-05; 0; 0; 118.572; 15.4624; 0.396447; 0; 0; 13.8558; 1.99474; 0.125484; 0.000896272; 1; 0.522849; 
+4.57441; 0; 0; 16.6023; 0.164397; 3.4889e-05; 0; 0; 16.6023; 0.164397; 3.4889e-05; 0; 0; 33.6237; 10.087; 0.0758286; 0; 0; 16.6023; 4.18189; 0.0829076; 0.000840171; 1; 0.159611; 
+.
+BiEST
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+6.0375; 0; 0; 27.3394; 0.193597; 3.1461e-05; 0; 0; 27.3394; 0.193597; 3.1461e-05; 0; 0; 53.616; 9.04081; 0.0696755; 0; 0; 27.3394; 5.49825; 0.107958; 0.000544728; 1; 0.17821; 
+4.42721; 0; 0; 19.8605; 0.122672; 1.7765e-05; 0; 0; 19.8605; 0.122672; 1.7765e-05; 0; 0; 77.8896; 13.1257; 0.07113; 0; 0; 19.8605; 1.47884; 0.107185; 0.000528156; 1; 0.178861; 
+3.78139; 0; 0; 18.5626; 0.192329; 2.051e-05; 0; 0; 18.5626; 0.192329; 2.051e-05; 0; 0; 29.2838; 6.47551; 0.06244; 0; 0; 18.5626; 2.85798; 0.134857; 0.000497187; 1; 0.197815; 
+4.88089; 0; 0; 25.8714; 0.131977; 3.1124e-05; 0; 0; 25.8714; 0.131977; 3.1124e-05; 0; 0; 60.3459; 12.0574; 0.0711021; 0; 0; 25.8714; 3.21039; 0.12854; 0.000607874; 1; 0.200281; 
+4.26818; 0; 0; 14.0115; 0.109852; 1.3116e-05; 0; 0; 14.0115; 0.109852; 1.3116e-05; 0; 0; 29.6058; 10.3587; 0.181627; 0; 0; 14.0115; 2.53705; 0.0716641; 0.000453862; 1; 0.253758; 
+6.50286; 0; 0; 26.1724; 0.111302; 2.7384e-05; 0; 0; 26.1724; 0.111302; 2.7384e-05; 0; 0; 38.0421; 8.71632; 0.0835868; 0; 0; 26.1724; 2.02903; 0.0705134; 0.000567937; 1; 0.154695; 
+4.6202; 0; 0; 17.7808; 0.216019; 1.647e-05; 0; 0; 17.7808; 0.216019; 1.647e-05; 0; 0; 45.1059; 7.50563; 0.152081; 0; 0; 17.7808; 3.57357; 0.140393; 0.000485181; 1; 0.292975; 
+4.72695; 0; 0; 17.3958; 0.1499; 1.7006e-05; 0; 0; 17.3958; 0.1499; 1.7006e-05; 0; 0; 43.7916; 12.2345; 0.0375541; 0; 0; 17.3958; 3.13149; 0.120837; 0.000482225; 1; 0.15889; 
+3.63097; 0; 0; 16.4981; 0.176331; 1.5695e-05; 0; 0; 16.4981; 0.176331; 1.5695e-05; 0; 0; 36.8979; 8.68931; 0.24074; 0; 0; 16.4981; 2.85786; 0.102; 0.000474548; 1; 0.34323; 
+4.33635; 0; 0; 18.6073; 0.245857; 1.6432e-05; 0; 0; 18.6073; 0.245857; 1.6432e-05; 0; 0; 50.6639; 8.87562; 0.087459; 0; 0; 18.6073; 5.47705; 0.117681; 0.000517372; 1; 0.205674; 
+4.60849; 0; 0; 15.9601; 0.134922; 1.3441e-05; 0; 0; 15.9601; 0.134922; 1.3441e-05; 0; 0; 53.7391; 10.0355; 0.0840275; 0; 0; 15.9601; 3.86526; 0.166311; 0.000451113; 1; 0.250803; 
+4.5842; 0; 0; 17.5181; 0.116712; 1.5616e-05; 0; 0; 17.5181; 0.116712; 1.5616e-05; 0; 0; 20.6339; 4.08829; 0.0572134; 0; 0; 17.5181; 2.34018; 0.0462951; 0.000464254; 1; 0.103988; 
+4.3711; 0; 0; 18.2367; 0.135829; 1.6664e-05; 0; 0; 18.2367; 0.135829; 1.6664e-05; 0; 0; 36.0811; 11.753; 0.0354687; 0; 0; 18.2367; 1.77962; 0.11829; 0.000491852; 1; 0.154267; 
+3.99168; 0; 0; 15.9036; 0.251428; 1.3216e-05; 0; 0; 15.9036; 0.251428; 1.3216e-05; 0; 0; 28.833; 7.58072; 0.0165089; 0; 0; 15.9036; 3.55423; 0.0961893; 0.000451979; 1; 0.113163; 
+4.03089; 0; 0; 14.2036; 0.140026; 1.3018e-05; 0; 0; 14.2036; 0.140026; 1.3018e-05; 0; 0; 27.8675; 8.87821; 0.0691596; 0; 0; 14.2036; 2.54516; 0.0786692; 0.000450805; 1; 0.148293; 
+4.041; 0; 0; 14.6153; 0.0970769; 1.5737e-05; 0; 0; 14.6153; 0.0970769; 1.5737e-05; 0; 0; 23.6684; 8.31557; 0.0525965; 0; 0; 14.6153; 1.52389; 0.0823409; 0.000468684; 1; 0.135422; 
+4.09979; 0; 0; 15.6389; 0.0736321; 2.0943e-05; 0; 0; 15.6389; 0.0736321; 2.0943e-05; 0; 0; 44.8426; 11.6312; 0.0326291; 0; 0; 15.6389; 1.30798; 0.101391; 0.000473404; 1; 0.134514; 
+4.61868; 0; 0; 19.4211; 0.11142; 3.247e-05; 0; 0; 19.4211; 0.11142; 3.247e-05; 0; 0; 45.2943; 10.0064; 0.0933977; 0; 0; 19.4211; 2.15145; 0.112322; 0.000482155; 1; 0.206234; 
+8.07693; 0; 0; 36.6007; 0.138897; 4.2251e-05; 0; 0; 36.6007; 0.138897; 4.2251e-05; 0; 0; 77.6077; 12.4853; 0.193341; 0; 0; 36.6007; 3.0895; 0.144495; 0.000704417; 1; 0.338583; 
+3.66404; 0; 0; 16.2914; 0.198133; 1.2259e-05; 0; 0; 16.2914; 0.198133; 1.2259e-05; 0; 0; 56.0511; 10.4012; 0.0684434; 0; 0; 16.2914; 4.3367; 0.105025; 0.000479032; 1; 0.17396; 
+.
+BiTRRT
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+4.89216; 0; 0; 22.2595; 0.203452; 2.1639e-05; 0; 0; 22.2595; 0.203452; 2.1639e-05; 0; 0; 52.6739; 5.09754; 0.20219; 0; 0; 22.2595; 2.07238; 0.117204; 0.000611618; 1; 0.320027; 
+2.78354; 0; 0; 17.6139; 0.0981129; 3.5385e-05; 0; 0; 17.6139; 0.0981129; 3.5385e-05; 0; 0; 38.0255; 5.81606; 0.202779; 0; 0; 17.6139; 1.09284; 0.120373; 0.00068266; 1; 0.32387; 
+2.35815; 0; 0; 12.6764; 0.0338351; 1.2374e-05; 0; 0; 12.6764; 0.0338351; 1.2374e-05; 0; 0; 28.3267; 5.8491; 0.103936; 0; 0; 12.6764; 0.248976; 0.0891325; 0.000523015; 1; 0.193604; 
+2.98995; 0; 0; 15.8814; 0.216715; 1.582e-05; 0; 0; 15.8814; 0.216715; 1.582e-05; 0; 0; 36.6881; 4.76882; 0.223395; 0; 0; 15.8814; 2.08022; 0.127575; 0.000555033; 1; 0.351541; 
+2.57542; 0; 0; 12.1239; 0.100232; 1.0987e-05; 0; 0; 12.1239; 0.100232; 1.0987e-05; 0; 0; 24.3173; 5.81892; 0.054541; 0; 0; 12.1239; 1.23808; 0.0877267; 0.000504992; 1; 0.142784; 
+6.4909; 0; 0; 31.9327; 0.210093; 2.4496e-05; 0; 0; 31.9327; 0.210093; 2.4496e-05; 0; 0; 29.9342; 6.17233; 0.0596229; 0; 0; 31.9327; 6.72873; 0.135747; 0.000685727; 1; 0.196081; 
+2.58005; 0; 0; 14.6805; 0.0783038; 1.7345e-05; 0; 0; 14.6805; 0.0783038; 1.7345e-05; 0; 0; 51.1874; 4.9657; 0.653155; 0; 0; 14.6805; 1.69286; 0.102837; 0.000525204; 1; 0.756534; 
+2.68061; 0; 0; 14.2965; 0.142495; 1.6446e-05; 0; 0; 14.2965; 0.142495; 1.6446e-05; 0; 0; 32.2972; 5.33076; 0.139712; 0; 0; 14.2965; 1.7902; 0.0888962; 0.000652238; 1; 0.229277; 
+2.93047; 0; 0; 15.4683; 0.086791; 1.647e-05; 0; 0; 15.4683; 0.086791; 1.647e-05; 0; 0; 33.8414; 4.77729; 0.189811; 0; 0; 15.4683; 1.0971; 0.101744; 0.000539219; 1; 0.29211; 
+3.16799; 0; 0; 17.2373; 0.135896; 1.801e-05; 0; 0; 17.2373; 0.135896; 1.801e-05; 0; 0; 39.2099; 5.41468; 0.319439; 0; 0; 17.2373; 1.98791; 0.121645; 0.000577636; 1; 0.44168; 
+2.70676; 0; 0; 14.963; 0.0459651; 1.3013e-05; 0; 0; 14.963; 0.0459651; 1.3013e-05; 0; 0; 45.4778; 5.8995; 0.381985; 0; 0; 14.963; 0.386348; 0.108185; 0.000582546; 1; 0.490765; 
+3.03164; 0; 0; 19.8317; 0.211518; 1.8619e-05; 0; 0; 19.8317; 0.211518; 1.8619e-05; 0; 0; 28.3531; 5.40196; 0.118783; 0; 0; 19.8317; 4.40281; 0.142118; 0.000663213; 1; 0.261583; 
+2.71349; 0; 0; 13.2299; 0.0607931; 1.1744e-05; 0; 0; 13.2299; 0.0607931; 1.1744e-05; 0; 0; 31.2776; 5.98961; 0.577341; 0; 0; 13.2299; 0.672849; 0.105531; 0.000605875; 1; 0.68349; 
+2.79025; 0; 0; 17.2749; 0.0844341; 1.3733e-05; 0; 0; 17.2749; 0.0844341; 1.3733e-05; 0; 0; 41.8551; 6.25136; 0.306251; 0; 0; 17.2749; 1.30286; 0.113127; 0.000646525; 1; 0.420038; 
+2.53013; 0; 0; 13.6551; 0.112302; 1.1829e-05; 0; 0; 13.6551; 0.112302; 1.1829e-05; 0; 0; 37.9236; 5.46667; 0.172918; 0; 0; 13.6551; 0.957785; 0.117555; 0.000523821; 1; 0.291009; 
+2.89109; 0; 0; 15.9743; 0.188713; 1.5539e-05; 0; 0; 15.9743; 0.188713; 1.5539e-05; 0; 0; 42.0566; 5.91669; 0.24735; 0; 0; 15.9743; 2.08318; 0.100816; 0.000638445; 1; 0.348819; 
+3.30516; 0; 0; 16.7974; 0.151874; 1.7249e-05; 0; 0; 16.7974; 0.151874; 1.7249e-05; 0; 0; 32.4708; 4.30619; 0.119405; 0; 0; 16.7974; 1.84589; 0.135373; 0.000616099; 1; 0.255411; 
+3.05504; 0; 0; 13.4665; 0.0850003; 1.1083e-05; 0; 0; 13.4665; 0.0850003; 1.1083e-05; 0; 0; 23.0377; 4.66076; 0.111911; 0; 0; 13.4665; 2.22701; 0.101967; 0.000452826; 1; 0.214342; 
+2.75414; 0; 0; 14.2448; 0.0706752; 1.3749e-05; 0; 0; 14.2448; 0.0706752; 1.3749e-05; 0; 0; 28.3973; 5.36898; 0.662238; 0; 0; 14.2448; 0.607066; 0.0863016; 0.000493979; 1; 0.749047; 
+4.32531; 0; 0; 17.0957; 0.153013; 1.7233e-05; 0; 0; 17.0957; 0.153013; 1.7233e-05; 0; 0; 26.9862; 5.31982; 0.431628; 0; 0; 17.0957; 1.68763; 0.0976679; 0.000713518; 1; 0.530027; 
+.
+EST
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+3.44726; 0; 0; 13.6501; 0.140635; 1.9243e-05; 0; 0; 13.6501; 0.140635; 1.9243e-05; 0; 0; 32.1516; 11.5476; 0.330147; 0; 0; 13.6501; 2.39965; 0.068482; 0.000372088; 1; 0.39902; 
+4.00226; 0; 0; 14.9519; 0.123665; 2.6447e-05; 0; 0; 14.9519; 0.123665; 2.6447e-05; 0; 0; 21.4399; 5.8216; 0.0974143; 0; 0; 14.9519; 3.10449; 0.0582456; 0.000446607; 1; 0.156133; 
+3.47074; 0; 0; 15.9216; 0.208917; 1.8204e-05; 0; 0; 15.9216; 0.208917; 1.8204e-05; 0; 0; 35.9642; 9.87875; 0.0604809; 0; 0; 15.9216; 3.43439; 0.113058; 0.000437531; 1; 0.173994; 
+3.15507; 0; 0; 15.28; 0.149195; 3.2155e-05; 0; 0; 15.28; 0.149195; 3.2155e-05; 0; 0; 45.8437; 10.2525; 0.395967; 0; 0; 15.28; 2.41007; 0.115309; 0.00044982; 1; 0.511758; 
+3.80449; 0; 0; 13.6862; 0.113875; 2.3424e-05; 0; 0; 13.6862; 0.113875; 2.3424e-05; 0; 0; 19.7251; 5.66102; 0.0154928; 0; 0; 13.6862; 2.0431; 0.0589569; 0.000452684; 1; 0.0749258; 
+4.27656; 0; 0; 17.1893; 0.1212; 1.6579e-05; 0; 0; 17.1893; 0.1212; 1.6579e-05; 0; 0; 32.3433; 7.82855; 0.894887; 0; 0; 17.1893; 2.29937; 0.10871; 0.000431208; 1; 1.00404; 
+5.48394; 0; 0; 18.802; 0.17553; 2.1301e-05; 0; 0; 18.802; 0.17553; 2.1301e-05; 0; 0; 42.9915; 10.756; 0.139819; 0; 0; 18.802; 2.77625; 0.0969109; 0.000496877; 1; 0.237249; 
+3.73336; 0; 0; 18.8395; 0.210241; 1.5038e-05; 0; 0; 18.8395; 0.210241; 1.5038e-05; 0; 0; 44.5374; 7.83; 0.139744; 0; 0; 18.8395; 3.98354; 0.125775; 0.000467821; 1; 0.266002; 
+4.88463; 0; 0; 25.2772; 0.134195; 2.4052e-05; 0; 0; 25.2772; 0.134195; 2.4052e-05; 0; 0; 54.4065; 9.88297; 0.287869; 0; 0; 25.2772; 2.1451; 0.125758; 0.000596134; 1; 0.414247; 
+4.32744; 0; 0; 16.1394; 0.120395; 1.7243e-05; 0; 0; 16.1394; 0.120395; 1.7243e-05; 0; 0; 32.1606; 8.12105; 0.172672; 0; 0; 16.1394; 0.982457; 0.118136; 0.000514023; 1; 0.291339; 
+3.4578; 0; 0; 13.6056; 0.139871; 2.1558e-05; 0; 0; 13.6056; 0.139871; 2.1558e-05; 0; 0; 27.4177; 6.96712; 0.0768591; 0; 0; 13.6056; 2.29277; 0.080273; 0.000459466; 1; 0.157613; 
+3.23338; 0; 0; 15.5002; 0.131872; 2.3157e-05; 0; 0; 15.5002; 0.131872; 2.3157e-05; 0; 0; 24.8324; 6.90125; 0.0345701; 0; 0; 15.5002; 1.98415; 0.0894733; 0.000446989; 1; 0.124514; 
+3.36638; 0; 0; 12.3129; 0.150184; 1.183e-05; 0; 0; 12.3129; 0.150184; 1.183e-05; 0; 0; 38.4717; 12.1133; 0.391823; 0; 0; 12.3129; 1.8871; 0.0946243; 0.0004828; 1; 0.486942; 
+3.47573; 0; 0; 17.1328; 0.202998; 1.7224e-05; 0; 0; 17.1328; 0.202998; 1.7224e-05; 0; 0; 51.2761; 13.3161; 0.0933564; 0; 0; 17.1328; 4.2444; 0.114355; 0.000468578; 1; 0.208197; 
+4.39773; 0; 0; 19.7461; 0.222667; 2.6817e-05; 0; 0; 19.7461; 0.222667; 2.6817e-05; 0; 0; 33.7117; 8.9346; 0.210312; 0; 0; 19.7461; 5.18423; 0.0672984; 0.000524286; 1; 0.278161; 
+4.32761; 0; 0; 21.3279; 0.116428; 1.8353e-05; 0; 0; 21.3279; 0.116428; 1.8353e-05; 0; 0; 29.5732; 6.74613; 0.345728; 0; 0; 21.3279; 1.68622; 0.125851; 0.00057157; 1; 0.472169; 
+4.82184; 0; 0; 17.8491; 0.156983; 2.5174e-05; 0; 0; 17.8491; 0.156983; 2.5174e-05; 0; 0; 54.0591; 8.07019; 0.189479; 0; 0; 17.8491; 3.75773; 0.165463; 0.00053236; 1; 0.3555; 
+5.32935; 0; 0; 25.2666; 0.136552; 2.0153e-05; 0; 0; 25.2666; 0.136552; 2.0153e-05; 0; 0; 52.279; 10.1209; 0.122323; 0; 0; 25.2666; 2.52752; 0.165841; 0.000605232; 1; 0.28879; 
+3.94794; 0; 0; 16.1365; 0.139858; 1.5479e-05; 0; 0; 16.1365; 0.139858; 1.5479e-05; 0; 0; 35.721; 11.2498; 0.607531; 0; 0; 16.1365; 2.03086; 0.11481; 0.00050528; 1; 0.722862; 
+3.55886; 0; 0; 14.5047; 0.105932; 1.7547e-05; 0; 0; 14.5047; 0.105932; 1.7547e-05; 0; 0; 80.3291; 13.4383; 1.19488; 0; 0; 14.5047; 1.65639; 0.130874; 0.000464895; 1; 1.32624; 
+.
+FMT
+0 common properties
+3 properties for each run
+average_waypoint_distance REAL
+solved BOOLEAN
+time REAL
+20 runs
+1.79769e+308; 0; 5.00239; 
+1.79769e+308; 0; 5.00668; 
+1.79769e+308; 0; 5.0078; 
+1.79769e+308; 0; 5.00524; 
+1.79769e+308; 0; 5.00218; 
+1.79769e+308; 0; 5.00624; 
+1.79769e+308; 0; 5.01174; 
+1.79769e+308; 0; 5.00626; 
+1.79769e+308; 0; 5.00243; 
+1.79769e+308; 0; 5.00281; 
+1.79769e+308; 0; 5.00478; 
+1.79769e+308; 0; 5.00478; 
+1.79769e+308; 0; 5.00589; 
+1.79769e+308; 0; 5.00975; 
+1.79769e+308; 0; 5.00427; 
+1.79769e+308; 0; 5.00109; 
+1.79769e+308; 0; 5.00187; 
+1.79769e+308; 0; 5.00098; 
+1.79769e+308; 0; 5.00377; 
+1.79769e+308; 0; 5.0021; 
+.
+KPIECE
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+4.72402; 0; 0; 16.5783; 0.181124; 1.5563e-05; 0; 0; 16.5783; 0.181124; 1.5563e-05; 0; 0; 71.0333; 11.5983; 0.376213; 0; 0; 16.5783; 2.52624; 0.123118; 0.000388039; 1; 0.499735; 
+3.83717; 0; 0; 18.3421; 0.160895; 2.8146e-05; 0; 0; 18.3421; 0.160895; 2.8146e-05; 0; 0; 132.155; 13.9417; 0.217664; 0; 0; 18.3421; 3.13216; 0.161119; 0.000551246; 1; 0.379363; 
+4.13907; 0; 0; 13.3399; 0.0896701; 2.1394e-05; 0; 0; 13.3399; 0.0896701; 2.1394e-05; 0; 0; 21.1132; 6.43143; 0.0520107; 0; 0; 13.3399; 1.10861; 0.0808937; 0.000446685; 1; 0.133372; 
+3.96511; 0; 0; 17.7618; 0.087342; 1.9954e-05; 0; 0; 17.7618; 0.087342; 1.9954e-05; 0; 0; 65.2123; 10.8095; 0.540639; 0; 0; 17.7618; 1.4534; 0.113326; 0.000451556; 1; 0.654437; 
+3.78876; 0; 0; 13.5768; 0.205408; 1.0814e-05; 0; 0; 13.5768; 0.205408; 1.0814e-05; 0; 0; 31.2629; 9.01615; 0.0248943; 0; 0; 13.5768; 3.05591; 0.0938108; 0.000433713; 1; 0.11915; 
+4.0858; 0; 0; 12.17; 0.0536137; 1.3853e-05; 0; 0; 12.17; 0.0536137; 1.3853e-05; 0; 0; 49.429; 12.3463; 0.07217; 0; 0; 12.17; 0.772687; 0.0842351; 0.000389441; 1; 0.156808; 
+5.42117; 0; 0; 34.0136; 0.20848; 4.189e-05; 0; 0; 34.0136; 0.20848; 4.189e-05; 0; 0; 148.494; 13.1947; 0.361183; 0; 0; 34.0136; 2.52476; 0.157821; 0.000683491; 1; 0.51973; 
+6.46857; 0; 0; 36.2083; 0.169301; 4.0294e-05; 0; 0; 36.2083; 0.169301; 4.0294e-05; 0; 0; 117.163; 15.6387; 0.896938; 0; 0; 36.2083; 3.57407; 0.157294; 0.000700938; 1; 1.05497; 
+4.24528; 0; 0; 18.7572; 0.184995; 2.9236e-05; 0; 0; 18.7572; 0.184995; 2.9236e-05; 0; 0; 50.241; 9.11433; 0.0643423; 0; 0; 18.7572; 3.74296; 0.122366; 0.000520992; 1; 0.187258; 
+6.61995; 0; 0; 29.0214; 0.271895; 2.4978e-05; 0; 0; 29.0214; 0.271895; 2.4978e-05; 0; 0; 139.51; 15.0778; 0.325242; 0; 0; 29.0214; 7.29868; 0.186533; 0.000578465; 1; 0.512379; 
+4.49037; 0; 0; 23.5094; 0.235194; 3.507e-05; 0; 0; 23.5094; 0.235194; 3.507e-05; 0; 0; 77.8932; 13.004; 0.148328; 0; 0; 23.5094; 7.38817; 0.158773; 0.000712091; 1; 0.307847; 
+4.23126; 0; 0; 17.702; 0.11072; 1.4198e-05; 0; 0; 17.702; 0.11072; 1.4198e-05; 0; 0; 30.0065; 7.5522; 0.0680079; 0; 0; 17.702; 1.8748; 0.0913027; 0.000487508; 1; 0.159812; 
+5.8881; 0; 0; 22.476; 0.125604; 3.8188e-05; 0; 0; 22.476; 0.125604; 3.8188e-05; 0; 0; 148.528; 15.2981; 0.30835; 0; 0; 22.476; 1.78524; 0.125424; 0.000524337; 1; 0.434336; 
+5.23544; 0; 0; 31.9745; 0.238733; 4.1007e-05; 0; 0; 31.9745; 0.238733; 4.1007e-05; 0; 0; 153.252; 12.9303; 0.704054; 0; 0; 31.9745; 4.20824; 0.196546; 0.000658216; 1; 0.901298; 
+3.88473; 0; 0; 16.2259; 0.189404; 1.8308e-05; 0; 0; 16.2259; 0.189404; 1.8308e-05; 0; 0; 47.2286; 9.30945; 0.0606136; 0; 0; 16.2259; 3.31552; 0.0995588; 0.000484369; 1; 0.160675; 
+4.18075; 0; 0; 13.8666; 0.0932565; 1.4055e-05; 0; 0; 13.8666; 0.0932565; 1.4055e-05; 0; 0; 54.4219; 12.9385; 0.132943; 0; 0; 13.8666; 1.31497; 0.0967302; 0.000397616; 1; 0.230085; 
+4.20428; 0; 0; 17.7265; 0.263056; 1.8165e-05; 0; 0; 17.7265; 0.263056; 1.8165e-05; 0; 0; 46.6013; 13.4555; 0.0620865; 0; 0; 17.7265; 4.76793; 0.0893969; 0.000431624; 1; 0.151933; 
+4.25954; 0; 0; 21.2338; 0.221659; 1.6954e-05; 0; 0; 21.2338; 0.221659; 1.6954e-05; 0; 0; 89.0681; 13.5578; 0.395082; 0; 0; 21.2338; 4.28095; 0.130569; 0.000681853; 1; 0.52635; 
+4.32096; 0; 0; 18.0049; 0.160459; 2.36e-05; 0; 0; 18.0049; 0.160459; 2.36e-05; 0; 0; 36.7649; 9.64524; 0.055979; 0; 0; 18.0049; 2.20882; 0.0898581; 0.000892023; 1; 0.146753; 
+5.39219; 0; 0; 34.4371; 0.201936; 2.5602e-05; 0; 0; 34.4371; 0.201936; 2.5602e-05; 0; 0; 102.67; 13.7355; 0.372003; 0; 0; 34.4371; 3.2486; 0.147111; 0.00142532; 1; 0.520565; 
+.
+LBKPIECE
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+7.42019; 0; 0; 46.2867; 0.207738; 3.6099e-05; 0; 0; 46.2867; 0.207738; 3.6099e-05; 0; 0; 384.129; 15.4995; 0.908825; 0; 0; 46.2867; 4.60212; 0.212549; 0.000838373; 1; 1.12225; 
+4.00514; 0; 0; 17.7163; 0.139074; 1.5266e-05; 0; 0; 17.7163; 0.139074; 1.5266e-05; 0; 0; 370.164; 15.288; 1.2381; 0; 0; 17.7163; 2.7931; 0.161742; 0.000660411; 1; 1.40052; 
+3.8311; 0; 0; 20.2648; 0.19519; 2.3283e-05; 0; 0; 20.2648; 0.19519; 2.3283e-05; 0; 0; 315.768; 13.4675; 0.77042; 0; 0; 20.2648; 4.87826; 0.15216; 0.000747044; 1; 0.923351; 
+5.17376; 0; 0; 20.0607; 0.18618; 1.6761e-05; 0; 0; 20.0607; 0.18618; 1.6761e-05; 0; 0; 318.366; 13.8495; 1.92286; 0; 0; 20.0607; 2.23297; 0.165427; 0.000718668; 1; 2.08902; 
+5.03984; 0; 0; 16.035; 0.218514; 1.4015e-05; 0; 0; 16.035; 0.218514; 1.4015e-05; 0; 0; 218.795; 14.1539; 0.557074; 0; 0; 16.035; 3.10519; 0.158243; 0.000844315; 1; 0.716176; 
+4.26373; 0; 0; 20.1924; 0.175882; 2.0476e-05; 0; 0; 20.1924; 0.175882; 2.0476e-05; 0; 0; 114.826; 11.8354; 0.18896; 0; 0; 20.1924; 3.7148; 0.134578; 0.000582852; 1; 0.324141; 
+4.22049; 0; 0; 16.643; 0.207927; 1.1694e-05; 0; 0; 16.643; 0.207927; 1.1694e-05; 0; 0; 385.217; 15.3594; 0.79289; 0; 0; 16.643; 4.93645; 0.199787; 0.000566736; 1; 0.993256; 
+4.77933; 0; 0; 21.957; 0.157952; 2.1834e-05; 0; 0; 21.957; 0.157952; 2.1834e-05; 0; 0; 243.114; 14.7111; 0.761353; 0; 0; 21.957; 3.21063; 0.157454; 0.00064177; 1; 0.91947; 
+4.26536; 0; 0; 17.969; 0.170371; 2.0421e-05; 0; 0; 17.969; 0.170371; 2.0421e-05; 0; 0; 227.261; 15.5699; 0.997281; 0; 0; 17.969; 2.97244; 0.124692; 0.000553321; 1; 1.12255; 
+3.98428; 0; 0; 14.3126; 0.0920199; 1.3534e-05; 0; 0; 14.3126; 0.0920199; 1.3534e-05; 0; 0; 254.939; 13.414; 0.476983; 0; 0; 14.3126; 1.08723; 0.14675; 0.000522258; 1; 0.624269; 
+3.96163; 0; 0; 14.7078; 0.175039; 1.657e-05; 0; 0; 14.7078; 0.175039; 1.657e-05; 0; 0; 448.42; 15.5161; 0.674504; 0; 0; 14.7078; 2.88362; 0.25432; 0.00055874; 1; 0.929399; 
+4.07351; 0; 0; 14.6955; 0.15678; 1.3534e-05; 0; 0; 14.6955; 0.15678; 1.3534e-05; 0; 0; 625.313; 14.6895; 2.33896; 0; 0; 14.6955; 2.34586; 0.214841; 0.000691258; 1; 2.5545; 
+6.65191; 0; 0; 40.2849; 0.148666; 2.9309e-05; 0; 0; 40.2849; 0.148666; 2.9309e-05; 0; 0; 246.891; 14.4761; 1.4465; 0; 0; 40.2849; 2.52156; 0.224493; 0.00130296; 1; 1.67232; 
+4.24136; 0; 0; 18.3398; 0.180708; 1.4069e-05; 0; 0; 18.3398; 0.180708; 1.4069e-05; 0; 0; 300.413; 13.893; 1.88886; 0; 0; 18.3398; 2.89049; 0.150989; 0.000803378; 1; 2.04067; 
+4.99906; 0; 0; 24.8599; 0.131693; 1.961e-05; 0; 0; 24.8599; 0.131693; 1.961e-05; 0; 0; 603.825; 14.5708; 1.69277; 0; 0; 24.8599; 1.74044; 0.219026; 0.00111587; 1; 1.91293; 
+4.23411; 0; 0; 15.1336; 0.214052; 1.2499e-05; 0; 0; 15.1336; 0.214052; 1.2499e-05; 0; 0; 316.023; 15.5739; 0.738418; 0; 0; 15.1336; 3.17042; 0.179074; 0.000863751; 1; 0.918368; 
+3.61775; 0; 0; 16.0237; 0.212662; 1.2519e-05; 0; 0; 16.0237; 0.212662; 1.2519e-05; 0; 0; 251.096; 16.7396; 0.643542; 0; 0; 16.0237; 3.01763; 0.154562; 0.00100644; 1; 0.799122; 
+6.58578; 0; 0; 32.6384; 0.239348; 2.5514e-05; 0; 0; 32.6384; 0.239348; 2.5514e-05; 0; 0; 500.472; 15.1801; 1.73673; 0; 0; 32.6384; 3.25294; 0.221842; 0.00168735; 1; 1.96028; 
+5.99116; 0; 0; 30.4802; 0.286458; 2.4987e-05; 0; 0; 30.4802; 0.286458; 2.4987e-05; 0; 0; 467.758; 15.3837; 2.24023; 0; 0; 30.4802; 7.59152; 0.354871; 0.00175853; 1; 2.59688; 
+3.63918; 0; 0; 14.8261; 0.123503; 2.1308e-05; 0; 0; 14.8261; 0.123503; 2.1308e-05; 0; 0; 145.89; 14.7828; 0.3079; 0; 0; 14.8261; 1.16348; 0.115063; 0.00148134; 1; 0.424466; 
+.
+LazyPRM
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+3.34991; 0; 0; 14.1416; 0.0562947; 1.4017e-05; 0; 0; 14.1416; 0.0562947; 1.4017e-05; 0; 0; 21.9719; 3.84864; 5.00007; 0; 0; 14.1416; 0.935471; 0.07441; 0.00036388; 1; 5.07486; 
+4.13857; 0; 0; 16.8303; 0.231706; 1.4791e-05; 0; 0; 16.8303; 0.231706; 1.4791e-05; 0; 0; 24.1534; 7.98822; 4.99317; 0; 0; 16.8303; 3.43491; 0.0626704; 0.00782621; 1; 5.06368; 
+3.39199; 0; 0; 13.9509; 0.0958894; 1.2936e-05; 0; 0; 13.9509; 0.0958894; 1.2936e-05; 0; 0; 31.8147; 5.26665; 4.99695; 0; 0; 13.9509; 2.06768; 0.0932723; 0.00592551; 1; 5.09616; 
+4.48611; 0; 0; 17.7509; 0.0764618; 1.5452e-05; 0; 0; 17.7509; 0.0764618; 1.5452e-05; 0; 0; 43.8444; 7.76766; 4.99713; 0; 0; 17.7509; 1.41351; 0.102984; 0.00491772; 1; 5.10504; 
+2.99341; 0; 0; 13.3022; 0.190586; 1.8356e-05; 0; 0; 13.3022; 0.190586; 1.8356e-05; 0; 0; 26.9263; 7.57815; 4.99774; 0; 0; 13.3022; 2.39499; 0.0736086; 0.00413183; 1; 5.0755; 
+3.11541; 0; 0; 13.9288; 0.0260127; 1.3132e-05; 0; 0; 13.9288; 0.0260127; 1.3132e-05; 0; 0; 26.6013; 6.39635; 4.99543; 0; 0; 13.9288; 0.314154; 0.0844411; 0.00616706; 1; 5.08605; 
+3.82549; 0; 0; 15.2341; 0.0718461; 1.3668e-05; 0; 0; 15.2341; 0.0718461; 1.3668e-05; 0; 0; 27.5867; 5.7291; 4.99624; 0; 0; 15.2341; 0.93839; 0.0892581; 0.00577295; 1; 5.09129; 
+3.42351; 0; 0; 14.4358; 0.158514; 1.3354e-05; 0; 0; 14.4358; 0.158514; 1.3354e-05; 0; 0; 21.6248; 5.13177; 4.99481; 0; 0; 14.4358; 1.98009; 0.0631417; 0.00578887; 1; 5.06376; 
+3.26359; 0; 0; 17.444; 0.211817; 1.4782e-05; 0; 0; 17.444; 0.211817; 1.4782e-05; 0; 0; 30.4747; 6.883; 4.99878; 0; 0; 17.444; 3.1339; 0.087894; 0.00639934; 1; 5.09309; 
+3.71811; 0; 0; 15.1215; 0.129339; 1.3355e-05; 0; 0; 15.1215; 0.129339; 1.3355e-05; 0; 0; 21.5655; 3.93732; 4.99461; 0; 0; 15.1215; 2.11004; 0.0825736; 0.00585696; 1; 5.08305; 
+3.71896; 0; 0; 14.9948; 0.132878; 2.0464e-05; 0; 0; 14.9948; 0.132878; 2.0464e-05; 0; 0; 24.058; 4.07199; 4.99264; 0; 0; 14.9948; 2.05667; 0.0793617; 0.00802659; 1; 5.08005; 
+3.24604; 0; 0; 13.4145; 0.0380362; 1.3178e-05; 0; 0; 13.4145; 0.0380362; 1.3178e-05; 0; 0; 19.6808; 4.44477; 4.99459; 0; 0; 13.4145; 0.410407; 0.0793542; 0.00667677; 1; 5.08064; 
+3.04065; 0; 0; 11.3418; 0.00733888; 1.1118e-05; 0; 0; 11.3418; 0.00733888; 1.1118e-05; 0; 0; 14.7435; 3.91748; 4.99296; 0; 0; 11.3418; 0.0751157; 0.0503993; 0.00869955; 1; 5.05207; 
+2.95836; 0; 0; 12.2358; 0.0317535; 1.2263e-05; 0; 0; 12.2358; 0.0317535; 1.2263e-05; 0; 0; 25.1833; 4.35396; 4.99207; 0; 0; 12.2358; 1.10631; 0.0819055; 0.00872544; 1; 5.08272; 
+4.23084; 0; 0; 15.2763; 0.0665646; 1.4677e-05; 0; 0; 15.2763; 0.0665646; 1.4677e-05; 0; 0; 30.0149; 7.0112; 4.99153; 0; 0; 15.2763; 0.748907; 0.084762; 0.00964311; 1; 5.08595; 
+2.59823; 0; 0; 12.2601; 0.147388; 1.2678e-05; 0; 0; 12.2601; 0.147388; 1.2678e-05; 0; 0; 21.3567; 5.79448; 4.9947; 0; 0; 12.2601; 1.53562; 0.0591361; 0.00572844; 1; 5.05957; 
+4.52354; 0; 0; 17.5654; 0.126643; 1.6327e-05; 0; 0; 17.5654; 0.126643; 1.6327e-05; 0; 0; 23.2044; 4.27022; 4.99265; 0; 0; 17.5654; 2.9736; 0.0999189; 0.00791551; 1; 5.1005; 
+3.74841; 0; 0; 15.8271; 0.0769504; 1.5212e-05; 0; 0; 15.8271; 0.0769504; 1.5212e-05; 0; 0; 32.3382; 7.68317; 4.99342; 0; 0; 15.8271; 0.84415; 0.0786715; 0.00713981; 1; 5.07924; 
+2.86246; 0; 0; 13.2878; 0.110216; 1.2293e-05; 0; 0; 13.2878; 0.110216; 1.2293e-05; 0; 0; 18.7844; 2.64692; 4.99454; 0; 0; 13.2878; 2.49921; 0.0591; 0.00604649; 1; 5.05969; 
+2.78563; 0; 0; 13.1467; 0.226899; 1.0934e-05; 0; 0; 13.1467; 0.226899; 1.0934e-05; 0; 0; 21.0919; 6.78023; 4.99288; 0; 0; 13.1467; 2.86848; 0.0567564; 0.00750132; 1; 5.05715; 
+.
+LazyPRMstar
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+3.37815; 0; 0; 13.8549; 0.176921; 1.3333e-05; 0; 0; 13.8549; 0.176921; 1.3333e-05; 0; 0; 18.2328; 7.07526; 5.00161; 0; 0; 13.8549; 1.84061; 0.0545708; 0.000595453; 1; 5.05679; 
+3.15004; 0; 0; 13.5358; 0.121076; 1.2722e-05; 0; 0; 13.5358; 0.121076; 1.2722e-05; 0; 0; 20.4881; 4.94039; 4.99821; 0; 0; 13.5358; 2.09388; 0.0753107; 0.00974264; 1; 5.08327; 
+2.78133; 0; 0; 11.3401; 0.00352879; 1.0903e-05; 0; 0; 11.3401; 0.00352879; 1.0903e-05; 0; 0; 14.4169; 4.04133; 4.99276; 0; 0; 11.3401; 0.029441; 0.0482604; 0.00885539; 1; 5.04988; 
+3.13238; 0; 0; 13.2515; 0.207081; 1.4065e-05; 0; 0; 13.2515; 0.207081; 1.4065e-05; 0; 0; 17.9562; 6.64043; 4.98832; 0; 0; 13.2515; 2.55679; 0.0800161; 0.012164; 1; 5.08051; 
+3.08851; 0; 0; 13.254; 0.0724223; 1.1068e-05; 0; 0; 13.254; 0.0724223; 1.1068e-05; 0; 0; 15.8568; 3.17269; 4.99177; 0; 0; 13.254; 1.21066; 0.0483544; 0.0100486; 1; 5.05019; 
+3.59135; 0; 0; 14.5582; 0.0594596; 1.2742e-05; 0; 0; 14.5582; 0.0594596; 1.2742e-05; 0; 0; 17.8656; 3.23386; 4.98813; 0; 0; 14.5582; 1.08448; 0.0754292; 0.0134414; 1; 5.07701; 
+3.64887; 0; 0; 14.3852; 0.080597; 1.6351e-05; 0; 0; 14.3852; 0.080597; 1.6351e-05; 0; 0; 19.5549; 5.40882; 4.98956; 0; 0; 14.3852; 1.00269; 0.0869326; 0.0112103; 1; 5.08771; 
+3.20318; 0; 0; 13.9961; 0.0531961; 1.6561e-05; 0; 0; 13.9961; 0.0531961; 1.6561e-05; 0; 0; 17.35; 4.67264; 4.98432; 0; 0; 13.9961; 0.503228; 0.0535454; 0.016543; 1; 5.05443; 
+3.22422; 0; 0; 14.3235; 0.0657233; 1.3194e-05; 0; 0; 14.3235; 0.0657233; 1.3194e-05; 0; 0; 20.5888; 2.09192; 4.9919; 0; 0; 14.3235; 1.42887; 0.0775255; 0.0107449; 1; 5.08018; 
+3.39421; 0; 0; 14.2667; 0.0831654; 1.2526e-05; 0; 0; 14.2667; 0.0831654; 1.2526e-05; 0; 0; 17.0736; 3.00036; 4.99071; 0; 0; 14.2667; 1.30353; 0.0387835; 0.00995519; 1; 5.03946; 
+3.62263; 0; 0; 14.5921; 0.092532; 1.2604e-05; 0; 0; 14.5921; 0.092532; 1.2604e-05; 0; 0; 19.7093; 5.84625; 5.00216; 0; 0; 14.5921; 1.7929; 0.0369861; 0.0109204; 1; 5.05008; 
+3.48934; 0; 0; 13.9982; 0.0622287; 1.1149e-05; 0; 0; 13.9982; 0.0622287; 1.1149e-05; 0; 0; 20.4918; 4.08494; 4.99352; 0; 0; 13.9982; 2.09909; 0.0959927; 0.0101652; 1; 5.09969; 
+2.76917; 0; 0; 11.9163; 0.0889196; 1.0653e-05; 0; 0; 11.9163; 0.0889196; 1.0653e-05; 0; 0; 14.5668; 5.21941; 4.99112; 0; 0; 11.9163; 1.3698; 0.0500531; 0.00981235; 1; 5.051; 
+4.08429; 0; 0; 15.3552; 0.0813594; 2.4296e-05; 0; 0; 15.3552; 0.0813594; 2.4296e-05; 0; 0; 22.0987; 4.94459; 4.98969; 0; 0; 15.3552; 0.975819; 0.0712214; 0.0126921; 1; 5.07363; 
+3.28349; 0; 0; 13.7724; 0.0914223; 1.2219e-05; 0; 0; 13.7724; 0.0914223; 1.2219e-05; 0; 0; 17.5516; 3.78552; 4.99252; 0; 0; 13.7724; 1.59571; 0.0651327; 0.00831912; 1; 5.06598; 
+3.12062; 0; 0; 12.5872; 0.065122; 1.2585e-05; 0; 0; 12.5872; 0.065122; 1.2585e-05; 0; 0; 14.4467; 2.57387; 4.98904; 0; 0; 12.5872; 0.844883; 0.0841418; 0.011469; 1; 5.08467; 
+3.13534; 0; 0; 13.2758; 0.0984115; 1.2577e-05; 0; 0; 13.2758; 0.0984115; 1.2577e-05; 0; 0; 16.9465; 3.98734; 4.98827; 0; 0; 13.2758; 1.20665; 0.0578169; 0.0124772; 1; 5.05858; 
+3.33246; 0; 0; 14.1447; 0.0803393; 2.1312e-05; 0; 0; 14.1447; 0.0803393; 2.1312e-05; 0; 0; 19.8074; 4.07734; 4.98867; 0; 0; 14.1447; 0.820517; 0.0708512; 0.0145898; 1; 5.07413; 
+3.33813; 0; 0; 12.9986; 0.0657628; 1.1714e-05; 0; 0; 12.9986; 0.0657628; 1.1714e-05; 0; 0; 19.1011; 4.66096; 5.0048; 0; 0; 12.9986; 0.901244; 0.0519726; 0.0107787; 1; 5.06756; 
+3.26745; 0; 0; 15.0489; 0.117055; 1.2833e-05; 0; 0; 15.0489; 0.117055; 1.2833e-05; 0; 0; 18.563; 4.99008; 4.98159; 0; 0; 15.0489; 1.73136; 0.064035; 0.0188327; 1; 5.06447; 
+.
+PDST
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+3.3976; 0; 0; 16.7986; 0.196729; 1.4188e-05; 0; 0; 16.7986; 0.196729; 1.4188e-05; 0; 0; 24.1784; 7.17745; 0.179032; 0; 0; 16.7986; 2.87853; 0.0655479; 0.000403678; 1; 0.244998; 
+3.62017; 0; 0; 17.3968; 0.100811; 1.3591e-05; 0; 0; 17.3968; 0.100811; 1.3591e-05; 0; 0; 52.3652; 9.06174; 0.0834447; 0; 0; 17.3968; 1.65516; 0.120678; 0.000832495; 1; 0.204969; 
+3.49816; 0; 0; 17.0355; 0.0743142; 1.6443e-05; 0; 0; 17.0355; 0.0743142; 1.6443e-05; 0; 0; 38.49; 6.70871; 1.07849; 0; 0; 17.0355; 1.40105; 0.105568; 0.00061518; 1; 1.18469; 
+5.66989; 0; 0; 29.6846; 0.197233; 2.7021e-05; 0; 0; 29.6846; 0.197233; 2.7021e-05; 0; 0; 92.9231; 8.45668; 0.501853; 0; 0; 29.6846; 2.95817; 0.175722; 0.00298825; 1; 0.680591; 
+3.16292; 0; 0; 14.5037; 0.0973523; 1.6208e-05; 0; 0; 14.5037; 0.0973523; 1.6208e-05; 0; 0; 22.2487; 4.88271; 0.0434228; 0; 0; 14.5037; 1.11429; 0.0691415; 0.00109069; 1; 0.113671; 
+3.69597; 0; 0; 14.5272; 0.079525; 1.2154e-05; 0; 0; 14.5272; 0.079525; 1.2154e-05; 0; 0; 37.7092; 8.70844; 1.97395; 0; 0; 14.5272; 0.914684; 0.0997734; 0.000481576; 1; 2.07422; 
+2.9851; 0; 0; 13.8832; 0.0836045; 1.1727e-05; 0; 0; 13.8832; 0.0836045; 1.1727e-05; 0; 0; 41.5577; 9.46589; 0.837868; 0; 0; 13.8832; 0.998351; 0.108252; 0.00597713; 1; 0.952108; 
+2.98167; 0; 0; 13.7007; 0.0854644; 1.2921e-05; 0; 0; 13.7007; 0.0854644; 1.2921e-05; 0; 0; 28.4243; 6.81758; 0.173355; 0; 0; 13.7007; 1.24655; 0.122336; 0.00198628; 1; 0.297691; 
+3.26886; 0; 0; 13.7848; 0.0955347; 1.2063e-05; 0; 0; 13.7848; 0.0955347; 1.2063e-05; 0; 0; 36.131; 7.48238; 0.292775; 0; 0; 13.7848; 1.41434; 0.100532; 0.000607984; 1; 0.393927; 
+2.95104; 0; 0; 14.5564; 0.224397; 1.3507e-05; 0; 0; 14.5564; 0.224397; 1.3507e-05; 0; 0; 32.7178; 9.25357; 0.351978; 0; 0; 14.5564; 3.19426; 0.0912765; 0.000783266; 1; 0.444051; 
+2.88953; 0; 0; 13.5849; 0.0189651; 1.6115e-05; 0; 0; 13.5849; 0.0189651; 1.6115e-05; 0; 0; 40.8236; 7.36334; 0.104299; 0; 0; 13.5849; 0.190551; 0.112686; 0.00108218; 1; 0.218083; 
+4.27137; 0; 0; 21.5685; 0.153318; 1.9865e-05; 0; 0; 21.5685; 0.153318; 1.9865e-05; 0; 0; 42.9895; 8.9804; 0.209416; 0; 0; 21.5685; 2.68738; 0.126682; 0.000615828; 1; 0.336734; 
+3.4602; 0; 0; 13.0193; 0.123716; 1.1324e-05; 0; 0; 13.0193; 0.123716; 1.1324e-05; 0; 0; 36.1862; 6.81291; 0.065394; 0; 0; 13.0193; 1.72229; 0.118523; 0.000651474; 1; 0.18458; 
+3.75435; 0; 0; 15.6681; 0.0930345; 1.3873e-05; 0; 0; 15.6681; 0.0930345; 1.3873e-05; 0; 0; 27.9191; 8.07956; 0.707921; 0; 0; 15.6681; 1.26611; 0.0891482; 0.000532259; 1; 0.797615; 
+3.32157; 0; 0; 15.2315; 0.16045; 1.2931e-05; 0; 0; 15.2315; 0.16045; 1.2931e-05; 0; 0; 39.5503; 7.92959; 0.0841887; 0; 0; 15.2315; 2.52231; 0.103336; 0.00181045; 1; 0.189348; 
+3.51924; 0; 0; 14.7682; 0.208766; 1.4028e-05; 0; 0; 14.7682; 0.208766; 1.4028e-05; 0; 0; 40.1624; 9.09441; 3.4186; 0; 0; 14.7682; 2.61017; 0.120081; 0.000949405; 1; 3.53964; 
+3.50609; 0; 0; 14.4133; 0.158816; 1.3575e-05; 0; 0; 14.4133; 0.158816; 1.3575e-05; 0; 0; 34.94; 7.95553; 0.0861028; 0; 0; 14.4133; 3.02867; 0.0642294; 0.0142822; 1; 0.164628; 
+3.38097; 0; 0; 18.1299; 0.0728666; 2.746e-05; 0; 0; 18.1299; 0.0728666; 2.746e-05; 0; 0; 34.6654; 7.57488; 0.57772; 0; 0; 18.1299; 0.908775; 0.114305; 0.000620302; 1; 0.692673; 
+7.30514; 0; 0; 49.1301; 0.237962; 5.1099e-05; 0; 0; 49.1301; 0.237962; 5.1099e-05; 0; 0; 35.0163; 9.01995; 0.166132; 0; 0; 49.1301; 11.8184; 0.177517; 0.00224303; 1; 0.345943; 
+3.0017; 0; 0; 13.808; 0.154469; 4.2016e-05; 0; 0; 13.808; 0.154469; 4.2016e-05; 0; 0; 34.1722; 8.08341; 0.0239381; 0; 0; 13.808; 1.7375; 0.0728923; 0.000901787; 1; 0.0977742; 
+.
+PRM
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+3.98523; 0; 0; 16.9033; 0.0561047; 1.5016e-05; 0; 0; 16.9033; 0.0561047; 1.5016e-05; 0; 0; 27.4999; 5.57529; 5.01073; 0; 0; 16.9033; 1.73751; 0.0964793; 0.000510919; 1; 5.10774; 
+2.90538; 0; 0; 12.6775; 0.0522199; 1.2749e-05; 0; 0; 12.6775; 0.0522199; 1.2749e-05; 0; 0; 18.9622; 5.97922; 5.01032; 0; 0; 12.6775; 0.839378; 0.0609962; 0.000708632; 1; 5.07204; 
+3.58643; 0; 0; 16.8354; 0.159528; 1.4305e-05; 0; 0; 16.8354; 0.159528; 1.4305e-05; 0; 0; 25.3723; 9.80005; 5.00993; 0; 0; 16.8354; 1.86218; 0.0758688; 0.000803379; 1; 5.08661; 
+3.84203; 0; 0; 14.8677; 0.0762337; 2.2991e-05; 0; 0; 14.8677; 0.0762337; 2.2991e-05; 0; 0; 23.0423; 6.47821; 5.00219; 0; 0; 14.8677; 1.19805; 0.0933828; 0.000767329; 1; 5.09636; 
+2.86818; 0; 0; 11.2602; 0.0667632; 1.6671e-05; 0; 0; 11.2602; 0.0667632; 1.6671e-05; 0; 0; 19.2692; 9.68962; 5.01548; 0; 0; 11.2602; 0.578935; 0.0744501; 0.000914872; 1; 5.09086; 
+2.95145; 0; 0; 12.5653; 0.127066; 1.7202e-05; 0; 0; 12.5653; 0.127066; 1.7202e-05; 0; 0; 22.1022; 9.65453; 5.00215; 0; 0; 12.5653; 1.88267; 0.0715057; 0.000682497; 1; 5.07436; 
+4.85871; 0; 0; 17.5644; 0.127118; 2.0716e-05; 0; 0; 17.5644; 0.127118; 2.0716e-05; 0; 0; 21.7469; 4.90154; 5.00245; 0; 0; 17.5644; 2.048; 0.0797847; 0.00077964; 1; 5.08304; 
+3.33813; 0; 0; 13.6912; 0.0950374; 2.5788e-05; 0; 0; 13.6912; 0.0950374; 2.5788e-05; 0; 0; 16.1228; 2.78513; 5.00757; 0; 0; 13.6912; 2.31369; 0.0476179; 0.000988765; 1; 5.0562; 
+3.64748; 0; 0; 14.6006; 0.190309; 3.0023e-05; 0; 0; 14.6006; 0.190309; 3.0023e-05; 0; 0; 24.2993; 9.12978; 5.00598; 0; 0; 14.6006; 2.80307; 0.0623924; 0.000783292; 1; 5.06919; 
+5.04069; 0; 0; 18.3042; 0.139162; 3.058e-05; 0; 0; 18.3042; 0.139162; 3.058e-05; 0; 0; 29.8768; 5.20287; 5.0017; 0; 0; 18.3042; 2.31649; 0.103984; 0.000852409; 1; 5.10657; 
+3.49675; 0; 0; 15.1967; 0.144661; 1.6766e-05; 0; 0; 15.1967; 0.144661; 1.6766e-05; 0; 0; 17.9286; 3.08104; 5.00831; 0; 0; 15.1967; 2.3092; 0.0896888; 0.000748184; 1; 5.09877; 
+4.00691; 0; 0; 16.5984; 0.149154; 2.6639e-05; 0; 0; 16.5984; 0.149154; 2.6639e-05; 0; 0; 22.6595; 5.20716; 5.01442; 0; 0; 16.5984; 2.54823; 0.0871697; 0.000774192; 1; 5.10239; 
+3.5526; 0; 0; 15.2134; 0.10172; 2.0736e-05; 0; 0; 15.2134; 0.10172; 2.0736e-05; 0; 0; 23.6558; 4.28513; 5.01826; 0; 0; 15.2134; 1.71637; 0.105638; 0.000787718; 1; 5.12471; 
+3.77581; 0; 0; 16.7974; 0.204229; 2.4594e-05; 0; 0; 16.7974; 0.204229; 2.4594e-05; 0; 0; 18.8627; 6.40245; 5.00168; 0; 0; 16.7974; 2.74441; 0.0632991; 0.00070748; 1; 5.06571; 
+3.09322; 0; 0; 13.4446; 0.15399; 2.0059e-05; 0; 0; 13.4446; 0.15399; 2.0059e-05; 0; 0; 19.9758; 6.24325; 5.00503; 0; 0; 13.4446; 1.2298; 0.0902314; 0.000740964; 1; 5.09602; 
+2.83232; 0; 0; 11.5716; 0.00715776; 1.8398e-05; 0; 0; 11.5716; 0.00715776; 1.8398e-05; 0; 0; 12.931; 1.78435; 5.00778; 0; 0; 11.5716; 0.0490239; 0.0606619; 0.000722219; 1; 5.06918; 
+5.82166; 0; 0; 26.1812; 0.215714; 4.1452e-05; 0; 0; 26.1812; 0.215714; 4.1452e-05; 0; 0; 26.1812; 7.36044; 5.01479; 0; 0; 26.1812; 7.36044; 0.0409543; 0.00092707; 1; 5.05671; 
+3.32664; 0; 0; 14.4871; 0.0694825; 2.8031e-05; 0; 0; 14.4871; 0.0694825; 2.8031e-05; 0; 0; 22.5986; 4.24369; 5.01684; 0; 0; 14.4871; 0.93397; 0.0678237; 0.000740917; 1; 5.08543; 
+4.37143; 0; 0; 19.3703; 0.100681; 2.3118e-05; 0; 0; 19.3703; 0.100681; 2.3118e-05; 0; 0; 26.5984; 5.29712; 5.00589; 0; 0; 19.3703; 1.55473; 0.107518; 0.000848735; 1; 5.11428; 
+4.22964; 0; 0; 17.6705; 0.127449; 3.1191e-05; 0; 0; 17.6705; 0.127449; 3.1191e-05; 0; 0; 22.5175; 6.85938; 5.00937; 0; 0; 17.6705; 2.32361; 0.0630372; 0.000830166; 1; 5.07327; 
+.
+PRMstar
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+3.01063; 0; 0; 13.3204; 0.0613785; 1.2267e-05; 0; 0; 13.3204; 0.0613785; 1.2267e-05; 0; 0; 18.0632; 5.66869; 5.02186; 0; 0; 13.3204; 0.868503; 0.135109; 0.000439003; 1; 5.15742; 
+3.04443; 0; 0; 13.6847; 0.0386252; 1.1918e-05; 0; 0; 13.6847; 0.0386252; 1.1918e-05; 0; 0; 20.4076; 4.57678; 5.02228; 0; 0; 13.6847; 0.401474; 0.0814056; 0.000721186; 1; 5.10442; 
+3.43024; 0; 0; 14.3524; 0.0991275; 1.4329e-05; 0; 0; 14.3524; 0.0991275; 1.4329e-05; 0; 0; 21.5173; 5.73393; 5.02649; 0; 0; 14.3524; 1.37783; 0.0927485; 0.000706581; 1; 5.11996; 
+3.77195; 0; 0; 15.0914; 0.0942442; 1.2834e-05; 0; 0; 15.0914; 0.0942442; 1.2834e-05; 0; 0; 19.3831; 5.99069; 5.00505; 0; 0; 15.0914; 1.14868; 0.0689635; 0.0007877; 1; 5.07481; 
+2.78617; 0; 0; 12.8077; 0.283405; 2.0349e-05; 0; 0; 12.8077; 0.283405; 2.0349e-05; 0; 0; 22.4423; 4.77829; 5.00668; 0; 0; 12.8077; 2.55538; 0.0792098; 0.000819293; 1; 5.08673; 
+3.27173; 0; 0; 13.7487; 0.0480934; 1.2448e-05; 0; 0; 13.7487; 0.0480934; 1.2448e-05; 0; 0; 21.5415; 6.51935; 5.02546; 0; 0; 13.7487; 0.428189; 0.0765932; 0.000764594; 1; 5.10283; 
+2.89518; 0; 0; 14.34; 0.169441; 1.4448e-05; 0; 0; 14.34; 0.169441; 1.4448e-05; 0; 0; 24.6988; 5.15032; 5.00546; 0; 0; 14.34; 2.14079; 0.0819075; 0.000673736; 1; 5.08806; 
+2.7543; 0; 0; 13.6987; 0.105133; 1.8428e-05; 0; 0; 13.6987; 0.105133; 1.8428e-05; 0; 0; 20.6735; 4.48299; 5.01061; 0; 0; 13.6987; 1.54305; 0.113136; 0.000714974; 1; 5.12448; 
+3.83468; 0; 0; 16.5249; 0.0801338; 1.5673e-05; 0; 0; 16.5249; 0.0801338; 1.5673e-05; 0; 0; 17.5679; 7.95247; 5.01296; 0; 0; 16.5249; 1.71744; 0.0483221; 0.000691167; 1; 5.06199; 
+3.30452; 0; 0; 15.0728; 0.125499; 1.9985e-05; 0; 0; 15.0728; 0.125499; 1.9985e-05; 0; 0; 23.5964; 8.04906; 5.04027; 0; 0; 15.0728; 2.58986; 0.0735558; 0.000724155; 1; 5.11457; 
+4.15541; 0; 0; 17.4758; 0.122797; 2.0808e-05; 0; 0; 17.4758; 0.122797; 2.0808e-05; 0; 0; 23.8169; 4.88557; 5.02183; 0; 0; 17.4758; 1.64575; 0.0920146; 0.000692139; 1; 5.11456; 
+3.12766; 0; 0; 14.8; 0.138846; 1.4494e-05; 0; 0; 14.8; 0.138846; 1.4494e-05; 0; 0; 19.8788; 5.74235; 5.01636; 0; 0; 14.8; 2.45373; 0.0663686; 0.000656655; 1; 5.0834; 
+2.90316; 0; 0; 13.3749; 0.0790418; 1.5141e-05; 0; 0; 13.3749; 0.0790418; 1.5141e-05; 0; 0; 17.2734; 4.26065; 5.02909; 0; 0; 13.3749; 0.674501; 0.0662826; 0.000616652; 1; 5.096; 
+3.03232; 0; 0; 12.3941; 0.103888; 1.1268e-05; 0; 0; 12.3941; 0.103888; 1.1268e-05; 0; 0; 12.3555; 1.3775; 5.00188; 0; 0; 12.3941; 1.62157; 0.0362562; 0.000597148; 1; 5.03874; 
+3.67199; 0; 0; 14.8799; 0.080746; 1.9931e-05; 0; 0; 14.8799; 0.080746; 1.9931e-05; 0; 0; 23.6393; 5.24081; 5.00889; 0; 0; 14.8799; 1.63076; 0.0755939; 0.000805878; 1; 5.08531; 
+3.35037; 0; 0; 15.7342; 0.0933565; 1.9816e-05; 0; 0; 15.7342; 0.0933565; 1.9816e-05; 0; 0; 18.953; 5.02503; 5.01037; 0; 0; 15.7342; 2.11126; 0.0528491; 0.000685628; 1; 5.06392; 
+3.66583; 0; 0; 16.7142; 0.236067; 2.9505e-05; 0; 0; 16.7142; 0.236067; 2.9505e-05; 0; 0; 20.7404; 5.073; 5.01336; 0; 0; 16.7142; 3.7649; 0.0574322; 0.000749356; 1; 5.07157; 
+2.97159; 0; 0; 13.0625; 0.0366604; 1.8422e-05; 0; 0; 13.0625; 0.0366604; 1.8422e-05; 0; 0; 16.0295; 3.71083; 5.00852; 0; 0; 13.0625; 0.337703; 0.0881859; 0.000684308; 1; 5.09741; 
+3.08153; 0; 0; 12.6018; 0.0629383; 1.1615e-05; 0; 0; 12.6018; 0.0629383; 1.1615e-05; 0; 0; 20.463; 5.97772; 5.01513; 0; 0; 12.6018; 1.29208; 0.051428; 0.000655858; 1; 5.06723; 
+2.88131; 0; 0; 13.3189; 0.118982; 1.7348e-05; 0; 0; 13.3189; 0.118982; 1.7348e-05; 0; 0; 19.0082; 3.73401; 5.03451; 0; 0; 13.3189; 1.91189; 0.0758476; 0.000737501; 1; 5.11111; 
+.
+ProjEST
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+7.26114; 0; 0; 35.5215; 0.198467; 3.0827e-05; 0; 0; 35.5215; 0.198467; 3.0827e-05; 0; 0; 65.4484; 10.6076; 1.11305; 0; 0; 35.5215; 5.16613; 0.179944; 0.000630133; 1; 1.29365; 
+4.47311; 0; 0; 14.8824; 0.0672212; 2.8471e-05; 0; 0; 14.8824; 0.0672212; 2.8471e-05; 0; 0; 25.6675; 8.45736; 0.06962; 0; 0; 14.8824; 1.14202; 0.0932845; 0.000664631; 1; 0.163598; 
+4.39576; 0; 0; 13.5968; 0.0721029; 1.9982e-05; 0; 0; 13.5968; 0.0721029; 1.9982e-05; 0; 0; 18.8954; 4.92104; 0.293098; 0; 0; 13.5968; 1.3676; 0.0702199; 0.000442357; 1; 0.363781; 
+4.99099; 0; 0; 16.4825; 0.115051; 3.4443e-05; 0; 0; 16.4825; 0.115051; 3.4443e-05; 0; 0; 21.5931; 5.89485; 0.0837295; 0; 0; 16.4825; 1.64874; 0.0703775; 0.000490167; 1; 0.154632; 
+5.90949; 0; 0; 21.9705; 0.14737; 3.9416e-05; 0; 0; 21.9705; 0.14737; 3.9416e-05; 0; 0; 30.4539; 7.72277; 0.0310397; 0; 0; 21.9705; 2.96191; 0.0840482; 0.000526485; 1; 0.115654; 
+5.79474; 0; 0; 21.4469; 0.121318; 1.7406e-05; 0; 0; 21.4469; 0.121318; 1.7406e-05; 0; 0; 73.7316; 11.5478; 0.738776; 0; 0; 21.4469; 1.75489; 0.121348; 0.000519423; 1; 0.86066; 
+4.62163; 0; 0; 13.8868; 0.0978683; 1.8456e-05; 0; 0; 13.8868; 0.0978683; 1.8456e-05; 0; 0; 43.146; 11.8337; 0.111796; 0; 0; 13.8868; 1.39836; 0.102683; 0.000511578; 1; 0.215009; 
+4.67377; 0; 0; 15.5236; 0.120537; 2.7151e-05; 0; 0; 15.5236; 0.120537; 2.7151e-05; 0; 0; 31.9512; 8.41195; 0.086972; 0; 0; 15.5236; 3.41229; 0.0759752; 0.00041507; 1; 0.163389; 
+5.12095; 0; 0; 16.8402; 0.165355; 2.7922e-05; 0; 0; 16.8402; 0.165355; 2.7922e-05; 0; 0; 22.0872; 6.26864; 0.0632449; 0; 0; 16.8402; 4.35228; 0.079013; 0.000445002; 1; 0.142731; 
+5.74676; 0; 0; 21.6669; 0.212031; 2.5608e-05; 0; 0; 21.6669; 0.212031; 2.5608e-05; 0; 0; 54.1069; 11.2246; 0.312131; 0; 0; 21.6669; 4.42663; 0.13505; 0.00050144; 1; 0.447707; 
+5.84511; 0; 0; 22.0362; 0.176502; 2.5417e-05; 0; 0; 22.0362; 0.176502; 2.5417e-05; 0; 0; 34.127; 9.30719; 0.0822107; 0; 0; 22.0362; 5.38922; 0.0738829; 0.000540813; 1; 0.15666; 
+5.188; 0; 0; 20.1971; 0.170173; 2.2998e-05; 0; 0; 20.1971; 0.170173; 2.2998e-05; 0; 0; 34.3435; 8.70274; 0.192374; 0; 0; 20.1971; 2.78032; 0.0921821; 0.00051396; 1; 0.285093; 
+4.87042; 0; 0; 17.0356; 0.154536; 2.8157e-05; 0; 0; 17.0356; 0.154536; 2.8157e-05; 0; 0; 60.3889; 15.0303; 0.289121; 0; 0; 17.0356; 2.25944; 0.0971322; 0.000483698; 1; 0.386765; 
+4.66673; 0; 0; 16.1294; 0.0494953; 2.4965e-05; 0; 0; 16.1294; 0.0494953; 2.4965e-05; 0; 0; 50.9873; 9.72407; 0.646383; 0; 0; 16.1294; 0.775619; 0.121344; 0.000437365; 1; 0.76819; 
+4.85591; 0; 0; 22.151; 0.266948; 3.4748e-05; 0; 0; 22.151; 0.266948; 3.4748e-05; 0; 0; 36.3302; 8.63466; 0.0805543; 0; 0; 22.151; 4.04424; 0.116872; 0.000557184; 1; 0.198018; 
+4.44622; 0; 0; 14.4502; 0.181157; 2.6294e-05; 0; 0; 14.4502; 0.181157; 2.6294e-05; 0; 0; 33.4509; 10.7004; 0.117817; 0; 0; 14.4502; 3.40163; 0.0764674; 0.000400687; 1; 0.194712; 
+7.1536; 0; 0; 32.8067; 0.177637; 3.9562e-05; 0; 0; 32.8067; 0.177637; 3.9562e-05; 0; 0; 89.7492; 11.9789; 1.77752; 0; 0; 32.8067; 3.25302; 0.15728; 0.000621212; 1; 1.93546; 
+4.62569; 0; 0; 16.2051; 0.276248; 1.2416e-05; 0; 0; 16.2051; 0.276248; 1.2416e-05; 0; 0; 30.3715; 10.7672; 0.0420051; 0; 0; 16.2051; 5.09043; 0.0798457; 0.000555801; 1; 0.122419; 
+6.52026; 0; 0; 24.4623; 0.199893; 1.8835e-05; 0; 0; 24.4623; 0.199893; 1.8835e-05; 0; 0; 62.9098; 13.7031; 0.735764; 0; 0; 24.4623; 4.50068; 0.131373; 0.000506599; 1; 0.867663; 
+4.77775; 0; 0; 14.4249; 0.0848243; 1.2358e-05; 0; 0; 14.4249; 0.0848243; 1.2358e-05; 0; 0; 44.5355; 12.4272; 0.118682; 0; 0; 14.4249; 1.05856; 0.0765296; 0.0007441; 1; 0.195968; 
+.
+RRTConnect
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+3.47301; 0; 0; 13.4095; 0.0716306; 2.6688e-05; 0; 0; 13.4095; 0.0716306; 2.6688e-05; 0; 0; 29.4; 6.73667; 0.045611; 0; 0; 13.4095; 1.87112; 0.0882731; 0.000435385; 1; 0.134346; 
+3.40645; 0; 0; 13.8478; 0.0597857; 3.3499e-05; 0; 0; 13.8478; 0.0597857; 3.3499e-05; 0; 0; 21.1264; 7.02343; 0.0181028; 0; 0; 13.8478; 0.762139; 0.0684949; 0.000493415; 1; 0.0871246; 
+3.8913; 0; 0; 15.8967; 0.212163; 3.243e-05; 0; 0; 15.8967; 0.212163; 3.243e-05; 0; 0; 30.432; 7.41439; 0.0471497; 0; 0; 15.8967; 3.77556; 0.0977209; 0.000503797; 1; 0.145407; 
+4.47242; 0; 0; 14.8272; 0.113481; 2.3025e-05; 0; 0; 14.8272; 0.113481; 2.3025e-05; 0; 0; 23.9512; 5.07292; 0.0205218; 0; 0; 14.8272; 1.44419; 0.0923899; 0.000451416; 1; 0.113386; 
+4.61763; 0; 0; 17.9769; 0.162533; 2.3982e-05; 0; 0; 17.9769; 0.162533; 2.3982e-05; 0; 0; 27.0585; 4.56766; 0.0185908; 0; 0; 17.9769; 2.32493; 0.0968859; 0.000495971; 1; 0.115997; 
+3.64242; 0; 0; 15.6845; 0.173601; 2.5118e-05; 0; 0; 15.6845; 0.173601; 2.5118e-05; 0; 0; 37.7314; 8.29197; 0.0402288; 0; 0; 15.6845; 3.68957; 0.102633; 0.000449464; 1; 0.143336; 
+4.14616; 0; 0; 14.5328; 0.0940579; 2.1275e-05; 0; 0; 14.5328; 0.0940579; 2.1275e-05; 0; 0; 21.7887; 4.50529; 0.0414285; 0; 0; 14.5328; 1.87116; 0.0854418; 0.000388346; 1; 0.12728; 
+3.44152; 0; 0; 11.9051; 0.0383706; 1.9519e-05; 0; 0; 11.9051; 0.0383706; 1.9519e-05; 0; 0; 13.4794; 2.21767; 0.00596266; 0; 0; 11.9051; 0.315771; 0.0591729; 0.000354183; 1; 0.0655093; 
+4.07379; 0; 0; 16.1286; 0.151488; 2.8736e-05; 0; 0; 16.1286; 0.151488; 2.8736e-05; 0; 0; 28.3679; 4.96179; 0.0457994; 0; 0; 16.1286; 4.01699; 0.10134; 0.000446614; 1; 0.147614; 
+4.77519; 0; 0; 17.6531; 0.184718; 3.0387e-05; 0; 0; 17.6531; 0.184718; 3.0387e-05; 0; 0; 28.657; 7.82579; 0.0270794; 0; 0; 17.6531; 3.86651; 0.0899475; 0.000447076; 1; 0.117504; 
+4.92816; 0; 0; 23.8972; 0.229571; 2.2995e-05; 0; 0; 23.8972; 0.229571; 2.2995e-05; 0; 0; 37.1811; 5.2971; 0.0489422; 0; 0; 23.8972; 5.8848; 0.0832577; 0.000568145; 1; 0.132791; 
+4.03242; 0; 0; 15.2364; 0.106166; 1.9914e-05; 0; 0; 15.2364; 0.106166; 1.9914e-05; 0; 0; 42.1242; 8.36148; 0.0460792; 0; 0; 15.2364; 1.32123; 0.117474; 0.000469835; 1; 0.164043; 
+3.52747; 0; 0; 17.2992; 0.092868; 2.07e-05; 0; 0; 17.2992; 0.092868; 2.07e-05; 0; 0; 29.4348; 6.50782; 0.0315537; 0; 0; 17.2992; 1.89669; 0.095271; 0.000427418; 1; 0.127273; 
+4.37054; 0; 0; 19.9775; 0.0828942; 2.4801e-05; 0; 0; 19.9775; 0.0828942; 2.4801e-05; 0; 0; 42.4011; 10.5914; 0.0258728; 0; 0; 19.9775; 1.24503; 0.134965; 0.000468248; 1; 0.161331; 
+3.84002; 0; 0; 19.1653; 0.0626712; 1.5827e-05; 0; 0; 19.1653; 0.0626712; 1.5827e-05; 0; 0; 25.6568; 5.95526; 0.0290679; 0; 0; 19.1653; 0.759964; 0.0979393; 0.000474503; 1; 0.127498; 
+3.92041; 0; 0; 15.2252; 0.0796993; 1.2115e-05; 0; 0; 15.2252; 0.0796993; 1.2115e-05; 0; 0; 23.3941; 3.97529; 0.0145971; 0; 0; 15.2252; 1.46962; 0.0852724; 0.000413869; 1; 0.100295; 
+3.70639; 0; 0; 14.3315; 0.0932326; 1.219e-05; 0; 0; 14.3315; 0.0932326; 1.219e-05; 0; 0; 29.4138; 5.31484; 0.0335862; 0; 0; 14.3315; 1.4209; 0.0975921; 0.000420061; 1; 0.131611; 
+9.1086; 0; 0; 40.1727; 0.123862; 4.7591e-05; 0; 0; 40.1727; 0.123862; 4.7591e-05; 0; 0; 66.5377; 8.57329; 0.125413; 0; 0; 40.1727; 2.35177; 0.157995; 0.000689136; 1; 0.284144; 
+3.95121; 0; 0; 17.4619; 0.0772393; 1.3558e-05; 0; 0; 17.4619; 0.0772393; 1.3558e-05; 0; 0; 37.9148; 6.65501; 0.0451272; 0; 0; 17.4619; 1.02797; 0.0927349; 0.000472959; 1; 0.138349; 
+3.53978; 0; 0; 11.8361; 0.0531446; 1.0033e-05; 0; 0; 11.8361; 0.0531446; 1.0033e-05; 0; 0; 12.4345; 1.49595; 0.00498393; 0; 0; 11.8361; 0.577534; 0.0437506; 0.000353388; 1; 0.049098; 
+.
+RRT
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+4.80018; 0; 0; 18.417; 0.222868; 1.9034e-05; 0; 0; 18.417; 0.222868; 1.9034e-05; 0; 0; 42.9121; 6.35823; 0.0790327; 0; 0; 18.417; 5.27113; 0.119784; 0.000478336; 1; 0.199314; 
+4.88494; 0; 0; 21.5713; 0.160101; 3.7611e-05; 0; 0; 21.5713; 0.160101; 3.7611e-05; 0; 0; 29.6966; 3.07115; 0.47339; 0; 0; 21.5713; 4.47197; 0.109224; 0.00060023; 1; 0.583252; 
+3.89748; 0; 0; 14.3551; 0.118099; 2.5096e-05; 0; 0; 14.3551; 0.118099; 2.5096e-05; 0; 0; 25.9926; 5.30795; 0.0274841; 0; 0; 14.3551; 2.30293; 0.0977021; 0.0005162; 1; 0.125727; 
+4.97983; 0; 0; 20.9546; 0.188875; 3.7655e-05; 0; 0; 20.9546; 0.188875; 3.7655e-05; 0; 0; 41.2769; 6.6647; 0.121889; 0; 0; 20.9546; 2.25222; 0.102922; 0.000562937; 1; 0.225411; 
+4.72024; 0; 0; 18.0417; 0.0802058; 2.6657e-05; 0; 0; 18.0417; 0.0802058; 2.6657e-05; 0; 0; 24.7277; 4.77191; 0.234706; 0; 0; 18.0417; 2.85789; 0.112332; 0.000527525; 1; 0.347592; 
+4.92645; 0; 0; 21.5825; 0.0939932; 3.4098e-05; 0; 0; 21.5825; 0.0939932; 3.4098e-05; 0; 0; 47.7682; 8.16422; 0.234368; 0; 0; 21.5825; 1.433; 0.102932; 0.000571824; 1; 0.337906; 
+4.03183; 0; 0; 18.9787; 0.20918; 1.6646e-05; 0; 0; 18.9787; 0.20918; 1.6646e-05; 0; 0; 42.4824; 6.25289; 0.0980671; 0; 0; 18.9787; 4.05311; 0.127789; 0.000494848; 1; 0.226368; 
+4.40243; 0; 0; 20.6761; 0.161817; 2.9253e-05; 0; 0; 20.6761; 0.161817; 2.9253e-05; 0; 0; 35.1737; 6.34822; 0.0465468; 0; 0; 20.6761; 4.65452; 0.111236; 0.000494267; 1; 0.158307; 
+4.69041; 0; 0; 15.409; 0.0765611; 1.7286e-05; 0; 0; 15.409; 0.0765611; 1.7286e-05; 0; 0; 29.946; 8.80838; 0.0862669; 0; 0; 15.409; 2.03806; 0.0985351; 0.000473092; 1; 0.185292; 
+4.30839; 0; 0; 18.056; 0.169467; 3.0048e-05; 0; 0; 18.056; 0.169467; 3.0048e-05; 0; 0; 51.3013; 8.44163; 0.308235; 0; 0; 18.056; 2.37099; 0.120943; 0.000468687; 1; 0.429677; 
+3.89026; 0; 0; 15.6424; 0.144248; 2.6652e-05; 0; 0; 15.6424; 0.144248; 2.6652e-05; 0; 0; 23.088; 4.28688; 0.0162312; 0; 0; 15.6424; 2.59765; 0.0864725; 0.00045634; 1; 0.103187; 
+4.39951; 0; 0; 18.7293; 0.118486; 1.4416e-05; 0; 0; 18.7293; 0.118486; 1.4416e-05; 0; 0; 45.2891; 9.14605; 0.441885; 0; 0; 18.7293; 1.47874; 0.129123; 0.000488883; 1; 0.571512; 
+5.47532; 0; 0; 23.0468; 0.0983488; 2.5904e-05; 0; 0; 23.0468; 0.0983488; 2.5904e-05; 0; 0; 55.2085; 9.92264; 0.724097; 0; 0; 23.0468; 1.57638; 0.127532; 0.00057672; 1; 0.852231; 
+4.174; 0; 0; 13.6561; 0.179172; 1.4589e-05; 0; 0; 13.6561; 0.179172; 1.4589e-05; 0; 0; 26.4756; 7.12462; 1.07417; 0; 0; 13.6561; 2.8108; 0.121664; 0.00047041; 1; 1.19632; 
+3.53632; 0; 0; 13.5262; 0.10138; 1.322e-05; 0; 0; 13.5262; 0.10138; 1.322e-05; 0; 0; 39.7284; 7.79312; 0.0486086; 0; 0; 13.5262; 2.2385; 0.0828445; 0.000445617; 1; 0.131912; 
+4.27365; 0; 0; 18.2075; 0.123358; 1.3418e-05; 0; 0; 18.2075; 0.123358; 1.3418e-05; 0; 0; 30.0666; 7.17107; 0.0711956; 0; 0; 18.2075; 1.62177; 0.107842; 0.000458552; 1; 0.179509; 
+3.91595; 0; 0; 14.2072; 0.149591; 1.2167e-05; 0; 0; 14.2072; 0.149591; 1.2167e-05; 0; 0; 22.8581; 6.82118; 0.259975; 0; 0; 14.2072; 3.01819; 0.0530488; 0.000414431; 1; 0.313451; 
+4.12451; 0; 0; 15.6511; 0.245496; 1.2173e-05; 0; 0; 15.6511; 0.245496; 1.2173e-05; 0; 0; 25.2239; 6.00311; 1.06997; 0; 0; 15.6511; 3.69505; 0.0614916; 0.000464212; 1; 1.13194; 
+5.0875; 0; 0; 17.3536; 0.157085; 1.3799e-05; 0; 0; 17.3536; 0.157085; 1.3799e-05; 0; 0; 21.9227; 5.28658; 0.228118; 0; 0; 17.3536; 2.1032; 0.0706621; 0.000500242; 1; 0.299294; 
+4.77767; 0; 0; 19.1151; 0.0782217; 1.8904e-05; 0; 0; 19.1151; 0.0782217; 1.8904e-05; 0; 0; 27.0305; 6.08481; 0.0666447; 0; 0; 19.1151; 1.24292; 0.0869835; 0.000498768; 1; 0.154146; 
+.
+RRTstar
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+2.90209; 0; 0; 15.5627; 0.315549; 1.7854e-05; 0; 0; 15.5627; 0.315549; 1.7854e-05; 0; 0; 16.2719; 4.76825; 5.00014; 0; 0; 15.5627; 3.0864; 0.0689649; 0.000397268; 1; 5.06952; 
+2.92819; 0; 0; 13.8944; 0.0778251; 1.3029e-05; 0; 0; 13.8944; 0.0778251; 1.3029e-05; 0; 0; 16.0434; 2.7912; 5.00456; 0; 0; 13.8944; 1.10245; 0.0812817; 0.000587029; 1; 5.08644; 
+2.82831; 0; 0; 12.8232; 0.0558068; 1.3083e-05; 0; 0; 12.8232; 0.0558068; 1.3083e-05; 0; 0; 15.145; 3.19696; 5.00978; 0; 0; 12.8232; 0.756607; 0.0399432; 0.000580824; 1; 5.05032; 
+2.78645; 0; 0; 13.4011; 0.0477518; 1.2892e-05; 0; 0; 13.4011; 0.0477518; 1.2892e-05; 0; 0; 16.1741; 3.55137; 5.00471; 0; 0; 13.4011; 1.16728; 0.0681406; 0.000620366; 1; 5.07348; 
+2.88344; 0; 0; 12.466; 0.038687; 1.519e-05; 0; 0; 12.466; 0.038687; 1.519e-05; 0; 0; 17.9345; 5.41048; 4.99983; 0; 0; 12.466; 0.506573; 0.0758119; 0.000578352; 1; 5.07624; 
+2.71725; 0; 0; 13.3257; 0.0829749; 1.31e-05; 0; 0; 13.3257; 0.0829749; 1.31e-05; 0; 0; 18.5527; 3.69663; 5.00238; 0; 0; 13.3257; 1.3565; 0.066601; 0.000645202; 1; 5.06964; 
+3.05771; 0; 0; 15.0374; 0.101843; 1.3556e-05; 0; 0; 15.0374; 0.101843; 1.3556e-05; 0; 0; 17.956; 3.45036; 4.99984; 0; 0; 15.0374; 3.34511; 0.0548749; 0.000580386; 1; 5.0553; 
+2.51818; 0; 0; 12.0628; 0.0442697; 1.0183e-05; 0; 0; 12.0628; 0.0442697; 1.0183e-05; 0; 0; 13.215; 2.01793; 5.0017; 0; 0; 12.0628; 1.14247; 0.0387771; 0.000551135; 1; 5.04104; 
+3.07739; 0; 0; 14.8454; 0.101465; 1.2923e-05; 0; 0; 14.8454; 0.101465; 1.2923e-05; 0; 0; 20.0773; 5.11171; 5.00361; 0; 0; 14.8454; 1.18955; 0.0735247; 0.000592259; 1; 5.07774; 
+2.57625; 0; 0; 13.8843; 0.0334229; 1.1333e-05; 0; 0; 13.8843; 0.0334229; 1.1333e-05; 0; 0; 16.1468; 3.3241; 5.0145; 0; 0; 13.8843; 0.759187; 0.0673636; 0.000565066; 1; 5.08244; 
+3.08898; 0; 0; 14.2708; 0.0897857; 1.1827e-05; 0; 0; 14.2708; 0.0897857; 1.1827e-05; 0; 0; 16.3868; 1.46546; 5.00031; 0; 0; 14.2708; 1.78084; 0.0634234; 0.000584468; 1; 5.06433; 
+3.18623; 0; 0; 14.446; 0.200584; 1.3775e-05; 0; 0; 14.446; 0.200584; 1.3775e-05; 0; 0; 18.6717; 7.17785; 5.00631; 0; 0; 14.446; 2.36492; 0.039268; 0.000590254; 1; 5.04618; 
+2.32895; 0; 0; 11.4261; 0.0149741; 9.575e-06; 0; 0; 11.4261; 0.0149741; 9.575e-06; 0; 0; 20.5059; 7.2207; 5.01359; 0; 0; 11.4261; 0.31803; 0.0722652; 0.000536808; 1; 5.0864; 
+3.29684; 0; 0; 14.938; 0.0683719; 1.2368e-05; 0; 0; 14.938; 0.0683719; 1.2368e-05; 0; 0; 16.1669; 2.33436; 5.00239; 0; 0; 14.938; 1.50573; 0.0485188; 0.000567673; 1; 5.05149; 
+2.41611; 0; 0; 11.7425; 0.0120521; 1.1411e-05; 0; 0; 11.7425; 0.0120521; 1.1411e-05; 0; 0; 16.7826; 4.35661; 5.00146; 0; 0; 11.7425; 0.269937; 0.0792309; 0.000564778; 1; 5.08127; 
+2.75045; 0; 0; 12.8736; 0.126962; 1.2964e-05; 0; 0; 12.8736; 0.126962; 1.2964e-05; 0; 0; 17.6161; 7.03935; 5.00068; 0; 0; 12.8736; 1.61203; 0.0596663; 0.000550982; 1; 5.06091; 
+3.43302; 0; 0; 15.5244; 0.0900971; 2.5749e-05; 0; 0; 15.5244; 0.0900971; 2.5749e-05; 0; 0; 21.2412; 5.17635; 5.00293; 0; 0; 15.5244; 1.55083; 0.0718849; 0.000633404; 1; 5.07548; 
+2.64913; 0; 0; 12.7612; 0.0721127; 1.0489e-05; 0; 0; 12.7612; 0.0721127; 1.0489e-05; 0; 0; 15.4485; 2.5386; 5.00932; 0; 0; 12.7612; 1.65859; 0.061487; 0.000577968; 1; 5.0714; 
+2.4155; 0; 0; 13.1179; 0.0619352; 1.1535e-05; 0; 0; 13.1179; 0.0619352; 1.1535e-05; 0; 0; 17.3571; 2.31704; 5.00121; 0; 0; 13.1179; 1.29359; 0.0805257; 0.000552205; 1; 5.0823; 
+2.60847; 0; 0; 12.8125; 0.0870873; 1.1196e-05; 0; 0; 12.8125; 0.0870873; 1.1196e-05; 0; 0; 16.8146; 4.45913; 5.01169; 0; 0; 12.8125; 0.893509; 0.0883611; 0.000570657; 1; 5.10063; 
+.
+SBL
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+5.19895; 0; 0; 22.8567; 0.153878; 1.8212e-05; 0; 0; 22.8567; 0.153878; 1.8212e-05; 0; 0; 86.5662; 13.3753; 0.993002; 0; 0; 22.8567; 1.92689; 0.151613; 0.000551513; 1; 1.14518; 
+5.55778; 0; 0; 18.5223; 0.205862; 2.0533e-05; 0; 0; 18.5223; 0.205862; 2.0533e-05; 0; 0; 51.2186; 12.3423; 0.197692; 0; 0; 18.5223; 3.3144; 0.115475; 0.000652037; 1; 0.31384; 
+4.87877; 0; 0; 16.1063; 0.0874897; 1.7744e-05; 0; 0; 16.1063; 0.0874897; 1.7744e-05; 0; 0; 156.333; 17.3043; 0.956857; 0; 0; 16.1063; 2.68667; 0.150032; 0.000560477; 1; 1.10747; 
+5.97119; 0; 0; 32.4798; 0.190231; 2.8076e-05; 0; 0; 32.4798; 0.190231; 2.8076e-05; 0; 0; 162.811; 15.3746; 1.32417; 0; 0; 32.4798; 3.45872; 0.158085; 0.000835203; 1; 1.48312; 
+6.12885; 0; 0; 21.0797; 0.160764; 3.4847e-05; 0; 0; 21.0797; 0.160764; 3.4847e-05; 0; 0; 81.8318; 14.2139; 1.14949; 0; 0; 21.0797; 2.60764; 0.129689; 0.000665698; 1; 1.27988; 
+5.59676; 0; 0; 29.6652; 0.199957; 2.8621e-05; 0; 0; 29.6652; 0.199957; 2.8621e-05; 0; 0; 139.523; 12.3512; 1.56887; 0; 0; 29.6652; 3.3585; 0.159663; 0.000808403; 1; 1.72937; 
+5.37602; 0; 0; 17.4575; 0.174161; 2.0601e-05; 0; 0; 17.4575; 0.174161; 2.0601e-05; 0; 0; 126.687; 16.9407; 0.578157; 0; 0; 17.4575; 2.10654; 0.109502; 0.000770166; 1; 0.68845; 
+4.78994; 0; 0; 13.5594; 0.134301; 1.99e-05; 0; 0; 13.5594; 0.134301; 1.99e-05; 0; 0; 103.193; 16.147; 1.08168; 0; 0; 13.5594; 2.41265; 0.117064; 0.000549623; 1; 1.19931; 
+4.62491; 0; 0; 14.3362; 0.0620305; 2.2502e-05; 0; 0; 14.3362; 0.0620305; 2.2502e-05; 0; 0; 66.0218; 14.0671; 0.422514; 0; 0; 14.3362; 1.10131; 0.0699243; 0.00061113; 1; 0.493072; 
+4.56912; 0; 0; 14.605; 0.118348; 2.2228e-05; 0; 0; 14.605; 0.118348; 2.2228e-05; 0; 0; 142.096; 14.0455; 1.05319; 0; 0; 14.605; 2.95722; 0.184553; 0.000513901; 1; 1.23828; 
+6.1291; 0; 0; 24.1855; 0.129985; 1.9677e-05; 0; 0; 24.1855; 0.129985; 1.9677e-05; 0; 0; 94.1476; 11.0588; 0.48927; 0; 0; 24.1855; 2.26848; 0.116444; 0.000632569; 1; 0.606366; 
+5.54862; 0; 0; 22.2031; 0.13955; 1.9252e-05; 0; 0; 22.2031; 0.13955; 1.9252e-05; 0; 0; 101.02; 13.7015; 0.625436; 0; 0; 22.2031; 2.19709; 0.123197; 0.000669518; 1; 0.749322; 
+5.34269; 0; 0; 18.7366; 0.0605891; 2.5367e-05; 0; 0; 18.7366; 0.0605891; 2.5367e-05; 0; 0; 61.6212; 12.248; 0.100123; 0; 0; 18.7366; 1.78171; 0.126664; 0.000561668; 1; 0.227374; 
+4.95261; 0; 0; 19.532; 0.24887; 1.4791e-05; 0; 0; 19.532; 0.24887; 1.4791e-05; 0; 0; 45.7986; 10.1353; 0.480445; 0; 0; 19.532; 5.87523; 0.11381; 0.000500926; 1; 0.59477; 
+4.55048; 0; 0; 12.7008; 0.0898155; 1.2454e-05; 0; 0; 12.7008; 0.0898155; 1.2454e-05; 0; 0; 52.8461; 11.6562; 1.02074; 0; 0; 12.7008; 1.32925; 0.0927344; 0.000541149; 1; 1.11402; 
+4.6009; 0; 0; 12.8168; 0.0643356; 1.2371e-05; 0; 0; 12.8168; 0.0643356; 1.2371e-05; 0; 0; 50.8089; 12.963; 0.347503; 0; 0; 12.8168; 0.994798; 0.071128; 0.000545913; 1; 0.419189; 
+6.75855; 0; 0; 36.6691; 0.228789; 2.7811e-05; 0; 0; 36.6691; 0.228789; 2.7811e-05; 0; 0; 88.3925; 11.0188; 1.10264; 0; 0; 36.6691; 4.15046; 0.180661; 0.000822826; 1; 1.28415; 
+7.96646; 0; 0; 47.8816; 0.134938; 3.3509e-05; 0; 0; 47.8816; 0.134938; 3.3509e-05; 0; 0; 132.708; 14.4212; 1.15082; 0; 0; 47.8816; 3.16183; 0.199734; 0.00177733; 1; 1.35237; 
+5.12202; 0; 0; 18.0293; 0.0770693; 1.7434e-05; 0; 0; 18.0293; 0.0770693; 1.7434e-05; 0; 0; 59.4753; 14.3221; 0.6669; 0; 0; 18.0293; 1.16891; 0.116654; 0.00110553; 1; 0.784677; 
+7.46227; 0; 0; 31.1212; 0.123628; 2.3009e-05; 0; 0; 31.1212; 0.123628; 2.3009e-05; 0; 0; 96.46; 9.69652; 1.57176; 0; 0; 31.1212; 3.54436; 0.180566; 0.00137132; 1; 1.75372; 
+.
+SPARS
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+4.36348; 0; 0; 14.3058; 0.120136; 2.0806e-05; 0; 0; 14.3058; 0.120136; 2.0806e-05; 0; 0; 40.5244; 8.95184; 5.01853; 0; 0; 14.3058; 2.26315; 0.0861976; 0.000386119; 1; 5.10514; 
+4.39372; 0; 0; 16.2015; 0.190864; 2.0242e-05; 0; 0; 16.2015; 0.190864; 2.0242e-05; 0; 0; 32.6391; 6.41204; 5.06955; 0; 0; 16.2015; 2.85035; 0.0832471; 0.000578645; 1; 5.1534; 
+6.96934; 0; 0; 28.3818; 0.16933; 2.5093e-05; 0; 0; 28.3818; 0.16933; 2.5093e-05; 0; 0; 48.7177; 7.6652; 5.03579; 0; 0; 28.3818; 3.4646; 0.128403; 0.000674227; 1; 5.16489; 
+5.06954; 0; 0; 17.7238; 0.270742; 1.9021e-05; 0; 0; 17.7238; 0.270742; 1.9021e-05; 0; 0; 68.2208; 8.97615; 5.03897; 0; 0; 17.7238; 4.99193; 0.1254; 0.000567285; 1; 5.16496; 
+6.28908; 0; 0; 30.2818; 0.200166; 2.4966e-05; 0; 0; 30.2818; 0.200166; 2.4966e-05; 0; 0; 64.3608; 9.24014; 5.06056; 0; 0; 30.2818; 3.18288; 0.134623; 0.000739725; 1; 5.19595; 
+4.64114; 0; 0; 18.9186; 0.1902; 1.7681e-05; 0; 0; 18.9186; 0.1902; 1.7681e-05; 0; 0; 40.3956; 7.60611; 5.0203; 0; 0; 18.9186; 3.27285; 0.102903; 0.000595445; 1; 5.12382; 
+4.22434; 0; 0; 14.5149; 0.120767; 1.3145e-05; 0; 0; 14.5149; 0.120767; 1.3145e-05; 0; 0; 37.0248; 10.1013; 5.02631; 0; 0; 14.5149; 2.32219; 0.0889412; 0.000592267; 1; 5.11586; 
+7.28724; 0; 0; 32.656; 0.103148; 2.6113e-05; 0; 0; 32.656; 0.103148; 2.6113e-05; 0; 0; 66.6006; 8.79389; 5.12044; 0; 0; 32.656; 1.51826; 0.182512; 0.00075346; 1; 5.30373; 
+4.4325; 0; 0; 14.5549; 0.132549; 1.6371e-05; 0; 0; 14.5549; 0.132549; 1.6371e-05; 0; 0; 31.1789; 5.80748; 5.03864; 0; 0; 14.5549; 1.47843; 0.104527; 0.000524225; 1; 5.14371; 
+4.48417; 0; 0; 18.6731; 0.161235; 3.1931e-05; 0; 0; 18.6731; 0.161235; 3.1931e-05; 0; 0; 53.4323; 7.36915; 5.13769; 0; 0; 18.6731; 5.02309; 0.16459; 0.000621712; 1; 5.30293; 
+7.46251; 0; 0; 29.9687; 0.230221; 4.5146e-05; 0; 0; 29.9687; 0.230221; 4.5146e-05; 0; 0; 44.4975; 8.2414; 5.01894; 0; 0; 29.9687; 4.48601; 0.147216; 0.000804169; 1; 5.16701; 
+4.59341; 0; 0; 16.0796; 0.197233; 1.4969e-05; 0; 0; 16.0796; 0.197233; 1.4969e-05; 0; 0; 22.4098; 7.40007; 5.00724; 0; 0; 16.0796; 3.1502; 0.0443485; 0.000593019; 1; 5.0522; 
+4.07959; 0; 0; 16.3917; 0.192589; 1.5312e-05; 0; 0; 16.3917; 0.192589; 1.5312e-05; 0; 0; 25.7094; 5.65891; 5.05305; 0; 0; 16.3917; 4.4249; 0.0956404; 0.000567415; 1; 5.14927; 
+4.17903; 0; 0; 15.3365; 0.156859; 2.0802e-05; 0; 0; 15.3365; 0.156859; 2.0802e-05; 0; 0; 30.9105; 7.6881; 5.00712; 0; 0; 15.3365; 3.18266; 0.0921772; 0.000548005; 1; 5.09986; 
+4.94203; 0; 0; 14.6481; 0.0764734; 1.4061e-05; 0; 0; 14.6481; 0.0764734; 1.4061e-05; 0; 0; 17.8832; 4.5192; 5.00312; 0; 0; 14.6481; 1.45899; 0.0352318; 0.000480379; 1; 5.03884; 
+5.01429; 0; 0; 19.0765; 0.0756657; 1.5698e-05; 0; 0; 19.0765; 0.0756657; 1.5698e-05; 0; 0; 34.2719; 4.82846; 5.03415; 0; 0; 19.0765; 0.926167; 0.10783; 0.000545088; 1; 5.14254; 
+4.39668; 0; 0; 17.386; 0.204177; 1.6518e-05; 0; 0; 17.386; 0.204177; 1.6518e-05; 0; 0; 63.7564; 8.31545; 5.01339; 0; 0; 17.386; 3.32418; 0.206787; 0.000584761; 1; 5.22078; 
+4.64909; 0; 0; 19.1397; 0.126035; 1.6996e-05; 0; 0; 19.1397; 0.126035; 1.6996e-05; 0; 0; 25.5129; 6.13858; 5.0528; 0; 0; 19.1397; 2.45789; 0.10088; 0.000587826; 1; 5.15428; 
+4.4988; 0; 0; 14.9059; 0.109664; 1.3293e-05; 0; 0; 14.9059; 0.109664; 1.3293e-05; 0; 0; 14.9059; 3.33676; 5.02343; 0; 0; 14.9059; 3.33676; 0.0239725; 0.000565233; 1; 5.04799; 
+4.22141; 0; 0; 15.3143; 0.144223; 1.2937e-05; 0; 0; 15.3143; 0.144223; 1.2937e-05; 0; 0; 47.0903; 6.13669; 5.25528; 0; 0; 15.3143; 3.051; 0.12107; 0.000510502; 1; 5.37687; 
+.
+SPARStwo
+0 common properties
+3 properties for each run
+average_waypoint_distance REAL
+solved BOOLEAN
+time REAL
+20 runs
+1.79769e+308; 0; 5.00123; 
+1.79769e+308; 0; 5.00023; 
+1.79769e+308; 0; 5.00028; 
+1.79769e+308; 0; 5.00072; 
+1.79769e+308; 0; 5.00126; 
+1.79769e+308; 0; 5.00036; 
+1.79769e+308; 0; 5.00113; 
+1.79769e+308; 0; 5.00028; 
+1.79769e+308; 0; 5.00041; 
+1.79769e+308; 0; 5.00087; 
+1.79769e+308; 0; 5.00115; 
+1.79769e+308; 0; 5.00034; 
+1.79769e+308; 0; 5.00121; 
+1.79769e+308; 0; 5.00027; 
+1.79769e+308; 0; 5.001; 
+1.79769e+308; 0; 5.00091; 
+1.79769e+308; 0; 5.00017; 
+1.79769e+308; 0; 5.00051; 
+1.79769e+308; 0; 5.00015; 
+1.79769e+308; 0; 5.0006; 
+.
+STRIDE
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+5.57163; 0; 0; 23.0384; 0.216088; 2.9349e-05; 0; 0; 23.0384; 0.216088; 2.9349e-05; 0; 0; 76.0136; 15.666; 1.26214; 0; 0; 23.0384; 2.56417; 0.217587; 0.00067142; 1; 1.48042; 
+4.54956; 0; 0; 18.0756; 0.18159; 1.5103e-05; 0; 0; 18.0756; 0.18159; 1.5103e-05; 0; 0; 61.8324; 9.8898; 1.87657; 0; 0; 18.0756; 4.13623; 0.148327; 0.000730975; 1; 2.02564; 
+4.76202; 0; 0; 20.7474; 0.261571; 2.3257e-05; 0; 0; 20.7474; 0.261571; 2.3257e-05; 0; 0; 90.5997; 12.7435; 0.519994; 0; 0; 20.7474; 5.62636; 0.133396; 0.000735889; 1; 0.65415; 
+3.76529; 0; 0; 15.1813; 0.149646; 1.5641e-05; 0; 0; 15.1813; 0.149646; 1.5641e-05; 0; 0; 49.7872; 10.0792; 0.608055; 0; 0; 15.1813; 1.60185; 0.113257; 0.000501646; 1; 0.721829; 
+7.70409; 0; 0; 47.5614; 0.299302; 3.7252e-05; 0; 0; 47.5614; 0.299302; 3.7252e-05; 0; 0; 94.843; 13.1897; 1.93676; 0; 0; 47.5614; 8.61184; 0.253442; 0.000879364; 1; 2.19112; 
+4.7802; 0; 0; 18.2662; 0.113461; 3.5186e-05; 0; 0; 18.2662; 0.113461; 3.5186e-05; 0; 0; 39.0543; 10.2467; 0.175194; 0; 0; 18.2662; 2.75193; 0.06997; 0.000759523; 1; 0.245959; 
+3.83956; 0; 0; 13.1106; 0.121166; 2.1709e-05; 0; 0; 13.1106; 0.121166; 2.1709e-05; 0; 0; 49.7292; 10.8824; 0.102489; 0; 0; 13.1106; 2.59827; 0.126866; 0.0005211; 1; 0.229898; 
+4.09789; 0; 0; 15.3837; 0.0913148; 1.5698e-05; 0; 0; 15.3837; 0.0913148; 1.5698e-05; 0; 0; 28.8795; 6.94258; 1.23704; 0; 0; 15.3837; 1.1439; 0.0876679; 0.00045744; 1; 1.32518; 
+4.02471; 0; 0; 16.2117; 0.19243; 1.4978e-05; 0; 0; 16.2117; 0.19243; 1.4978e-05; 0; 0; 34.1132; 7.23778; 1.02095; 0; 0; 16.2117; 3.32876; 0.0920337; 0.00061178; 1; 1.11361; 
+3.95161; 0; 0; 17.6624; 0.181489; 1.7581e-05; 0; 0; 17.6624; 0.181489; 1.7581e-05; 0; 0; 75.8945; 11.8463; 0.615074; 0; 0; 17.6624; 4.13143; 0.117207; 0.000599437; 1; 0.732898; 
+4.89629; 0; 0; 15.6376; 0.064442; 1.6003e-05; 0; 0; 15.6376; 0.064442; 1.6003e-05; 0; 0; 24.7137; 11.71; 0.17382; 0; 0; 15.6376; 0.62482; 0.161609; 0.000539155; 1; 0.335984; 
+3.69935; 0; 0; 12.6375; 0.0215008; 2.1291e-05; 0; 0; 12.6375; 0.0215008; 2.1291e-05; 0; 0; 36.0548; 11.2533; 0.108977; 0; 0; 12.6375; 0.54685; 0.0793467; 0.000429042; 1; 0.188774; 
+3.66988; 0; 0; 13.7934; 0.067782; 1.6114e-05; 0; 0; 13.7934; 0.067782; 1.6114e-05; 0; 0; 31.0277; 9.4384; 0.0369338; 0; 0; 13.7934; 1.23232; 0.0693523; 0.000441279; 1; 0.106743; 
+4.8801; 0; 0; 23.3604; 0.166129; 1.9561e-05; 0; 0; 23.3604; 0.166129; 1.9561e-05; 0; 0; 42.3981; 9.98727; 0.0561812; 0; 0; 23.3604; 6.06393; 0.116135; 0.000486596; 1; 0.172822; 
+4.9127; 0; 0; 17.401; 0.129707; 1.4533e-05; 0; 0; 17.401; 0.129707; 1.4533e-05; 0; 0; 36.9927; 11.0479; 0.124671; 0; 0; 17.401; 1.94171; 0.111439; 0.000506251; 1; 0.236632; 
+4.24865; 0; 0; 17.426; 0.234593; 1.9769e-05; 0; 0; 17.426; 0.234593; 1.9769e-05; 0; 0; 41.1164; 14.2161; 0.0424245; 0; 0; 17.426; 5.34952; 0.106685; 0.000516412; 1; 0.149646; 
+6.80869; 0; 0; 51.3225; 0.23068; 5.0138e-05; 0; 0; 51.3225; 0.23068; 5.0138e-05; 0; 0; 69.8187; 10.8609; 1.65329; 0; 0; 51.3225; 8.81584; 0.229969; 0.000817012; 1; 1.88412; 
+4.83263; 0; 0; 20.0771; 0.154482; 1.6218e-05; 0; 0; 20.0771; 0.154482; 1.6218e-05; 0; 0; 61.883; 10.6705; 0.352405; 0; 0; 20.0771; 3.42043; 0.125679; 0.000656605; 1; 0.478757; 
+4.04062; 0; 0; 14.6994; 0.204953; 1.0986e-05; 0; 0; 14.6994; 0.204953; 1.0986e-05; 0; 0; 45.1102; 12.8493; 0.10343; 0; 0; 14.6994; 3.70469; 0.120415; 0.000459281; 1; 0.224316; 
+3.73079; 0; 0; 15.143; 0.151052; 1.2832e-05; 0; 0; 15.143; 0.151052; 1.2832e-05; 0; 0; 35.6296; 12.4222; 0.310787; 0; 0; 15.143; 1.48254; 0.0862148; 0.000448446; 1; 0.397463; 
+.
+TRRT
+0 common properties
+24 properties for each run
+average_waypoint_distance REAL
+final_path_clearance REAL
+final_path_correct BOOLEAN
+final_path_length REAL
+final_path_smoothness REAL
+final_path_time REAL
+path_interpolate_clearance REAL
+path_interpolate_correct BOOLEAN
+path_interpolate_length REAL
+path_interpolate_smoothness REAL
+path_interpolate_time REAL
+path_plan_clearance REAL
+path_plan_correct BOOLEAN
+path_plan_length REAL
+path_plan_smoothness REAL
+path_plan_time REAL
+path_simplify_clearance REAL
+path_simplify_correct BOOLEAN
+path_simplify_length REAL
+path_simplify_smoothness REAL
+path_simplify_time REAL
+process_time REAL
+solved BOOLEAN
+time REAL
+20 runs
+2.78007; 0; 0; 14.2764; 0.18365; 1.7467e-05; 0; 0; 14.2764; 0.18365; 1.7467e-05; 0; 0; 31.7071; 5.19182; 0.344171; 0; 0; 14.2764; 2.55834; 0.100601; 0.000446431; 1; 0.445235; 
+2.46977; 0; 0; 12.3656; 0.12328; 1.9466e-05; 0; 0; 12.3656; 0.12328; 1.9466e-05; 0; 0; 18.8945; 3.92938; 0.0818209; 0; 0; 12.3656; 1.25406; 0.0820399; 0.000611611; 1; 0.164492; 
+3.02742; 0; 0; 15.2707; 0.0595779; 2.5402e-05; 0; 0; 15.2707; 0.0595779; 2.5402e-05; 0; 0; 35.5724; 4.95324; 0.663301; 0; 0; 15.2707; 0.578727; 0.109718; 0.000589333; 1; 0.773633; 
+2.67762; 0; 0; 14.2064; 0.182437; 2.104e-05; 0; 0; 14.2064; 0.182437; 2.104e-05; 0; 0; 31.0295; 5.09526; 0.95802; 0; 0; 14.2064; 2.21115; 0.0974664; 0.000751233; 1; 1.05626; 
+4.45206; 0; 0; 28.6458; 0.351302; 4.0665e-05; 0; 0; 28.6458; 0.351302; 4.0665e-05; 0; 0; 24.9088; 5.07761; 0.172807; 0; 0; 28.6458; 7.2271; 0.10688; 0.000967155; 1; 0.280695; 
+2.70998; 0; 0; 13.8999; 0.0402665; 1.9672e-05; 0; 0; 13.8999; 0.0402665; 1.9672e-05; 0; 0; 29.3024; 4.98595; 0.365682; 0; 0; 13.8999; 0.289787; 0.132957; 0.000633307; 1; 0.499292; 
+3.04169; 0; 0; 14.9227; 0.0964278; 3.1891e-05; 0; 0; 14.9227; 0.0964278; 3.1891e-05; 0; 0; 38.5061; 5.1598; 1.33717; 0; 0; 14.9227; 1.07551; 0.11602; 0.000878116; 1; 1.4541; 
+2.34871; 0; 0; 12.9045; 0.0792052; 2.2301e-05; 0; 0; 12.9045; 0.0792052; 2.2301e-05; 0; 0; 38.7933; 5.71905; 0.244187; 0; 0; 12.9045; 1.1789; 0.115839; 0.000978556; 1; 0.361027; 
+2.54143; 0; 0; 13.1384; 0.0974643; 2.9752e-05; 0; 0; 13.1384; 0.0974643; 2.9752e-05; 0; 0; 21.2054; 4.19472; 0.0614067; 0; 0; 13.1384; 1.17673; 0.109015; 0.000666851; 1; 0.171119; 
+2.58754; 0; 0; 14.4534; 0.103274; 2.0523e-05; 0; 0; 14.4534; 0.103274; 2.0523e-05; 0; 0; 22.1852; 3.35737; 0.313257; 0; 0; 14.4534; 1.15589; 0.0910985; 0.000534928; 1; 0.404911; 
+2.42492; 0; 0; 12.4999; 0.0399748; 1.7874e-05; 0; 0; 12.4999; 0.0399748; 1.7874e-05; 0; 0; 18.5924; 4.25437; 0.163688; 0; 0; 12.4999; 0.713083; 0.0837582; 0.00056738; 1; 0.248032; 
+3.75093; 0; 0; 14.7309; 0.109602; 1.1801e-05; 0; 0; 14.7309; 0.109602; 1.1801e-05; 0; 0; 25.9555; 3.98144; 1.63104; 0; 0; 14.7309; 2.0178; 0.155386; 0.00050393; 1; 1.78694; 
+2.56873; 0; 0; 12.9595; 0.0257253; 1.4858e-05; 0; 0; 12.9595; 0.0257253; 1.4858e-05; 0; 0; 21.2713; 4.92295; 0.126139; 0; 0; 12.9595; 0.204048; 0.0850418; 0.00105349; 1; 0.212249; 
+3.00877; 0; 0; 15.9754; 0.238585; 2.001e-05; 0; 0; 15.9754; 0.238585; 2.001e-05; 0; 0; 24.6591; 4.07196; 0.0550007; 0; 0; 15.9754; 2.53515; 0.121204; 0.000535772; 1; 0.176761; 
+1.79769e+308; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; ; 0; 5.0004; 
+3.04023; 0; 0; 14.503; 0.0469813; 2.1965e-05; 0; 0; 14.503; 0.0469813; 2.1965e-05; 0; 0; 24.6607; 3.91907; 0.0671862; 0; 0; 14.503; 0.958821; 0.0861126; 0.00140675; 1; 0.154728; 
+2.42074; 0; 0; 13.0172; 0.0833502; 1.809e-05; 0; 0; 13.0172; 0.0833502; 1.809e-05; 0; 0; 30.0933; 4.99; 0.405486; 0; 0; 13.0172; 0.939489; 0.0893661; 0.000462583; 1; 0.495333; 
+4.3217; 0; 0; 17.7878; 0.115761; 2.1307e-05; 0; 0; 17.7878; 0.115761; 2.1307e-05; 0; 0; 35.2124; 5.25458; 0.666488; 0; 0; 17.7878; 2.4743; 0.122417; 0.000622138; 1; 0.789548; 
+2.48576; 0; 0; 11.5034; 0.12948; 1.3576e-05; 0; 0; 11.5034; 0.12948; 1.3576e-05; 0; 0; 22.1549; 5.15874; 0.119308; 0; 0; 11.5034; 1.3564; 0.0862762; 0.00058767; 1; 0.206186; 
+4.07762; 0; 0; 18.8769; 0.125855; 2.3563e-05; 0; 0; 18.8769; 0.125855; 2.3563e-05; 0; 0; 32.2129; 4.45524; 0.154374; 0; 0; 18.8769; 2.03425; 0.139679; 0.000595374; 1; 0.294672; 
+.

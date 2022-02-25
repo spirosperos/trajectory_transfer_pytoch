@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="simulation" default="true"/>
+
+  <include file="$(find acin_support)/launch/gazebo.launch"/>
+  <include file="$(find ros_acin_robot_control)/launch/ros_acin_control.launch"/>
+  <include file="$(find acin_gateway)/launch/gateway.launch"/>
+  <include file="$(find acin_moveit)/launch/acin.launch"/>
+  <include file="$(find acin_reconstruction)/launch/reconstruction.launch">
+    <arg name="simulation" value="$(arg simulation)"/>
+  </include>
+  <include file="$(find acin_automation)/launch/automation.launch"/>
+</launch>

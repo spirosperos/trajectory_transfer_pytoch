@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="acin_robot">
+  <xacro:include filename="$(find acin_support)/urdf/frame_macro.xacro"/>
+  <xacro:include filename="$(find acin_support)/urdf/base_macro.xacro"/>
+  <xacro:include filename="$(find acin_support)/urdf/iiwa_macro.xacro"/>
+
+  <xacro:arg name="marker" default="true"/>
+  <xacro:arg name="camera" default="true"/>
+  <xacro:arg name="penholder" default="true"/>
+  <xacro:arg name="table" default="true"/>
+  <xacro:arg name="table_x" default="0"/>
+  <xacro:arg name="table_y" default="0"/>
+  <xacro:arg name="sd" default="0"/>
+
+  <link name="world"/>
+  <joint name="world_joint" type="fixed">
+    <parent link="world"/>
+    <child link="frame_link"/>
+  </joint>
+
+  <!-- Frame -->
+  <xacro:frame prefix="frame_" sd="$(arg sd)"/>
+
+  <!-- Base -->
+  <xacro:base prefix="base_" parent="frame_link" sd="$(arg sd)">
+    <origin xyz="-0.0730 0 ${2+0.0006-0.089+0.0115}"/>
+  </xacro:base>
+
+  <!-- Robot -->
+  <xacro:iiwa prefix="arm_" parent="base_link_1" sd="$(arg sd)">
+    <origin xyz="0 0 -0.0297" rpy="0 ${pi} 0"/>
+  </xacro:iiwa>
+
+  <!-- Camera -->
+  <xacro:if value="$(arg camera)">
+    <xacro:include filename="$(find acin_support)/urdf/camera_macro.xacro"/>
+    <xacro:camera_tool prefix="camera_" parent="world" sd="$(arg sd)">
+      <origin xyz="1 -0.23 1.75" rpy="${pi} ${-pi/4} 0"/>
+    </xacro:camera_tool>
+  </xacro:if>
+
+  <!-- Table -->
+  <xacro:if value="$(arg table)">
+    <xacro:include filename="$(find acin_support)/urdf/table_macro.xacro"/>
+    <xacro:table prefix="table_" parent="frame_link" sd="$(arg sd)">
+      <origin xyz="$(arg table_x) $(arg table_y) 0"/>
+    </xacro:table>
+  </xacro:if>
+
+  <!-- Marker board -->
+  <xacro:if value="$(arg marker)">
+    <xacro:include filename="$(find acin_reconstruction)/urdf/marker_macro.xacro"/>
+    <xacro:marker/>
+  </xacro:if>
+
+  <!-- Object power drill -->
+  <xacro:include filename="$(find acin_objects)/urdf/object_macro.xacro"/>
+  <xacro:object object="power_drill" textured="true" polygons="64k" parent="object_link">
+    <origin xyz="0.4 0.2 0.15" rpy="0 ${-pi/2} ${pi/2}"/>
+  </xacro:object>
+
+    <!-- Penholder -->
+  <xacro:if value="$(arg penholder)">
+    <xacro:include filename="$(find acin_support)/urdf/penholder.xacro"/>
+    <xacro:penholder_tool prefix="penholder_" parent="arm_link_7" sd="$(arg sd)">
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    </xacro:penholder_tool>
+  </xacro:if>
+
+  <!-- Plugins for Gazebo -->
+  <gazebo>
+    <plugin name="joint_state_publisher" filename="libgazebo_ros_joint_state_publisher.so">
+      <xacro:if value="$(arg table)">
+        <jointName>table_joint_2, base_joint_1, base_joint_2, arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4, arm_joint_5, arm_joint_6, arm_joint_7</jointName>
+      </xacro:if>
+      <xacro:unless value="$(arg table)">
+        <jointName>base_joint_1, base_joint_2, arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4, arm_joint_5, arm_joint_6, arm_joint_7</jointName>
+      </xacro:unless>
+      <updateRate>10</updateRate>
+      <alwaysOn>true</alwaysOn>
+    </plugin>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="ros_acin_gazebo_robot_plugin" filename="libros_acin_gazebo_robot_plugin.so">
+      <joint_init_pos>-1, 0, 0, 0, 0, 0, 0, 0, 0</joint_init_pos>
+      <jointNames>base_joint_1, base_joint_2, arm_joint_1, arm_joint_2, arm_joint_3, arm_joint_4, arm_joint_5, arm_joint_6, arm_joint_7</jointNames>
+      <jointPrefix></jointPrefix>
+    </plugin>
+  </gazebo>
+</robot>

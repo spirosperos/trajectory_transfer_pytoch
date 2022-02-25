@@ -1,0 +1,275 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="script">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="add"/>
+        <xs:element ref="scan"/>
+        <xs:element ref="show"/>
+        <xs:element ref="hide"/>
+        <xs:element ref="color"/>
+        <xs:element ref="wait"/>
+        <xs:element ref="load"/>
+        <xs:element ref="export"/>
+        <xs:element ref="move"/>
+        <xs:element ref="delete"/>
+        <xs:element ref="register"/>
+        <xs:element ref="multiway"/>
+        <xs:element ref="transform"/>
+        <xs:element ref="downsample"/>
+      </xs:choice>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="optimization" type="xs:boolean" use="optional" default="false"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="color">
+    <xs:complexType>
+      <xs:attribute name="fragment" type="xs:string" use="required"/>
+      <xs:attribute name="rgb" use="required">
+        <xs:simpleType>
+          <xs:restriction>
+            <xs:simpleType>
+              <xs:list>
+                <xs:simpleType>
+                  <xs:restriction base="xs:decimal">
+                    <xs:minInclusive value="0"/>
+                    <xs:maxInclusive value="1"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:list>
+            </xs:simpleType>
+            <xs:length value="3"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="scan">
+    <xs:complexType>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="path_color" type="xs:string" use="optional" default=""/>
+      <xs:attribute name="path_depth" type="xs:string" use="optional" default=""/>
+      <xs:attribute name="path_pose" type="xs:string" use="optional" default=""/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="wait">
+    <xs:complexType>
+      <xs:attribute name="duration" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="move">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="position"/>
+          <xs:element ref="orientation"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="sphere"/>
+          <xs:element ref="coordinates"/>
+        </xs:sequence>
+      </xs:choice>
+      <xs:attribute name="reference" type="xs:string" use="optional" default="world"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="load">
+    <xs:complexType>
+      <xs:attribute name="name" type="xs:string" use="required"/>
+      <xs:attribute name="path_color" type="xs:string" use="optional" default="/"/>
+      <xs:attribute name="path_depth" type="xs:string" use="optional" default="/"/>
+      <xs:attribute name="path_point_cloud" type="xs:string" use="optional" default="/"/>
+      <xs:attribute name="type" use="optional" default="rgbd_image">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="rgbd_image"/>
+            <xs:enumeration value="point_cloud"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="delete">
+    <xs:complexType>
+      <xs:attribute name="fragment" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="show">
+    <xs:complexType>
+      <xs:attribute name="fragment" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="downsample">
+    <xs:complexType>
+      <xs:attribute name="fragment" type="xs:string" use="required"/>
+      <xs:attribute name="voxel_size" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="hide">
+    <xs:complexType>
+      <xs:attribute name="fragment" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="add">
+    <xs:complexType>
+      <xs:attribute name="fragment" type="xs:string" use="required"/>
+      <xs:attribute name="target" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="transform">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="translation"/>
+        <xs:element ref="rotation"/>
+      </xs:all>
+      <xs:attribute name="fragment" type="xs:string" use="required"/>
+      <xs:attribute name="forward" type="xs:boolean" use="optional" default="true"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="translation">
+    <xs:complexType>
+      <xs:attribute name="xyz" type="xyz" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="rotation">
+    <xs:complexType>
+      <xs:attribute name="xyzw" type="xyzw" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="position">
+    <xs:complexType>
+      <xs:attribute name="xyz" type="xyz" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="orientation">
+    <xs:complexType>
+      <xs:attribute name="xyzw" type="xyzw" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="sphere">
+    <xs:complexType>
+      <xs:attribute name="xyz" type="xyz" use="required"/>
+      <xs:attribute name="radius" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="coordinates">
+    <xs:complexType>
+      <xs:attribute name="phi" type="xs:decimal" use="required"/>
+      <xs:attribute name="theta" type="xs:decimal" use="required"/>
+      <xs:attribute name="alpha" type="xs:decimal" use="optional" default="0"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="register">
+    <xs:complexType>
+      <xs:attribute name="source" type="xs:string" use="required"/>
+      <xs:attribute name="target" type="xs:string" use="required"/>
+      <xs:attribute name="method" use="optional" default="point_to_plane_icp">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="point_to_point_icp"/>
+            <xs:enumeration value="point_to_plane_icp"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="threshold" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="multiway">
+    <xs:complexType>
+      <xs:attribute name="method" use="optional" default="point_to_plane_icp">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="point_to_point_icp"/>
+            <xs:enumeration value="point_to_plane_icp"/>
+            <xs:enumeration value="colored_point_cloud_registration"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="threshold" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:minInclusive value="0"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="export">
+    <xs:complexType>
+      <xs:attribute name="fragment" type="xs:string" use="required"/>
+      <xs:attribute name="type" use="optional" default="mesh">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="point_cloud"/>
+            <xs:enumeration value="mesh"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="path" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="xyz">
+    <xs:restriction>
+      <xs:simpleType>
+        <xs:list itemType="xs:decimal"/>
+      </xs:simpleType>
+      <xs:length value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="xyzw">
+    <xs:restriction>
+      <xs:simpleType>
+        <xs:list itemType="xs:decimal"/>
+      </xs:simpleType>
+      <xs:length value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+

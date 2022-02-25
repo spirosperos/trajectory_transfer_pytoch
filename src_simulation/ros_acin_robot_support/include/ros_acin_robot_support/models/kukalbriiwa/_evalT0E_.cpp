@@ -1,0 +1,142 @@
+#include <evalT0E.h>
+#include <robot_params.h>
+void _evalT0E_ (const Eigen::Ref<JointVector> q, Eigen::Ref<HomogeneousTransformation> T0E, const RobotParams& param)
+{
+  double q1 = q(0);
+  double q2 = q(1);
+  double q3 = q(2);
+  double q4 = q(3);
+  double q5 = q(4);
+  double q6 = q(5);
+  double q7 = q(6);
+
+  double m[4][4];
+  double t1;
+  double t10;
+  double t102;
+  double t105;
+  double t110;
+  double t12;
+  double t127;
+  double t13;
+  double t14;
+  double t15;
+  double t156;
+  double t16;
+  double t17;
+  double t19;
+  double t2;
+  double t22;
+  double t23;
+  double t24;
+  double t25;
+  double t27;
+  double t3;
+  double t30;
+  double t31;
+  double t35;
+  double t38;
+  double t4;
+  double t43;
+  double t48;
+  double t51;
+  double t55;
+  double t6;
+  double t60;
+  double t65;
+  double t69;
+  double t7;
+  double t70;
+  double t72;
+  double t81;
+  double t85;
+  double t88;
+  double t9;
+  double t90;
+  double t91;
+  double t94;
+  m[0][0] = 0;
+  m[0][1] = 0;
+  m[0][2] = 0;
+  m[0][3] = 0;
+  m[1][0] = 0;
+  m[1][1] = 0;
+  m[1][2] = 0;
+  m[1][3] = 0;
+  m[2][0] = 0;
+  m[2][1] = 0;
+  m[2][2] = 0;
+  m[2][3] = 0;
+  m[3][0] = 0;
+  m[3][1] = 0;
+  m[3][2] = 0;
+  m[3][3] = 0;
+  t1 = cos(q5);
+  t2 = cos(q6);
+  t3 = t2 * t1;
+  t4 = cos(q4);
+  t6 = sin(q4);
+  t7 = sin(q6);
+  t9 = t3 * t4 + t6 * t7;
+  t10 = cos(q3);
+  t12 = sin(q3);
+  t13 = t12 * t2;
+  t14 = sin(q5);
+  t15 = t14 * t13;
+  t16 = t10 * t9 - t15;
+  t17 = cos(q2);
+  t19 = sin(q2);
+  t22 = -t3 * t6 + t4 * t7;
+  t23 = t22 * t19;
+  t24 = t16 * t17 - t23;
+  t25 = cos(q7);
+  t27 = sin(q7);
+  t30 = t12 * t1;
+  t31 = t10 * t14 * t4 + t30;
+  t35 = t14 * t19 * t6 + t17 * t31;
+  t38 = cos(q1);
+  t43 = t10 * t14 * t2 + t12 * t9;
+  t48 = -t12 * t14 * t4 + t10 * t1;
+  t51 = sin(q1);
+  m[0][0] = t38 * (t24 * t25 - t27 * t35) - t51 * (t25 * t43 + t48 * t27);
+  t55 = -t10 * t9 + t15;
+  t60 = t27 * (t17 * t55 + t23) - t35 * t25;
+  t65 = t25 * t48 - t27 * t43;
+  m[0][1] = t38 * t60 - t51 * t65;
+  t69 = t12 * t14;
+  t70 = t1 * t10 * t4 - t69;
+  t72 = t19 * t1;
+  t81 = t7 * (t17 * t70 + t72 * t6) + (-t10 * t17 * t6 + t19 * t4) * t2;
+  t85 = t10 * t14 + t30 * t4;
+  t88 = -t13 * t6 + t7 * t85;
+  m[0][2] = t38 * t81 - t51 * t88;
+  t90 = param.d7 + param.d8;
+  t91 = t7 * t90;
+  t94 = t2 * t90 + param.d5 + param.d6;
+  t102 = t4 * t94;
+  t105 = t6 * (-t10 * t17 * t94 + t91 * t72) + t7 * t70 * t90 * t17 + t19 * (t102 + param.d3 + param.d4);
+  t110 = -t12 * t6 * t94 + t85 * t91;
+  m[0][3] = t105 * t38 - t110 * t51;
+  m[1][0] = t25 * (t24 * t51 + t38 * t43) - (t35 * t51 - t38 * t48) * t27;
+  m[1][1] = t38 * t65 + t51 * t60;
+  m[1][2] = t38 * t88 + t51 * t81;
+  m[1][3] = t105 * t51 + t110 * t38;
+  t127 = -t22;
+  m[2][0] = t25 * (t127 * t17 + t19 * t55) + t27 * (-t14 * t17 * t6 + t19 * t31);
+  m[2][1] = t19 * (t16 * t27 + t25 * t31) - (t14 * t25 * t6 + t127 * t27) * t17;
+  m[2][2] = t19 * (t10 * t2 * t6 - t7 * t70) + (t1 * t6 * t7 + t2 * t4) * t17;
+  t156 = t7 * t1;
+  m[2][3] = t17 * (t156 * t6 * t90 + param.d3 + param.d4 + t102) + t19 * (t10 * (-t156 * t4 * t90 + t6 * t94) + t91 * t69) + param.d1 + param.d2;
+  m[3][0] = 0.0e0;
+  m[3][1] = 0.0e0;
+  m[3][2] = 0.0e0;
+  m[3][3] = 0.1e1;
+
+  for(int i = 0; i < T0E.rows(); ++i)
+  {
+    for(int j = 0; j < T0E.cols(); ++j)
+    {
+      T0E(i, j) = m[i][j];
+    }
+  }
+}

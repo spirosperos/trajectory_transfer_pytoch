@@ -1,0 +1,22 @@
+# Parameters for removing outliers in point clouds
+# (See Open3D's function 'open3d::geometry::PointCloud::RemoveRadiusOutliers')
+radius_outlier_removal:
+  enable: false
+  neighbors: 5
+  search_radius: 0.002
+
+# (See Open3D's function 'open3d::geometry::PointCloud::RemoveStatisticalOutliers')
+statistical_outlier_removal:
+  enable: true
+  neighbors: 50
+  std_ratio: 3
+
+# Parameter for orienting normal vectors
+# (See Open3D's function 'open3d::geometry::PointCloud::OrientNormalsConsistentTangentPlane')
+normal_orientation:
+  neighbor_points: 20
+
+# Parameter for generating a mesh
+# (See Open3D's function 'open3d::geometry::TriangleMesh::CreateFromPointCloudPoisson')
+mesh_generation:
+  depth: 8

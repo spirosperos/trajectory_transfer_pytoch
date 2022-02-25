@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<robot name="main" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="object" default="mustard_bottle"/>
+  <xacro:arg name="textured" default="true"/>
+  <xacro:arg name="polygons" default="64k"/>
+
+  <!-- Import object properties -->
+  <xacro:include filename="$(find acin_objects)/urdf/$(arg object).xacro"/>
+
+  <!-- Textured or nontextured -->
+  <xacro:if value="$(arg textured)">
+    <xacro:property name="file" value="textured.dae"/>
+    <!-- Let textured object appear brighter in Gazebo -->
+    <gazebo reference="link">
+      <visual>
+        <material>
+          <emissive>0.6 0.6 0.6 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:if>
+  <xacro:unless value="$(arg textured)">
+    <xacro:property name="file" value="nontextured.stl"/>
+  </xacro:unless>
+
+  <!-- Actual object -->
+  <link name="link">
+    <visual>
+      <xacro:set_origin/>
+      <geometry>
+        <mesh filename="package://acin_objects/meshes/$(arg object)_$(arg polygons)/${file}"/>
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 ${height/2}"/>
+      <geometry>
+        <box size="${length} ${width} ${height}"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <origin xyz="0 0 ${height/2}"/>
+      <mass value="${mass}"/>
+      <inertia ixx="${mass*( width**2+height**2)/12}" ixy="0" ixz="0"
+               iyy="${mass*(length**2+height**2)/12}" iyz="0"
+               izz="${mass*(length**2+ width**2)/12}"/>
+    </inertial>
+  </link>
+</robot>

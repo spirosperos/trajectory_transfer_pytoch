@@ -1,0 +1,10 @@
+# Distance of camera to object
+float32 distance
+# Number of scans
+uint8 scans
+---
+---
+# Progress between 0 and 1
+float32 progress
+# Description of the current task
+string message

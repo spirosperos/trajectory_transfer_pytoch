@@ -1,0 +1,28 @@
+controller_list:
+  - name: fake_arm_controller
+    type: $(arg execution_type)
+    joints:
+      - base_joint_1
+      - base_joint_2
+      - arm_joint_1
+      - arm_joint_2
+      - arm_joint_3
+      - arm_joint_4
+      - arm_joint_5
+      - arm_joint_6
+      - arm_joint_7
+  - name: fake_iiwa_controller
+    type: $(arg execution_type)
+    joints:
+      - arm_joint_1
+      - arm_joint_2
+      - arm_joint_3
+      - arm_joint_4
+      - arm_joint_5
+      - arm_joint_6
+      - arm_joint_7
+initial:  # Define initial robot poses.
+  - group: arm
+    pose: home
+  - group: iiwa
+    pose: home

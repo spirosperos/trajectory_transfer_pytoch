@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Marker, camera and table -->
+  <arg name="marker" default="true"/>
+  <arg name="camera" default="true"/>
+  <arg name="penholder" default="true"/>
+  <arg name="table" default="true"/>
+  <arg name="table_x" default="0"/>
+  <arg name="table_y" default="0"/>
+
+  <!-- Start Gazebo -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find acin_support)/worlds/empty.world"/>
+  </include>
+
+  <!-- Convert xacro and put it on parameter server -->
+  <param name="robot_gazebo" command="$(find xacro)/xacro $(find acin_support)/urdf/main.xacro
+  table:=$(arg table) table_x:=$(arg table_x) table_y:=$(arg table_y) camera:=$(arg camera) marker:=$(arg marker) penholder:=$(arg penholder) sd:=0"/>
+
+  <!-- Spawn model in Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param robot_gazebo -urdf -model robot"/>
+</launch>

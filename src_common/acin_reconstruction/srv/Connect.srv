@@ -1,0 +1,7 @@
+uint8 CONNECT = 0
+uint8 DISCONNECT = 1
+
+uint8 operation
+---
+bool success
+string message

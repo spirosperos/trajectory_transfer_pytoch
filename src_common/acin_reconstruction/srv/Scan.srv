@@ -1,0 +1,7 @@
+string name
+string path_color
+string path_depth
+string path_pose
+---
+bool success
+string message

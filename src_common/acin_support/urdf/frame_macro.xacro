@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="frame" params="prefix sd">
+    <xacro:include filename="$(find acin_support)/urdf/macros.xacro"/>
+    <xacro:property name="path" value="package://acin_support/meshes/frame"/>
+    <xacro:property name="profile_width" value="0.08"/>
+    <xacro:property name="height" value="2.00"/>
+    <xacro:property name="width" value="2.83"/>
+    <xacro:property name="depth" value="1.84"/>
+
+    <link name="${prefix}link">
+      <xacro:visual_mesh filename="${path}/frame.dae">
+        <origin rpy="0 0 ${pi/2}"/>
+      </xacro:visual_mesh>
+
+      <xacro:collision_box size="${profile_width+2*sd} ${width+2*(profile_width+sd)} ${height+profile_width+sd}">
+        <origin xyz="${-(depth+profile_width)/2} 0 ${(height+profile_width+sd)/2}"/>
+      </xacro:collision_box>
+      <xacro:collision_box size="${profile_width+2*sd} ${width+2*(profile_width+sd)} ${height+profile_width+sd}">
+        <origin xyz="${(depth+profile_width)/2} 0 ${(height+profile_width+sd)/2}"/>
+      </xacro:collision_box>
+      <xacro:collision_box size="${depth+2*sd} ${profile_width+2*sd} ${height+profile_width+sd}">
+        <origin xyz="0 ${-(width+profile_width)/2} ${(height+profile_width+sd)/2}"/>
+      </xacro:collision_box>
+      <xacro:collision_box size="${depth+2*sd} ${profile_width+2*sd} ${height+profile_width+sd}">
+        <origin xyz="0 ${(width+profile_width)/2} ${(height+profile_width+sd)/2}"/>
+      </xacro:collision_box>
+      <xacro:collision_box size="${depth+2*sd} ${width+2*sd} ${profile_width+2*sd}">
+        <origin xyz="0 0 ${height+profile_width/2}"/>
+      </xacro:collision_box>
+
+      <xacro:visual_mesh filename="${path}/EGC-120-3130-TB-KF-0H-GV.dae">
+        <origin rpy="${-pi/2} 0 0" xyz="${-(depth/2-0.4)} 0 ${height+0.0006}"/>
+      </xacro:visual_mesh>
+      <xacro:visual_mesh filename="${path}/EGC-120-3130-TB-KF-0H-GV.dae">
+        <origin rpy="${-pi/2} 0 0" xyz="${(depth/2-0.4)} 0 ${height+0.0006}"/>
+      </xacro:visual_mesh>
+
+      <xacro:collision_box size="${0.1160+2*sd} ${2.9900+2*sd} ${0.0890+2*sd}">
+        <origin xyz="${-(depth/2-0.4)} 0 ${height+0.0006-0.0890/2}"/>
+      </xacro:collision_box>
+      <xacro:collision_box size="${0.1160+2*sd} ${2.9900+2*sd} ${0.0890+2*sd}">
+        <origin xyz="${(depth/2-0.4)} 0 ${height+0.0006-0.0890/2}"/>
+      </xacro:collision_box>
+
+      <xacro:visual_mesh filename="${path}/EGC-TB-KF_motor_back.dae">
+        <origin rpy="0 0 ${pi}" xyz="${-(depth/2-0.34)} ${-(width+profile_width)/2} ${height+0.0006-0.051}"/>
+      </xacro:visual_mesh>
+      <xacro:visual_mesh filename="${path}/EGC-TB-KF_motor_front.dae">
+        <origin rpy="0 0 ${pi}" xyz="${depth/2-0.34} ${-(width+profile_width)/2} ${height+0.0006-0.051}"/>
+      </xacro:visual_mesh>
+
+      <inertial>
+        <mass value="500"/>
+        <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100"/>
+      </inertial>
+    </link>
+
+    <xacro:gazebo_material reference="${prefix}link"/>
+  </xacro:macro>
+</robot>

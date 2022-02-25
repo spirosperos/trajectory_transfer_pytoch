@@ -1,0 +1,11 @@
+uint8 POINT_TO_POINT_ICP=0
+uint8 POINT_TO_PLANE_ICP=1
+
+string source
+string target
+uint8 method
+float64 threshold
+---
+bool success
+string message
+geometry_msgs/Transform transform

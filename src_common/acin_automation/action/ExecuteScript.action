@@ -1,0 +1,8 @@
+# The script to be executed
+string filename
+---
+---
+# Progress between 0 and 1
+float32 progress
+# Description of the current task
+string message

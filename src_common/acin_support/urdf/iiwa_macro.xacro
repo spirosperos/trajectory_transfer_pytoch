@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+  <xacro:macro name="iiwa" params="prefix parent sd *origin">
+    <xacro:include filename="$(find acin_support)/urdf/macros.xacro"/>
+    <xacro:property name="path" value="package://acin_support/meshes/iiwa"/>
+
+    <!-- Links -->
+    <link name="${prefix}link_0">
+      <xacro:visual_mesh filename="${path}/base_link.dae">
+        <origin xyz="0 0 0"/>
+      </xacro:visual_mesh>
+      <collision>
+        <origin xyz="-0.090 0.000 0.076"/>
+        <geometry>
+          <box size="${0.100+2*sd} ${0.140+2*sd} ${0.152+2*sd}"/>
+        </geometry>
+      </collision>
+      <collision>
+        <origin xyz="0 0 0.080"/>
+        <geometry>
+          <cylinder radius="${0.099+sd}" length="${0.160+2*sd}"/>
+        </geometry>
+      </collision>
+      <collision>
+        <origin xyz="0 0 0.040"/>
+        <geometry>
+          <cylinder radius="${0.120+sd}" length="${0.080+2*sd}"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0 -0.01439 0.102503"/>
+        <mass value="6.495"/>
+        <inertia ixx="0.0690761441316632" ixy="0" ixz="0" iyy="0.0711085586914514" iyz="0" izz="0.0200625854402119"/>
+      </inertial>
+    </link>
+    <link name="${prefix}link_1">
+      <xacro:visual_mesh filename="${path}/link_1.dae">
+        <origin xyz="0 0 0"/>
+      </xacro:visual_mesh>
+      <xacro:collision_capsule r="${0.092+sd}" x1="0" y1="-0.031" z1="0.200" x2="0" y2="0" z2="0.031"/>
+      <inertial>
+        <origin xyz="0 -0.01439 0.102503"/>
+        <mass value="6.495"/>
+        <inertia ixx="0.0690761441316632" ixy="0" ixz="0" iyy="0.0711085586914514" iyz="0" izz="0.0200625854402119"/>
+      </inertial>
+    </link>
+    <link name="${prefix}link_2">
+      <xacro:visual_mesh filename="${path}/link_2.dae">
+        <origin xyz="0 0 -0.013" rpy="0 0 ${pi}"/>
+      </xacro:visual_mesh>
+      <xacro:collision_capsule r="${0.096+sd}" x1="0" y1="0.139" z1="0" x2="0" y2="0" z2="0.040"/>
+      <inertial>
+        <origin xyz="1.2e-05 0.06472 0.004804"/>
+        <mass value="8.807"/>
+        <inertia ixx="0.0824701683534692" ixy="0" ixz="0" iyy="0.0164110968055191" iyz="0" izz="0.0873510892661361"/>
+      </inertial>
+    </link>
+    <link name="${prefix}link_3">
+      <xacro:visual_mesh filename="${path}/link_3.dae">
+        <origin xyz="0 0 0"/>
+      </xacro:visual_mesh>
+      <xacro:collision_capsule r="${0.080+sd}" x1="0" y1="0.039" z1="0.189" x2="0" y2="0" z2="0.012"/>
+      <inertial>
+        <origin xyz="-2.08e-04 0.01601 0.087283"/>
+        <mass value="2.8"/>
+        <inertia ixx="0.0230152941318817" ixy="0" ixz="0" iyy="0.0228661554143474" iyz="0" izz="0.0554482283748983"/>
+      </inertial>
+    </link>
+    <link name="${prefix}link_4">
+      <xacro:visual_mesh filename="${path}/link_4.dae">
+        <origin xyz="0 0 -0.011"/>
+      </xacro:visual_mesh>
+      <xacro:collision_capsule r="${0.081+sd}" x1="0" y1="0.144" z1="0" x2="0" y2="0" z2="0.040"/>
+      <inertial>
+        <origin xyz="-2.03e-04 0.098639 0.011478"/>
+        <mass value="5.283"/>
+        <inertia ixx="0.0472789668341968" ixy="0" ixz="0" iyy="0.00964726804146909" iyz="0" izz="0.0466529007761679"/>
+      </inertial>
+    </link>
+    <link name="${prefix}link_5">
+      <xacro:visual_mesh filename="${path}/link_5.dae">
+        <origin xyz="0 0 0" rpy="0 0 ${pi}"/>
+      </xacro:visual_mesh>
+      <xacro:collision_capsule r="${0.076+sd}" x1="0" y1="0.050" z1="0.168" x2="0" y2="0" z2="0.005"/>
+      <inertial>
+        <origin xyz="5.7e-05 0.014468 0.062938"/>
+        <mass value="1.889"/>
+        <inertia ixx="0.0138359953358589" ixy="0" ixz="0" iyy="0.0116859337751969" iyz="0" izz="0.00571863785412578"/>
+      </inertial>
+    </link>
+    <link name="${prefix}link_6">
+      <xacro:visual_mesh filename="${path}/link_6.dae">
+        <origin xyz="0 0 -0.061" rpy="0 0 ${pi}"/>
+      </xacro:visual_mesh>
+      <xacro:collision_capsule r="${0.076+sd}" x1="0" y1="0.030" z1="-0.003" x2="0" y2="-0.030" z2="-0.003"/>
+      <inertial>
+        <origin xyz="3.63e-04 0.016982 -0.019731"/>
+        <mass value="2.32"/>
+        <inertia ixx="0.00732758787216765" ixy="0" ixz="0" iyy="0.00477633755783711" iyz="0" izz="0.00606797638550296"/>
+      </inertial>
+    </link>
+    <link name="${prefix}link_7">
+      <xacro:visual_mesh filename="${path}/link_7.dae">
+        <origin xyz="0 0 0"/>
+      </xacro:visual_mesh>
+      <collision>
+        <origin xyz="0 0 0.022"/>
+        <geometry>
+          <sphere radius="0.065"/>
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0.001904 -9.3e-05 0.018862"/>
+        <mass value="0.863"/>
+        <inertia ixx="0.000884" ixy="0" ixz="0" iyy="0.000888" iyz="0" izz="0.001105"/>
+      </inertial>
+    </link>
+
+    <!-- Joints -->
+    <joint name="${prefix}joint_0" type="fixed">
+      <xacro:insert_block name="origin"/>
+      <parent link="${parent}"/>
+      <child link="${prefix}link_0"/>
+    </joint>
+    <joint name="${prefix}joint_1" type="revolute">
+      <parent link="${prefix}link_0"/>
+      <child link="${prefix}link_1"/>
+      <origin xyz="0 0 0.1525" rpy="0 0 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${-170*pi/180}" upper="${170*pi/180}" velocity="1.4835" effort="320"/>
+    </joint>
+    <joint name="${prefix}joint_2" type="revolute">
+      <parent link="${prefix}link_1"/>
+      <child link="${prefix}link_2"/>
+      <origin xyz="0 0 0.2075" rpy="${pi/2} 0 ${pi}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${-120*pi/180}" upper="${120*pi/180}" velocity="1.4835" effort="320"/>
+    </joint>
+    <joint name="${prefix}joint_3" type="revolute">
+      <parent link="${prefix}link_2"/>
+      <child link="${prefix}link_3"/>
+      <origin xyz="0 0.2325 0" rpy="${pi/2} 0 ${pi}"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${-170*pi/180}" upper="${170*pi/180}" velocity="1.7453" effort="176"/>
+    </joint>
+    <joint name="${prefix}joint_4" type="revolute">
+      <parent link="${prefix}link_3"/>
+      <child link="${prefix}link_4"/>
+      <origin xyz="0 0 0.1875" rpy="${pi/2} 0 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${-120*pi/180}" upper="${120*pi/180}" velocity="1.3090" effort="176"/>
+    </joint>
+    <joint name="${prefix}joint_5" type="revolute">
+      <parent link="${prefix}link_4"/>
+      <child link="${prefix}link_5"/>
+      <origin xyz="0 0.2125 0" rpy="${-pi/2} ${pi} 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${-170*pi/180}" upper="${170*pi/180}" velocity="2.2689" effort="110"/>
+    </joint>
+    <joint name="${prefix}joint_6" type="revolute">
+      <parent link="${prefix}link_5"/>
+      <child link="${prefix}link_6"/>
+      <origin xyz="0 0 0.1875" rpy="${pi/2} 0 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${-120*pi/180}" upper="${120*pi/180}" velocity="2.3562" effort="40"/>
+    </joint>
+    <joint name="${prefix}joint_7" type="revolute">
+      <parent link="${prefix}link_6"/>
+      <child link="${prefix}link_7"/>
+      <origin xyz="0 0.081 0" rpy="${-pi/2} ${pi} 0"/>
+      <axis xyz="0 0 1"/>
+      <limit lower="${-175*pi/180}" upper="${175*pi/180}" velocity="2.3562" effort="40"/>
+    </joint>
+  </xacro:macro>
+</robot>

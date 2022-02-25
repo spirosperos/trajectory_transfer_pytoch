@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="simulation" default="true"/>
+
+  <group if="$(arg simulation)">
+    <param name="simulation" type="bool" value="true"/>
+    <!-- Load parameters of camera -->
+     <group ns="camera">
+      <rosparam command="load" file="$(find acin_reconstruction)/config/gazebo.yaml"/>
+    </group>
+  </group>
+
+  <group unless="$(arg simulation)">
+    <param name="simulation" type="bool" value="false"/>
+  </group>
+
+  <!-- Load parameters for processing steps -->
+  <group ns="processing">
+    <rosparam command="load" file="$(find acin_reconstruction)/config/processing.yaml"/>
+  </group>
+
+  <!-- Load parameters for ChArUco board -->
+  <group ns="marker">
+    <rosparam command="load" file="$(find acin_reconstruction)/config/marker.yaml"/>
+  </group>
+
+  <!-- Start reconstruction_node -->
+  <node name="reconstruction_node" pkg="acin_reconstruction" type="reconstruction_node"/>
+</launch>

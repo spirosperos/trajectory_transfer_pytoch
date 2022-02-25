@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Start script execution manager -->
+  <node name="script_execution_manager" pkg="acin_automation" type="script_execution_manager"/>
+
+  <!-- Start sequence optimizer -->
+  <node name="sequence_optimizer" pkg="acin_automation" type="sequence_optimizer"/>
+
+  <!-- Start view planner -->
+  <node name="view_planner" pkg="acin_automation" type="view_planner"/>
+</launch>

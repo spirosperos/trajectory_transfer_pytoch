@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="base" params="prefix parent sd *origin">
+    <xacro:include filename="$(find acin_support)/urdf/macros.xacro"/>
+    <xacro:property name="path" value="package://acin_support/meshes/base"/>
+    <xacro:property name="depth" value="1.84"/>
+
+    <link name="${prefix}link_0">
+      <xacro:visual_mesh filename="${path}/EGC-HD-160-1480-TB-0H-GK.dae">
+        <origin rpy="0 0 ${pi}" xyz="0 0 -0.0340"/>
+      </xacro:visual_mesh>
+      <xacro:visual_mesh filename="${path}/EGC-120-3130-TB-KF-0H-GV_slide.dae">
+        <origin xyz="${-(depth/2-0.4)+0.0730} 0 0"/>
+      </xacro:visual_mesh>
+      <xacro:visual_mesh filename="${path}/EGC-120-3130-TB-KF-0H-GV_slide.dae">
+        <origin xyz="${(depth/2-0.4)+0.0730} 0 0"/>
+      </xacro:visual_mesh>
+      <xacro:collision_box size="${2.1100+2*sd} ${0.1620+2*sd} ${0.0575+2*sd}">
+        <origin xyz="0 0 ${-0.034-0.0575/2}"/>
+      </xacro:collision_box>
+      <xacro:collision_box size="${0.1070+2*sd} ${0.3000+2*sd} ${0.0340+2*sd}">
+        <origin xyz="${-(depth/2-0.4)-0.0055+0.0730} 0 ${-0.0340/2}"/>
+      </xacro:collision_box>
+      <xacro:collision_box size="${0.1070+2*sd} ${0.3000+2*sd} ${0.0340+2*sd}">
+        <origin xyz="${(depth/2-0.4)-0.0055+0.0730} 0 ${-0.0340/2}"/>
+      </xacro:collision_box>
+      <inertial>
+        <mass value="40"/>
+        <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100"/>
+      </inertial>
+    </link>
+    <link name="${prefix}link_1">
+      <xacro:visual_mesh filename="${path}/EGC-HD-160-1480-TB-0H-GK_slide.dae">
+        <origin xyz="0 0 0" rpy="0 0 ${pi/2}"/>
+      </xacro:visual_mesh>
+      <xacro:collision_box size="${0.2200+2*sd} ${0.1507+2*sd} ${0.0297+2*sd}">
+        <origin xyz="0 0 ${-0.0297/2}"/>
+      </xacro:collision_box>
+      <inertial>
+        <mass value="4"/>
+        <inertia ixx="100" ixy="0" ixz="0" iyy="100" iyz="0" izz="100"/>
+      </inertial>
+    </link>
+
+    <joint name="${prefix}joint_1" type="prismatic">
+      <limit effort="800" velocity="5" lower="${-(1.3930-0.3000/2)}" upper="${(1.3930-0.3000/2)}"/>
+      <axis xyz="0 1 0"/>
+      <xacro:insert_block name="origin"/>
+      <parent link="${parent}"/>
+      <child link="${prefix}link_0"/>
+    </joint>
+    <joint name="${prefix}joint_2" type="prismatic">
+      <limit effort="1000" velocity="5" lower="${-(0.9725-0.2200/2)}" upper="${(0.9725-0.2200/2)}"/>
+      <axis xyz="1 0 0"/>
+      <parent link="${prefix}link_0"/>
+      <child link="${prefix}link_1"/>
+      <origin xyz="0 0 ${-0.034-0.0468}"/>
+    </joint>
+
+    <xacro:gazebo_material reference="${prefix}link_1"/>
+  </xacro:macro>
+</robot>

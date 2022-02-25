@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:macro name="collision_box" params="size *origin">
+    <collision>
+      <xacro:insert_block name="origin"/>
+      <geometry>
+        <box size="${size}"/>
+      </geometry>
+    </collision>
+  </xacro:macro>
+
+  <xacro:macro name="visual_mesh" params="filename *origin">
+    <visual>
+      <xacro:insert_block name="origin"/>
+      <geometry>
+        <mesh filename="${filename}"/>
+      </geometry>
+    </visual>
+  </xacro:macro>
+
+  <xacro:macro name="gazebo_material" params="reference">
+    <gazebo reference="${reference}">
+      <visual>
+        <material>
+          <emissive>0.2 0.2 0.2 0</emissive>
+        </material>
+      </visual>
+    </gazebo>
+  </xacro:macro>
+
+  <xacro:macro name="collision_capsule" params="r x1 y1 z1 x2 y2 z2">
+    <xacro:property name="d" value="${((x1-x2)**2+(y1-y2)**2)**0.5}"/>
+    <collision>
+      <origin xyz="${x1} ${y1} ${z1}"/>
+      <geometry>
+        <sphere radius="${r}"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="${x2} ${y2} ${z2}"/>
+      <geometry>
+        <sphere radius="${r}"/>
+      </geometry>
+    </collision>
+    <collision>
+      <origin xyz="${(x1+x2)/2} ${(y1+y2)/2} ${(z1+z2)/2}" rpy="${atan2(d,z2-z1)} 0 ${atan2(x2-x1,y1-y2)}"/>
+      <geometry>
+        <cylinder radius="${r}" length="${(d**2+(z1-z2)**2)**0.5}"/>
+      </geometry>
+    </collision>
+  </xacro:macro>
+</robot>

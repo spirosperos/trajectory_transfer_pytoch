@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="https://ros.org/wiki/xacro">
+  <!-- Here we define the 2 parameters of the macro -->
+  <xacro:macro name="penholder_tool" params="prefix parent sd *origin">
+    <!-- Create a fixed joint with a parameterized name. -->
+  <joint name="${prefix}joint_0" type="fixed">
+      <xacro:insert_block name="origin"/>
+      <parent link="${parent}"/>
+      <child link="${prefix}link_0"/>
+    </joint>
+
+
+    <link name="${prefix}link_0">
+      <visual>
+        <geometry>
+          <!-- The path to the visual meshes in the package. -->
+          <mesh filename="package://acin_support/meshes/penholder/penholder.dae"/>
+        </geometry>
+      </visual>
+      <collision>
+        <geometry>
+          <!-- The path to the collision meshes in the package. -->
+          <mesh filename="package://acin_support/meshes/penholder/penholder.dae"/>
+        </geometry>
+      </collision>
+    </link>
+
+<joint name="penholder_joint" type="fixed">
+      <!-- Sensor pose according to Photoneo's CAD model -->
+      <!--<origin xyz="0.17280 0.04865 0.03260" rpy="${-pi/2} 0 ${11.75*pi/180}"/>
+      <parent link="${prefix}link_1"/>-->
+      <!-- Sensor pose according to camera calibration -->
+      <origin xyz="0 0 0.116" rpy="0 0 0"/>
+      <parent link="${prefix}link_0"/>
+      <child link="${prefix}tcp"/>
+    </joint>
+    <link name="${prefix}tcp"/>
+
+
+  </xacro:macro>
+</robot>

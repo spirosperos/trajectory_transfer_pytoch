@@ -1,0 +1,24 @@
+#if defined(TWINCAT_COMPILE) && !defined(SSTREAM_H)
+#define SSTREAM_H
+
+	namespace std {
+		class ostream {
+		public:
+
+			ostream() {
+
+			}
+			void operator<<(const float& b) {
+				return;
+			}
+		};
+	//if defined(_DEFINE_STD_RAND_)
+			inline int rand() {
+				return rands_(0);
+			}
+		//#endif
+	}
+
+#endif; 
+
+

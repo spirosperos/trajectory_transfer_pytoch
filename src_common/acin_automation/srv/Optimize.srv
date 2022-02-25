@@ -1,0 +1,15 @@
+# State from which the sequence starts
+sensor_msgs/JointState start_state
+# Poses which need to be visited
+geometry_msgs/PoseStamped[] target_poses
+# Parameter for optimization
+float64 beta
+---
+# Optimized sequence
+sensor_msgs/JointState[] joint_states
+# Motion plans used during optimization
+moveit_msgs/MotionPlanResponse[] plans
+# Results
+duration total_duration
+int16 num_planning_requests
+bool success

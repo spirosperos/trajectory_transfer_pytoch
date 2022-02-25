@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="object" default="mustard_bottle"/>
+  <arg name="textured" default="true"/>
+  <arg name="polygons" default="64k"/>
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0"/>
+
+  <!-- Convert xacro and put it on parameter server -->
+  <param name="$(arg object)" command="$(find xacro)/xacro $(find acin_objects)/urdf/main.xacro
+  object:=$(arg object) polygons:=$(arg polygons) textured:=$(arg textured)"/>
+
+  <!-- Spawn model in Gazebo -->
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-param $(arg object) -urdf
+  -model $(arg object) -x $(arg x) -y $(arg y) -z $(arg z)"/>
+</launch>

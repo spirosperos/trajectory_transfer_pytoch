@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: acin_support
+    relative_path: urdf/main.xacro
+    xacro_args: sd:=0 marker:=false
+  SRDF:
+    relative_path: config/acin_robot.srdf
+  CONFIG:
+    author_name: Martin Fraunhofer
+    author_email: martin.fraunhofer@gmail.com
+    generated_timestamp: 1632297404
